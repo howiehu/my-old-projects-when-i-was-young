@@ -1,0 +1,76 @@
+﻿@model  EEDDMS.WebSite.Models.EquipmentListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CollectorModuleLayout.cshtml";
+}
+<h2>
+    选择设备</h2>
+<table>
+    <tr>
+        <th>
+            设备编号
+        </th>
+        <th>
+            设备名称
+        </th>
+        <th>
+            设备型号
+        </th>
+        <th>
+            出厂日期
+        </th>
+        <th>
+            启用日期
+        </th>
+        <th>
+            设备状态
+        </th>
+        <th>
+            设备健康状况
+        </th>
+        <th>
+            备注
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model.Equipments)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EquipmentNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EquipmentDetail.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EquipmentDetail.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartToUseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Health)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+            </td>
+            <td>
+                @Html.ActionLink("选择", "Select", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("返回设备编辑", "ContinueEdit", "Collector")
+</p>
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index",
+new { page = x }))
+</div>

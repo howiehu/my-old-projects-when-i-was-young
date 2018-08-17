@@ -1,0 +1,89 @@
+﻿@model EEDDMS.Domain.Entities.EquipmentDetail
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>编辑</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Edit", "EquipmentDetail", FormMethod.Post))
+{
+    
+    @Html.ValidationSummary(true)
+
+    
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.ManufacturerId)
+    @Html.HiddenFor(model => model.EquipmentClassId)
+    @Html.HiddenFor(model => model.IsDeleted)
+    @Html.HiddenFor(model => model.CreationDate)
+    @Html.HiddenFor(model => model.ModifyDate)
+    @Html.HiddenFor(model => model.DeleteDate)
+
+    <fieldset>
+        <legend>设备制造商</legend>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.Manufacturer.Name)
+            @Html.ActionLink("选择设备制造商", "Index", "SelectManufacturer")
+            @Html.ValidationMessageFor(model => model.ManufacturerId)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>设备分类</legend>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.EquipmentClass.Name)
+            @Html.ActionLink("选择设备分类", "Index", "SelectEquipmentClass")
+            @Html.ValidationMessageFor(model => model.EquipmentClassId)
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>设备信息</legend>
+
+        <div class="editor-label">
+            名称
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            型号
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Type)
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        <div class="editor-label">
+            设计寿命
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DesignLife)
+            @Html.ValidationMessageFor(model => model.DesignLife)
+        </div>
+
+        <div class="editor-label">
+            备注
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Memo)
+            @Html.ValidationMessageFor(model => model.Memo)
+        </div>
+
+        <p>
+            <input type="submit" value="保存" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回设备信息列表", "Index")
+</div>

@@ -1,0 +1,78 @@
+﻿@using EEDDMS.WebSite.Models;
+@model IEnumerable<EEDDMS.WebSite.Models.UnitTreeNode>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>单位信息列表</h2>
+
+@if (TempData["message"] != null)
+{
+    <div class="Message">@TempData["message"]</div>
+}
+
+<p>
+    @Html.ActionLink("新建主分类", "Create")
+</p>
+<table>
+
+@foreach (var item in Model)
+{
+    string trparentId = item.Unit.ParentId.HasValue ? "tr_" + item.Unit.ParentId.ToString() : "";
+    
+    <tr class="row" id="@("tr_" + @item.Unit.Id)" parentId="@(trparentId)">
+        <td>
+            @{
+                string indent = string.Empty;
+                for (int i = 0; i < item.LevelNumber; i++)
+                {
+                    indent += "&nbsp;&nbsp;";
+                }
+            }
+            <div>
+                @Html.Raw(indent)
+
+                @if (item.Unit.Children.Count > 0)
+                {
+                    <a id="@item.Unit.Id" class="plus">-</a>
+                }
+                else
+                {
+                    @:&nbsp;
+                }
+
+                @Html.DisplayFor(modelItem => item.Unit.Name)
+
+                <span class="editarea">
+                    @{
+                        switch (item.IsFirstOrLastNode)
+                        {
+                            case NodeSiblingPosition.Only:
+                                break;
+                            case NodeSiblingPosition.First:
+                                @Html.ActionLink("下移", "MoveDown", new { item.Unit.Id })
+                                break;
+                            case NodeSiblingPosition.Middle:
+                                @Html.ActionLink("上移", "MoveUp", new { item.Unit.Id })
+                                @:
+                                @Html.ActionLink("下移", "MoveDown", new { item.Unit.Id })
+                                break;
+                            case NodeSiblingPosition.Last:
+                                @Html.ActionLink("上移", "MoveUp", new { item.Unit.Id })
+                                break;
+                        }
+                    }
+                    @{Guid parentId = item.Unit.Id;}
+                    @Html.ActionLink("新建子分类", "CreateChild", new { parentId })
+                    @Html.ActionLink("编辑", "Edit", new { item.Unit.Id })
+                    @Html.ActionLink("详情", "Details", new { item.Unit.Id })
+                    @Html.ActionLink("删除", "Delete", new { item.Unit.Id })
+                </span>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

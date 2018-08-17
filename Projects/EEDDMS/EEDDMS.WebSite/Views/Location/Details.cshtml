@@ -1,0 +1,24 @@
+﻿@model EEDDMS.Domain.Entities.Location
+@{
+    ViewBag.Title = "详细信息";
+    Layout = "~/Views/Shared/_GeographyModuleLayout.cshtml";
+}
+<h2>
+    地域信息</h2>
+<fieldset>
+    <legend>详细信息</legend>
+    <div class="display-label">
+        Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+    <div class="display-label">
+        Memo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Memo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回地域信息列表", "Index")
+</p>

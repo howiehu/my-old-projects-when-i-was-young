@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Table xmlns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd" Alias="年度招标计划查询" SourceName="iqm_zb_plan_year_v" SourceType="TVF">
+    <Columns>
+        <Column Name="departName" Alias="部门名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+        <Column Name="planYear" Alias="计划年份" ColumnType="year" IsSumColumn="0" TextAlign="center">
+            <ValueUrl Url="../../zb/zb_plan_year_edit.aspx">
+                <Key>mainid</Key>
+            </ValueUrl>
+        </Column>
+        <Column Name="zbName" Alias="项目名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+        <Column Name="zbBudget" Alias="预算金额（元）" ColumnType="money" IsSumColumn="1" TextAlign="right" />
+        <Column Name="businName" Alias="招标方式" ColumnType="alias" IsSumColumn="0" TextAlign="center">
+            <ValueAlias>
+                <Value Value="委托招标" Alias="委托招标"/>
+                <Value Value="公开招标" Alias="公开招标"/>
+                <Value Value="邀请招标" Alias="邀请招标"/>
+                <Value Value="单一来源采购" Alias="单一来源采购"/>
+                <Value Value="询价采购" Alias="询价采购"/>
+                <Value Value="竞争性谈判" Alias="竞争性谈判"/>
+            </ValueAlias>
+        </Column>
+        <Column Name="zbStartDate" Alias="招标计划开始时间" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+        <Column Name="zbEndDate" Alias="招标计划结束时间" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+        <Column Name="createPerson" Alias="部门录入人" ColumnType="text" IsSumColumn="0" TextAlign="center" />
+        <Column Name="createDate" Alias="送审日期" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+        <Column Name="zbAuditPerson" Alias="招标中心审核人" ColumnType="text" IsSumColumn="0" TextAlign="center" />
+        <Column Name="zbAuditDate" Alias="审核日期" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+        <Column Name="memo" Alias="备注" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    </Columns>
+</Table>

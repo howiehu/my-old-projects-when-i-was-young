@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e2418e17-c051-4cf1-b7ad-d2c564a5a28a" name="Hu Hao@HUHAO-PC 2012-01-08 11:43:47" runUser="HuHao-PC\Hu Hao" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="本地" id="53fcd3f3-1e69-4ef6-9a35-c765d41c65df">
+    <Description>这些设置为本地测试运行的默认测试设置。</Description>
+    <Deployment runDeploymentRoot="Hu Hao_HUHAO-PC 2012-01-08 11_43_47">
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Tests\bin\Debug\Ninject.Web.Mvc.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Tests\bin\Debug\WebActivator.dll" />
+      <DeploymentItem filename="C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Web.Infrastructure\v4.0_1.0.0.0__31bf3856ad364e35\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.WebSite.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EEDDMS.Domain.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Tests\bin\Debug\Ninject.dll" />
+      <DeploymentItem filename="F:\Developer\.NET\Projects\EEDDMS\packages\Moq.4.0.10827\lib\NET40\Moq.dll" />
+    </Deployment>
+    <Execution>
+      <Hosts skipUnhostableTests="false" />
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 7.0">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+        <DataCollectors>
+          <DataCollector uri="datacollector://microsoft/CodeCoverage/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.CodeCoverage.CoveragePlugIn, Microsoft.VisualStudio.QualityTools.Plugins.CodeCoverage, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="代码覆盖率">
+            <Configuration>
+              <CodeCoverage xmlns="">
+                <Regular>
+                  <CodeCoverageItem binaryFile="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EEDDMS.Domain.dll" pdbFile="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EEDDMS.Domain.instr.pdb" instrumentInPlace="true" />
+                  <CodeCoverageItem binaryFile="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.WebSite.dll" pdbFile="F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.WebSite.instr.pdb" instrumentInPlace="true" />
+                </Regular>
+              </CodeCoverage>
+            </Configuration>
+          </DataCollector>
+        </DataCollectors>
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-01-08T11:43:47.2013036+08:00" queuing="2012-01-08T11:43:52.3337126+08:00" start="2012-01-08T11:43:52.4273128+08:00" finish="2012-01-08T11:43:57.0761210+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="63" executed="63" passed="63" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <ResultFiles>
+      <ResultFile path="HUHAO-PC\data.coverage" />
+    </ResultFiles>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Cannot_Edit_Nonexistent_Equipment" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="bb70bf60-6da2-1c72-42b6-b48e496dad43">
+      <Execution id="9064790f-208e-4834-9b06-bb9b50762fa2" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_Equipment" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="64664cc6-7c70-e42f-0fa1-0a830620fa5d">
+      <Execution id="7bea582f-e215-4bc1-8ef1-4219d8e220f8" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="e068f555-0b2c-e2ce-e479-d912e5ffb7ed">
+      <Execution id="9851da6d-cc08-4315-8b4a-f368321f20c0" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Continue_Edit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="a14b433f-3bc4-967e-47eb-7729979f0f06">
+      <Execution id="b8b1aad1-4806-48dc-98a8-d9f97637687e" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Continue_Edit" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="8e6f9094-aa57-f92b-c854-d85943147fac">
+      <Execution id="8acf39dd-c533-4d6e-9cc7-da3e5f9d33d5" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_EquipmentDetails" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="94e704b1-9918-bca7-4ec7-c593a88cdae3">
+      <Execution id="c9d4e77d-9d65-471a-b28f-87492de00401" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_EquipmentDetails" />
+    </UnitTest>
+    <UnitTest name="Can_Move_Up_EquipmentClass" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="98251ff1-4ce2-546f-4abb-7a40873f51ad">
+      <Execution id="06e99350-4ce1-41ab-ada8-b062e07ae50a" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Move_Up_EquipmentClass" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_EquipmentDetails" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="6c553511-266a-0dee-ab1a-eeb6fbc7f81b">
+      <Execution id="29be987d-ba43-480b-bdfe-715a56d473b4" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_EquipmentDetails" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_Equipments" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="7c089dbc-53cf-d336-a76a-7bb9aa2720d7">
+      <Execution id="f14f35a8-f874-4005-910c-7daed4092ecc" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_Equipments" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="fe2cb81e-d05b-80d1-047a-37ccc2405255">
+      <Execution id="490ab043-5db9-4ade-a2eb-67dc913def55" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Show_Equipment_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="d4addeb7-b46b-8b01-be23-81b7430c8f6f">
+      <Execution id="b622f838-2846-4682-9e3f-be5528e56487" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_Equipment_Details" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_Collectors" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="4b5b52ea-0c21-2a5a-79d3-e75415a978c9">
+      <Execution id="a4bd36d0-12d5-490d-80a0-af8aa869b3c0" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_Collectors" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_EquipmentClasses" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="24bedf45-f010-30e0-3791-0a58960f43da">
+      <Execution id="e3ba7cdc-a0af-4a77-a745-a0d8858a7dbd" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_EquipmentClasses" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_Equipment" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="07635d6a-8100-34e9-a7fb-d6a5a6f58965">
+      <Execution id="db2fe436-0fbf-4a08-b5fb-f19bfb8fedf8" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_Equipment" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_Unit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="682ddba8-704d-205f-8ba9-326ef9bdced3">
+      <Execution id="d7e78574-2f17-4959-8c26-fbf5b22eb551" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_Unit" />
+    </UnitTest>
+    <UnitTest name="Can_Show_EquipmentDetail_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="31f000a7-f4e6-7814-7b50-2d491dd9bfb1">
+      <Execution id="d474e2d4-3802-496d-850f-a13d68c2ab45" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_EquipmentDetail_Details" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_EquipmentClasses" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="0ad3bfad-b307-442c-1c0e-a4c212451b49">
+      <Execution id="7de4c172-3b23-44e6-bae1-3af89eb9c3ef" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_EquipmentClasses" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="2b9778e9-87ff-f4af-3cf4-0bfc4d4a39ee">
+      <Execution id="ea438002-f075-4b4e-8ffe-7e3a00cac188" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Show_Unit_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="dc620eea-5d39-b6d6-8980-95d328278ec4">
+      <Execution id="c7d8df5c-28d6-4535-ab50-b3639cfbe7db" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_Unit_Details" />
+    </UnitTest>
+    <UnitTest name="Can_Continue_Edit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="766e709f-e27e-214f-b7bd-49cab19e564f">
+      <Execution id="bd3e9517-b354-41f4-87d7-e2773d1c0d49" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Continue_Edit" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="7a1e9376-9028-74db-e7f2-2863dd7ce10b">
+      <Execution id="97b8d0bd-a205-4b69-a870-e88197fcb5f0" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="48d2e3b2-fe04-b941-3cb1-174bdcad81d1">
+      <Execution id="af7f7007-fbbb-47d4-9ccd-81215a38c3f4" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_Manufacturers" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="39850d68-9b5f-69cf-562d-7e38fd569a20">
+      <Execution id="cccd3bcd-3e99-4d1b-b154-a9cff2c57399" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_Manufacturers" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_Locations" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="05d21472-c35c-f556-a27e-7ac83287c664">
+      <Execution id="5b933e52-0e04-47ff-9cb9-b24bfb0c902a" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_Locations" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_Locations" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="03a5e672-e1b7-c235-b1d0-fcdc1201125f">
+      <Execution id="10ec67b6-e600-4660-8b98-801129d6d23a" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_Locations" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_EquipmentClass" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="9c986d41-c766-f1ab-ed19-691435fd933a">
+      <Execution id="09c0d81d-be55-4271-80c7-bfdaa1a61cda" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_EquipmentClass" />
+    </UnitTest>
+    <UnitTest name="Can_Show_EquipmentClass_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="3b1756a5-4eb9-4ed4-6fbf-6e51965f461f">
+      <Execution id="685918a7-c09e-4b62-99bf-c46f48c9420e" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_EquipmentClass_Details" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_Manufacturer" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="769842bd-80ba-3e5d-b9db-94ab54f176e1">
+      <Execution id="17380225-fa77-44e0-a37d-f3c822350c55" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_Manufacturer" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_Units" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="d159ea66-d80f-4e70-28f9-76757fddaaab">
+      <Execution id="ed9110bc-5042-46c6-81f0-2fbe0b56be0e" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_Units" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="c485ac2d-d198-ff2c-a138-5988046546c4">
+      <Execution id="125b2e6b-97ed-423a-a08a-20491c97c9f4" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_Locations" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="b8044e2e-9ceb-92ae-a87d-c00fa25ff9ec">
+      <Execution id="69c071ec-c471-431d-84fd-efd7d9e071f9" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_Locations" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_Collectors" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="984b6b81-6194-f851-bd59-2f1a22d8b1d5">
+      <Execution id="9f1b11c6-4c9d-4ac2-bf97-a9f823e1de8d" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_Collectors" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="aa4c4c5f-b583-b047-3fb2-d067db16d4f4">
+      <Execution id="7a166f1d-3719-40c8-90bc-33bd9c676adf" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_Locations" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="7028450f-9a76-d43f-cd7d-9dad8d8cce26">
+      <Execution id="eb31b1d2-aee8-4819-90cf-a8679695931c" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_Locations" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="37d18b93-0737-e20e-c251-972c3b0803c5">
+      <Execution id="d2c01863-c540-45af-9c83-8bdcec92690c" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_EquipmentDetail" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="ae2a92d4-d797-6681-b06b-8f86e0d0b750">
+      <Execution id="1d789ce4-7388-4bd8-bbcd-6008efd1bce9" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_EquipmentDetail" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_Manufacturers" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="7c197a2a-05cc-8c25-485f-2f366522f93e">
+      <Execution id="49210dc8-5622-4fd7-ae1e-550bfcb89777" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_Manufacturers" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_Locations" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="62841e84-553d-5e99-7762-be7939df9539">
+      <Execution id="df4b5d4c-0f6a-43a6-8ff8-9e37652ec5f2" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_Locations" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="677aa32d-2061-0d1c-d3f9-374696d7b056">
+      <Execution id="61e1068b-2dde-4bbb-aef7-cde26f233143" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="2a278308-b7dc-7cb0-fa93-a1fae2bffced">
+      <Execution id="c1f54a99-1b4e-4271-931f-ed4c087f4dff" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Can_Show_Collector_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="6a959719-dae9-d412-9945-c56d46ed73f1">
+      <Execution id="a78815d7-c28c-493a-af5b-af4a5872b434" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_Collector_Details" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_Collectors" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="85359990-63a4-8e71-ad29-14891a05dfbf">
+      <Execution id="8e5ce980-3423-4db4-a7bd-f97bfcc68208" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_Collectors" />
+    </UnitTest>
+    <UnitTest name="Can_Save_Valid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="e946a969-8c32-2a07-9222-de7b3224b454">
+      <Execution id="cbf9b45f-c177-49c1-804b-c94c2ad7021d" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Save_Valid_Changes" />
+    </UnitTest>
+    <UnitTest name="Cannot_Save_Invalid_Changes" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="bc821964-f5f7-18c6-c4f0-a2ec75156c6d">
+      <Execution id="a37280bd-672f-4d00-89c9-3f7c3db99702" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Save_Invalid_Changes" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_Manufacturers" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="4d961f8e-0594-53ff-f5a6-43f6e8b608ae">
+      <Execution id="a641cb3d-aecb-475d-b30c-289b527aa3e5" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_Manufacturers" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_Units" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="1cdcb796-1638-c9d1-750b-d338d70c7bed">
+      <Execution id="2a7e25a1-8e9f-47fb-afd5-2e2b58f3afa4" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_Units" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_EquipmentClass" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="cbfbb373-17b7-8d75-8ca6-6d480c0a36df">
+      <Execution id="8c2cf218-4039-4c7c-bdb7-7b0181e4940a" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_EquipmentClass" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_EquipmentClasses" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="efc05520-c146-b83a-c32e-936696d92b88">
+      <Execution id="5d10f9e6-799e-4ea7-82bd-b08a293137b3" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_EquipmentClasses" />
+    </UnitTest>
+    <UnitTest name="Can_Move_Down_EquipmentClass" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="f99c74b2-ace8-0604-2088-38ed1909e95f">
+      <Execution id="ab053cef-5bf1-4fb5-acf2-ec7628f9744c" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentClassControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Move_Down_EquipmentClass" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_Unit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="ebcd1165-ec28-3fe7-dadb-f2d969a40330">
+      <Execution id="42ec4953-dea3-4ac6-bc51-f165714137b2" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_Unit" />
+    </UnitTest>
+    <UnitTest name="Can_Move_Up_Unit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="95f40c64-1437-feac-a9a1-5689fe0b655c">
+      <Execution id="45021f42-e740-438c-868e-80a611f19c10" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Move_Up_Unit" />
+    </UnitTest>
+    <UnitTest name="Can_Show_Locations_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="82972afe-e69c-b97c-973f-79267cbdf61c">
+      <Execution id="c82891b0-dc4f-48d4-90e4-628397071d9f" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.LocationControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_Locations_Details" />
+    </UnitTest>
+    <UnitTest name="Cannot_Delete_Invalid_EquipmentDetails" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="9041141e-d8c8-8d35-5757-1ed9ea79de7f">
+      <Execution id="805303da-e3f9-4796-8da5-f88b3879e7a0" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Delete_Invalid_EquipmentDetails" />
+    </UnitTest>
+    <UnitTest name="Can_Show_Manufacturer_Details" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="deb319a7-965b-1e11-8e64-25999e1b9c85">
+      <Execution id="9beb97d4-583c-46ac-b13d-b68bcb6b2888" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Show_Manufacturer_Details" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_EquipmentDetail" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="d7699ade-953f-327a-1ab4-78d3289ed877">
+      <Execution id="e661b954-e7ed-4dc8-bb12-f6802897411a" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_EquipmentDetail" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_Manufacturer" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="3f73e8dd-d133-525e-b81c-136f12475da8">
+      <Execution id="4df1d995-f58d-4fd1-a7a5-2e868a9bd841" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.ManufacturerControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_Manufacturer" />
+    </UnitTest>
+    <UnitTest name="Can_Continue_Edit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="589bea15-84d8-789a-4409-f741d3c32534">
+      <Execution id="5c58c991-c546-44da-8a84-1ae4d1d028a0" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentDetailControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Continue_Edit" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_Units" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="18a6eb2e-bff3-3432-8664-028128340861">
+      <Execution id="cb3b2dd8-1840-4ea4-b4a3-5cdb4af7da51" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_Units" />
+    </UnitTest>
+    <UnitTest name="Can_Delete_Valid_Equipments" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="09240715-e850-fe27-ba34-612d910b9ec7">
+      <Execution id="42ec76bd-150a-4d21-b207-0d1f362524a5" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Delete_Valid_Equipments" />
+    </UnitTest>
+    <UnitTest name="Index_Contains_All_Equipments" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="1175f0b4-7b7c-9f5e-1880-fb8966c24d1c">
+      <Execution id="b96ba7ae-948a-4014-8b03-a95d1153bdc6" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.EquipmentControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index_Contains_All_Equipments" />
+    </UnitTest>
+    <UnitTest name="Can_Edit_Collector" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="e8f9ecd4-9075-f6b1-f0a7-d0342c9544dd">
+      <Execution id="bac49599-de43-4ad3-b85b-9b09507f7d83" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Edit_Collector" />
+    </UnitTest>
+    <UnitTest name="Cannot_Edit_Nonexistent_Collector" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="4efd2c6c-4aba-d018-fde4-8d1a583797fd">
+      <Execution id="da10f4c3-a801-42a6-a514-befbe520f620" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.CollectorControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Cannot_Edit_Nonexistent_Collector" />
+    </UnitTest>
+    <UnitTest name="Can_Move_Down_Unit" storage="f:\developer\.net\projects\eeddms\eeddms.tests\bin\debug\eeddms.tests.dll" id="917b9360-ba49-2e8e-5c0a-0ba15570ac40">
+      <Execution id="73f398eb-b32b-4b65-ab29-6294928a1c70" />
+      <TestMethod codeBase="F:/Developer/.NET/Projects/EEDDMS/EEDDMS.Tests/bin/Debug/EEDDMS.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="EEDDMS.Tests.UnitControllerTest, EEDDMS.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Can_Move_Down_Unit" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="列表中未列出的结果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有已加载的结果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="03a5e672-e1b7-c235-b1d0-fcdc1201125f" executionId="10ec67b6-e600-4660-8b98-801129d6d23a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05d21472-c35c-f556-a27e-7ac83287c664" executionId="5b933e52-0e04-47ff-9cb9-b24bfb0c902a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07635d6a-8100-34e9-a7fb-d6a5a6f58965" executionId="db2fe436-0fbf-4a08-b5fb-f19bfb8fedf8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09240715-e850-fe27-ba34-612d910b9ec7" executionId="42ec76bd-150a-4d21-b207-0d1f362524a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ad3bfad-b307-442c-1c0e-a4c212451b49" executionId="7de4c172-3b23-44e6-bae1-3af89eb9c3ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1175f0b4-7b7c-9f5e-1880-fb8966c24d1c" executionId="b96ba7ae-948a-4014-8b03-a95d1153bdc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18a6eb2e-bff3-3432-8664-028128340861" executionId="cb3b2dd8-1840-4ea4-b4a3-5cdb4af7da51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1cdcb796-1638-c9d1-750b-d338d70c7bed" executionId="2a7e25a1-8e9f-47fb-afd5-2e2b58f3afa4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24bedf45-f010-30e0-3791-0a58960f43da" executionId="e3ba7cdc-a0af-4a77-a745-a0d8858a7dbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a278308-b7dc-7cb0-fa93-a1fae2bffced" executionId="c1f54a99-1b4e-4271-931f-ed4c087f4dff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b9778e9-87ff-f4af-3cf4-0bfc4d4a39ee" executionId="ea438002-f075-4b4e-8ffe-7e3a00cac188" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="31f000a7-f4e6-7814-7b50-2d491dd9bfb1" executionId="d474e2d4-3802-496d-850f-a13d68c2ab45" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37d18b93-0737-e20e-c251-972c3b0803c5" executionId="d2c01863-c540-45af-9c83-8bdcec92690c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39850d68-9b5f-69cf-562d-7e38fd569a20" executionId="cccd3bcd-3e99-4d1b-b154-a9cff2c57399" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b1756a5-4eb9-4ed4-6fbf-6e51965f461f" executionId="685918a7-c09e-4b62-99bf-c46f48c9420e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f73e8dd-d133-525e-b81c-136f12475da8" executionId="4df1d995-f58d-4fd1-a7a5-2e868a9bd841" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48d2e3b2-fe04-b941-3cb1-174bdcad81d1" executionId="af7f7007-fbbb-47d4-9ccd-81215a38c3f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b5b52ea-0c21-2a5a-79d3-e75415a978c9" executionId="a4bd36d0-12d5-490d-80a0-af8aa869b3c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d961f8e-0594-53ff-f5a6-43f6e8b608ae" executionId="a641cb3d-aecb-475d-b30c-289b527aa3e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4efd2c6c-4aba-d018-fde4-8d1a583797fd" executionId="da10f4c3-a801-42a6-a514-befbe520f620" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="589bea15-84d8-789a-4409-f741d3c32534" executionId="5c58c991-c546-44da-8a84-1ae4d1d028a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62841e84-553d-5e99-7762-be7939df9539" executionId="df4b5d4c-0f6a-43a6-8ff8-9e37652ec5f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64664cc6-7c70-e42f-0fa1-0a830620fa5d" executionId="7bea582f-e215-4bc1-8ef1-4219d8e220f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="677aa32d-2061-0d1c-d3f9-374696d7b056" executionId="61e1068b-2dde-4bbb-aef7-cde26f233143" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="682ddba8-704d-205f-8ba9-326ef9bdced3" executionId="d7e78574-2f17-4959-8c26-fbf5b22eb551" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a959719-dae9-d412-9945-c56d46ed73f1" executionId="a78815d7-c28c-493a-af5b-af4a5872b434" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c553511-266a-0dee-ab1a-eeb6fbc7f81b" executionId="29be987d-ba43-480b-bdfe-715a56d473b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7028450f-9a76-d43f-cd7d-9dad8d8cce26" executionId="eb31b1d2-aee8-4819-90cf-a8679695931c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="766e709f-e27e-214f-b7bd-49cab19e564f" executionId="bd3e9517-b354-41f4-87d7-e2773d1c0d49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="769842bd-80ba-3e5d-b9db-94ab54f176e1" executionId="17380225-fa77-44e0-a37d-f3c822350c55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7a1e9376-9028-74db-e7f2-2863dd7ce10b" executionId="97b8d0bd-a205-4b69-a870-e88197fcb5f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c089dbc-53cf-d336-a76a-7bb9aa2720d7" executionId="f14f35a8-f874-4005-910c-7daed4092ecc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c197a2a-05cc-8c25-485f-2f366522f93e" executionId="49210dc8-5622-4fd7-ae1e-550bfcb89777" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82972afe-e69c-b97c-973f-79267cbdf61c" executionId="c82891b0-dc4f-48d4-90e4-628397071d9f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85359990-63a4-8e71-ad29-14891a05dfbf" executionId="8e5ce980-3423-4db4-a7bd-f97bfcc68208" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e6f9094-aa57-f92b-c854-d85943147fac" executionId="8acf39dd-c533-4d6e-9cc7-da3e5f9d33d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9041141e-d8c8-8d35-5757-1ed9ea79de7f" executionId="805303da-e3f9-4796-8da5-f88b3879e7a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="917b9360-ba49-2e8e-5c0a-0ba15570ac40" executionId="73f398eb-b32b-4b65-ab29-6294928a1c70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94e704b1-9918-bca7-4ec7-c593a88cdae3" executionId="c9d4e77d-9d65-471a-b28f-87492de00401" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95f40c64-1437-feac-a9a1-5689fe0b655c" executionId="45021f42-e740-438c-868e-80a611f19c10" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="98251ff1-4ce2-546f-4abb-7a40873f51ad" executionId="06e99350-4ce1-41ab-ada8-b062e07ae50a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="984b6b81-6194-f851-bd59-2f1a22d8b1d5" executionId="9f1b11c6-4c9d-4ac2-bf97-a9f823e1de8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c986d41-c766-f1ab-ed19-691435fd933a" executionId="09c0d81d-be55-4271-80c7-bfdaa1a61cda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a14b433f-3bc4-967e-47eb-7729979f0f06" executionId="b8b1aad1-4806-48dc-98a8-d9f97637687e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa4c4c5f-b583-b047-3fb2-d067db16d4f4" executionId="7a166f1d-3719-40c8-90bc-33bd9c676adf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae2a92d4-d797-6681-b06b-8f86e0d0b750" executionId="1d789ce4-7388-4bd8-bbcd-6008efd1bce9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8044e2e-9ceb-92ae-a87d-c00fa25ff9ec" executionId="69c071ec-c471-431d-84fd-efd7d9e071f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb70bf60-6da2-1c72-42b6-b48e496dad43" executionId="9064790f-208e-4834-9b06-bb9b50762fa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc821964-f5f7-18c6-c4f0-a2ec75156c6d" executionId="a37280bd-672f-4d00-89c9-3f7c3db99702" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c485ac2d-d198-ff2c-a138-5988046546c4" executionId="125b2e6b-97ed-423a-a08a-20491c97c9f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cbfbb373-17b7-8d75-8ca6-6d480c0a36df" executionId="8c2cf218-4039-4c7c-bdb7-7b0181e4940a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d159ea66-d80f-4e70-28f9-76757fddaaab" executionId="ed9110bc-5042-46c6-81f0-2fbe0b56be0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4addeb7-b46b-8b01-be23-81b7430c8f6f" executionId="b622f838-2846-4682-9e3f-be5528e56487" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7699ade-953f-327a-1ab4-78d3289ed877" executionId="e661b954-e7ed-4dc8-bb12-f6802897411a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc620eea-5d39-b6d6-8980-95d328278ec4" executionId="c7d8df5c-28d6-4535-ab50-b3639cfbe7db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="deb319a7-965b-1e11-8e64-25999e1b9c85" executionId="9beb97d4-583c-46ac-b13d-b68bcb6b2888" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e068f555-0b2c-e2ce-e479-d912e5ffb7ed" executionId="9851da6d-cc08-4315-8b4a-f368321f20c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8f9ecd4-9075-f6b1-f0a7-d0342c9544dd" executionId="bac49599-de43-4ad3-b85b-9b09507f7d83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e946a969-8c32-2a07-9222-de7b3224b454" executionId="cbf9b45f-c177-49c1-804b-c94c2ad7021d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebcd1165-ec28-3fe7-dadb-f2d969a40330" executionId="42ec4953-dea3-4ac6-bc51-f165714137b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efc05520-c146-b83a-c32e-936696d92b88" executionId="5d10f9e6-799e-4ea7-82bd-b08a293137b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f99c74b2-ace8-0604-2088-38ed1909e95f" executionId="ab053cef-5bf1-4fb5-acf2-ec7628f9744c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe2cb81e-d05b-80d1-047a-37ccc2405255" executionId="490ab043-5db9-4ade-a2eb-67dc913def55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="10ec67b6-e600-4660-8b98-801129d6d23a" testId="03a5e672-e1b7-c235-b1d0-fcdc1201125f" testName="Cannot_Edit_Nonexistent_Locations" computerName="HUHAO-PC" duration="00:00:00.3788891" startTime="2012-01-08T11:43:53.5037147+08:00" endTime="2012-01-08T11:43:54.2213160+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10ec67b6-e600-4660-8b98-801129d6d23a">
+    </UnitTestResult>
+    <UnitTestResult executionId="5b933e52-0e04-47ff-9cb9-b24bfb0c902a" testId="05d21472-c35c-f556-a27e-7ac83287c664" testName="Cannot_Delete_Invalid_Locations" computerName="HUHAO-PC" duration="00:00:00.0449848" startTime="2012-01-08T11:43:54.2213160+08:00" endTime="2012-01-08T11:43:54.2681160+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b933e52-0e04-47ff-9cb9-b24bfb0c902a">
+    </UnitTestResult>
+    <UnitTestResult executionId="db2fe436-0fbf-4a08-b5fb-f19bfb8fedf8" testId="07635d6a-8100-34e9-a7fb-d6a5a6f58965" testName="Can_Edit_Equipment" computerName="HUHAO-PC" duration="00:00:00.2140096" startTime="2012-01-08T11:43:54.2681160+08:00" endTime="2012-01-08T11:43:54.4865164+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db2fe436-0fbf-4a08-b5fb-f19bfb8fedf8">
+    </UnitTestResult>
+    <UnitTestResult executionId="42ec76bd-150a-4d21-b207-0d1f362524a5" testId="09240715-e850-fe27-ba34-612d910b9ec7" testName="Can_Delete_Valid_Equipments" computerName="HUHAO-PC" duration="00:00:00.0066288" startTime="2012-01-08T11:43:54.4865164+08:00" endTime="2012-01-08T11:43:54.5021164+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42ec76bd-150a-4d21-b207-0d1f362524a5">
+    </UnitTestResult>
+    <UnitTestResult executionId="7de4c172-3b23-44e6-bae1-3af89eb9c3ef" testId="0ad3bfad-b307-442c-1c0e-a4c212451b49" testName="Cannot_Delete_Invalid_EquipmentClasses" computerName="HUHAO-PC" duration="00:00:00.0171823" startTime="2012-01-08T11:43:54.5021164+08:00" endTime="2012-01-08T11:43:54.5177165+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7de4c172-3b23-44e6-bae1-3af89eb9c3ef">
+    </UnitTestResult>
+    <UnitTestResult executionId="b96ba7ae-948a-4014-8b03-a95d1153bdc6" testId="1175f0b4-7b7c-9f5e-1880-fb8966c24d1c" testName="Index_Contains_All_Equipments" computerName="HUHAO-PC" duration="00:00:00.0785982" startTime="2012-01-08T11:43:54.5177165+08:00" endTime="2012-01-08T11:43:54.6113166+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b96ba7ae-948a-4014-8b03-a95d1153bdc6">
+    </UnitTestResult>
+    <UnitTestResult executionId="cb3b2dd8-1840-4ea4-b4a3-5cdb4af7da51" testId="18a6eb2e-bff3-3432-8664-028128340861" testName="Can_Delete_Valid_Units" computerName="HUHAO-PC" duration="00:00:00.0180446" startTime="2012-01-08T11:43:54.6113166+08:00" endTime="2012-01-08T11:43:54.6269167+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb3b2dd8-1840-4ea4-b4a3-5cdb4af7da51">
+    </UnitTestResult>
+    <UnitTestResult executionId="2a7e25a1-8e9f-47fb-afd5-2e2b58f3afa4" testId="1cdcb796-1638-c9d1-750b-d338d70c7bed" testName="Index_Contains_All_Units" computerName="HUHAO-PC" duration="00:00:00.0244848" startTime="2012-01-08T11:43:54.6269167+08:00" endTime="2012-01-08T11:43:54.6581167+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a7e25a1-8e9f-47fb-afd5-2e2b58f3afa4">
+    </UnitTestResult>
+    <UnitTestResult executionId="e3ba7cdc-a0af-4a77-a745-a0d8858a7dbd" testId="24bedf45-f010-30e0-3791-0a58960f43da" testName="Can_Delete_Valid_EquipmentClasses" computerName="HUHAO-PC" duration="00:00:00.0040168" startTime="2012-01-08T11:43:54.6581167+08:00" endTime="2012-01-08T11:43:54.6737167+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3ba7cdc-a0af-4a77-a745-a0d8858a7dbd">
+    </UnitTestResult>
+    <UnitTestResult executionId="c1f54a99-1b4e-4271-931f-ed4c087f4dff" testId="2a278308-b7dc-7cb0-fa93-a1fae2bffced" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0112212" startTime="2012-01-08T11:43:54.6737167+08:00" endTime="2012-01-08T11:43:54.6893168+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1f54a99-1b4e-4271-931f-ed4c087f4dff">
+    </UnitTestResult>
+    <UnitTestResult executionId="ea438002-f075-4b4e-8ffe-7e3a00cac188" testId="2b9778e9-87ff-f4af-3cf4-0bfc4d4a39ee" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0197072" startTime="2012-01-08T11:43:54.6893168+08:00" endTime="2012-01-08T11:43:54.7049168+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea438002-f075-4b4e-8ffe-7e3a00cac188">
+    </UnitTestResult>
+    <UnitTestResult executionId="d474e2d4-3802-496d-850f-a13d68c2ab45" testId="31f000a7-f4e6-7814-7b50-2d491dd9bfb1" testName="Can_Show_EquipmentDetail_Details" computerName="HUHAO-PC" duration="00:00:00.0079582" startTime="2012-01-08T11:43:54.7049168+08:00" endTime="2012-01-08T11:43:54.7205168+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d474e2d4-3802-496d-850f-a13d68c2ab45">
+    </UnitTestResult>
+    <UnitTestResult executionId="d2c01863-c540-45af-9c83-8bdcec92690c" testId="37d18b93-0737-e20e-c251-972c3b0803c5" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0024655" startTime="2012-01-08T11:43:54.7205168+08:00" endTime="2012-01-08T11:43:54.7361169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2c01863-c540-45af-9c83-8bdcec92690c">
+    </UnitTestResult>
+    <UnitTestResult executionId="cccd3bcd-3e99-4d1b-b154-a9cff2c57399" testId="39850d68-9b5f-69cf-562d-7e38fd569a20" testName="Index_Contains_All_Manufacturers" computerName="HUHAO-PC" duration="00:00:00.0039268" startTime="2012-01-08T11:43:54.7361169+08:00" endTime="2012-01-08T11:43:54.7361169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cccd3bcd-3e99-4d1b-b154-a9cff2c57399">
+    </UnitTestResult>
+    <UnitTestResult executionId="685918a7-c09e-4b62-99bf-c46f48c9420e" testId="3b1756a5-4eb9-4ed4-6fbf-6e51965f461f" testName="Can_Show_EquipmentClass_Details" computerName="HUHAO-PC" duration="00:00:00.0053121" startTime="2012-01-08T11:43:54.7361169+08:00" endTime="2012-01-08T11:43:54.7517169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="685918a7-c09e-4b62-99bf-c46f48c9420e">
+    </UnitTestResult>
+    <UnitTestResult executionId="4df1d995-f58d-4fd1-a7a5-2e868a9bd841" testId="3f73e8dd-d133-525e-b81c-136f12475da8" testName="Can_Edit_Manufacturer" computerName="HUHAO-PC" duration="00:00:00.0060588" startTime="2012-01-08T11:43:54.7517169+08:00" endTime="2012-01-08T11:43:54.7673169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4df1d995-f58d-4fd1-a7a5-2e868a9bd841">
+    </UnitTestResult>
+    <UnitTestResult executionId="af7f7007-fbbb-47d4-9ccd-81215a38c3f4" testId="48d2e3b2-fe04-b941-3cb1-174bdcad81d1" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0019676" startTime="2012-01-08T11:43:54.7673169+08:00" endTime="2012-01-08T11:43:54.7673169+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af7f7007-fbbb-47d4-9ccd-81215a38c3f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="a4bd36d0-12d5-490d-80a0-af8aa869b3c0" testId="4b5b52ea-0c21-2a5a-79d3-e75415a978c9" testName="Can_Delete_Valid_Collectors" computerName="HUHAO-PC" duration="00:00:00.0177250" startTime="2012-01-08T11:43:54.7673169+08:00" endTime="2012-01-08T11:43:54.7985170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4bd36d0-12d5-490d-80a0-af8aa869b3c0">
+    </UnitTestResult>
+    <UnitTestResult executionId="a641cb3d-aecb-475d-b30c-289b527aa3e5" testId="4d961f8e-0594-53ff-f5a6-43f6e8b608ae" testName="Cannot_Delete_Invalid_Manufacturers" computerName="HUHAO-PC" duration="00:00:00.0044785" startTime="2012-01-08T11:43:54.7985170+08:00" endTime="2012-01-08T11:43:54.7985170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a641cb3d-aecb-475d-b30c-289b527aa3e5">
+    </UnitTestResult>
+    <UnitTestResult executionId="da10f4c3-a801-42a6-a514-befbe520f620" testId="4efd2c6c-4aba-d018-fde4-8d1a583797fd" testName="Cannot_Edit_Nonexistent_Collector" computerName="HUHAO-PC" duration="00:00:00.0038035" startTime="2012-01-08T11:43:54.7985170+08:00" endTime="2012-01-08T11:43:54.8141170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da10f4c3-a801-42a6-a514-befbe520f620">
+    </UnitTestResult>
+    <UnitTestResult executionId="5c58c991-c546-44da-8a84-1ae4d1d028a0" testId="589bea15-84d8-789a-4409-f741d3c32534" testName="Can_Continue_Edit" computerName="HUHAO-PC" duration="00:00:00.0076101" startTime="2012-01-08T11:43:54.8141170+08:00" endTime="2012-01-08T11:43:54.8297170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c58c991-c546-44da-8a84-1ae4d1d028a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="df4b5d4c-0f6a-43a6-8ff8-9e37652ec5f2" testId="62841e84-553d-5e99-7762-be7939df9539" testName="Index_Contains_All_Locations" computerName="HUHAO-PC" duration="00:00:00.0020142" startTime="2012-01-08T11:43:54.8297170+08:00" endTime="2012-01-08T11:43:54.8297170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df4b5d4c-0f6a-43a6-8ff8-9e37652ec5f2">
+    </UnitTestResult>
+    <UnitTestResult executionId="7bea582f-e215-4bc1-8ef1-4219d8e220f8" testId="64664cc6-7c70-e42f-0fa1-0a830620fa5d" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0012603" startTime="2012-01-08T11:43:54.8297170+08:00" endTime="2012-01-08T11:43:54.8297170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bea582f-e215-4bc1-8ef1-4219d8e220f8">
+    </UnitTestResult>
+    <UnitTestResult executionId="61e1068b-2dde-4bbb-aef7-cde26f233143" testId="677aa32d-2061-0d1c-d3f9-374696d7b056" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0024297" startTime="2012-01-08T11:43:54.8453170+08:00" endTime="2012-01-08T11:43:54.8453170+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61e1068b-2dde-4bbb-aef7-cde26f233143">
+    </UnitTestResult>
+    <UnitTestResult executionId="d7e78574-2f17-4959-8c26-fbf5b22eb551" testId="682ddba8-704d-205f-8ba9-326ef9bdced3" testName="Can_Edit_Unit" computerName="HUHAO-PC" duration="00:00:00.0055545" startTime="2012-01-08T11:43:54.8453170+08:00" endTime="2012-01-08T11:43:54.8609171+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7e78574-2f17-4959-8c26-fbf5b22eb551">
+    </UnitTestResult>
+    <UnitTestResult executionId="a78815d7-c28c-493a-af5b-af4a5872b434" testId="6a959719-dae9-d412-9945-c56d46ed73f1" testName="Can_Show_Collector_Details" computerName="HUHAO-PC" duration="00:00:00.0051649" startTime="2012-01-08T11:43:54.8609171+08:00" endTime="2012-01-08T11:43:54.8609171+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a78815d7-c28c-493a-af5b-af4a5872b434">
+    </UnitTestResult>
+    <UnitTestResult executionId="29be987d-ba43-480b-bdfe-715a56d473b4" testId="6c553511-266a-0dee-ab1a-eeb6fbc7f81b" testName="Index_Contains_All_EquipmentDetails" computerName="HUHAO-PC" duration="00:00:00.0098790" startTime="2012-01-08T11:43:54.8609171+08:00" endTime="2012-01-08T11:43:54.8765171+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29be987d-ba43-480b-bdfe-715a56d473b4">
+    </UnitTestResult>
+    <UnitTestResult executionId="eb31b1d2-aee8-4819-90cf-a8679695931c" testId="7028450f-9a76-d43f-cd7d-9dad8d8cce26" testName="Can_Edit_Locations" computerName="HUHAO-PC" duration="00:00:00.0046624" startTime="2012-01-08T11:43:54.8765171+08:00" endTime="2012-01-08T11:43:54.8921171+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb31b1d2-aee8-4819-90cf-a8679695931c">
+    </UnitTestResult>
+    <UnitTestResult executionId="bd3e9517-b354-41f4-87d7-e2773d1c0d49" testId="766e709f-e27e-214f-b7bd-49cab19e564f" testName="Can_Continue_Edit" computerName="HUHAO-PC" duration="00:00:00.0074556" startTime="2012-01-08T11:43:54.8921171+08:00" endTime="2012-01-08T11:43:54.9077172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd3e9517-b354-41f4-87d7-e2773d1c0d49">
+    </UnitTestResult>
+    <UnitTestResult executionId="17380225-fa77-44e0-a37d-f3c822350c55" testId="769842bd-80ba-3e5d-b9db-94ab54f176e1" testName="Cannot_Edit_Nonexistent_Manufacturer" computerName="HUHAO-PC" duration="00:00:00.0023196" startTime="2012-01-08T11:43:54.9077172+08:00" endTime="2012-01-08T11:43:54.9077172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17380225-fa77-44e0-a37d-f3c822350c55">
+    </UnitTestResult>
+    <UnitTestResult executionId="97b8d0bd-a205-4b69-a870-e88197fcb5f0" testId="7a1e9376-9028-74db-e7f2-2863dd7ce10b" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0029639" startTime="2012-01-08T11:43:54.9077172+08:00" endTime="2012-01-08T11:43:54.9233172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97b8d0bd-a205-4b69-a870-e88197fcb5f0">
+    </UnitTestResult>
+    <UnitTestResult executionId="f14f35a8-f874-4005-910c-7daed4092ecc" testId="7c089dbc-53cf-d336-a76a-7bb9aa2720d7" testName="Cannot_Delete_Invalid_Equipments" computerName="HUHAO-PC" duration="00:00:00.0031891" startTime="2012-01-08T11:43:54.9233172+08:00" endTime="2012-01-08T11:43:54.9233172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f14f35a8-f874-4005-910c-7daed4092ecc">
+    </UnitTestResult>
+    <UnitTestResult executionId="49210dc8-5622-4fd7-ae1e-550bfcb89777" testId="7c197a2a-05cc-8c25-485f-2f366522f93e" testName="Can_Delete_Valid_Manufacturers" computerName="HUHAO-PC" duration="00:00:00.0040330" startTime="2012-01-08T11:43:54.9233172+08:00" endTime="2012-01-08T11:43:54.9389172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49210dc8-5622-4fd7-ae1e-550bfcb89777">
+    </UnitTestResult>
+    <UnitTestResult executionId="c82891b0-dc4f-48d4-90e4-628397071d9f" testId="82972afe-e69c-b97c-973f-79267cbdf61c" testName="Can_Show_Locations_Details" computerName="HUHAO-PC" duration="00:00:00.0060933" startTime="2012-01-08T11:43:54.9389172+08:00" endTime="2012-01-08T11:43:54.9389172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c82891b0-dc4f-48d4-90e4-628397071d9f">
+    </UnitTestResult>
+    <UnitTestResult executionId="8e5ce980-3423-4db4-a7bd-f97bfcc68208" testId="85359990-63a4-8e71-ad29-14891a05dfbf" testName="Index_Contains_All_Collectors" computerName="HUHAO-PC" duration="00:00:00.0094374" startTime="2012-01-08T11:43:54.9545172+08:00" endTime="2012-01-08T11:43:54.9545172+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e5ce980-3423-4db4-a7bd-f97bfcc68208">
+    </UnitTestResult>
+    <UnitTestResult executionId="8acf39dd-c533-4d6e-9cc7-da3e5f9d33d5" testId="8e6f9094-aa57-f92b-c854-d85943147fac" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0082884" startTime="2012-01-08T11:43:54.9701173+08:00" endTime="2012-01-08T11:43:54.9701173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8acf39dd-c533-4d6e-9cc7-da3e5f9d33d5">
+    </UnitTestResult>
+    <UnitTestResult executionId="805303da-e3f9-4796-8da5-f88b3879e7a0" testId="9041141e-d8c8-8d35-5757-1ed9ea79de7f" testName="Cannot_Delete_Invalid_EquipmentDetails" computerName="HUHAO-PC" duration="00:00:00.0040160" startTime="2012-01-08T11:43:54.9701173+08:00" endTime="2012-01-08T11:43:54.9857173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="805303da-e3f9-4796-8da5-f88b3879e7a0">
+    </UnitTestResult>
+    <UnitTestResult executionId="73f398eb-b32b-4b65-ab29-6294928a1c70" testId="917b9360-ba49-2e8e-5c0a-0ba15570ac40" testName="Can_Move_Down_Unit" computerName="HUHAO-PC" duration="00:00:00.0030774" startTime="2012-01-08T11:43:54.9857173+08:00" endTime="2012-01-08T11:43:54.9857173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73f398eb-b32b-4b65-ab29-6294928a1c70">
+    </UnitTestResult>
+    <UnitTestResult executionId="c9d4e77d-9d65-471a-b28f-87492de00401" testId="94e704b1-9918-bca7-4ec7-c593a88cdae3" testName="Can_Delete_Valid_EquipmentDetails" computerName="HUHAO-PC" duration="00:00:00.0045864" startTime="2012-01-08T11:43:54.9857173+08:00" endTime="2012-01-08T11:43:55.0013173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9d4e77d-9d65-471a-b28f-87492de00401">
+    </UnitTestResult>
+    <UnitTestResult executionId="45021f42-e740-438c-868e-80a611f19c10" testId="95f40c64-1437-feac-a9a1-5689fe0b655c" testName="Can_Move_Up_Unit" computerName="HUHAO-PC" duration="00:00:00.0021537" startTime="2012-01-08T11:43:55.0013173+08:00" endTime="2012-01-08T11:43:55.0013173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45021f42-e740-438c-868e-80a611f19c10">
+    </UnitTestResult>
+    <UnitTestResult executionId="06e99350-4ce1-41ab-ada8-b062e07ae50a" testId="98251ff1-4ce2-546f-4abb-7a40873f51ad" testName="Can_Move_Up_EquipmentClass" computerName="HUHAO-PC" duration="00:00:00.0024856" startTime="2012-01-08T11:43:55.0169173+08:00" endTime="2012-01-08T11:43:55.0169173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06e99350-4ce1-41ab-ada8-b062e07ae50a">
+    </UnitTestResult>
+    <UnitTestResult executionId="9f1b11c6-4c9d-4ac2-bf97-a9f823e1de8d" testId="984b6b81-6194-f851-bd59-2f1a22d8b1d5" testName="Cannot_Delete_Invalid_Collectors" computerName="HUHAO-PC" duration="00:00:00.0032280" startTime="2012-01-08T11:43:55.0169173+08:00" endTime="2012-01-08T11:43:55.0169173+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f1b11c6-4c9d-4ac2-bf97-a9f823e1de8d">
+    </UnitTestResult>
+    <UnitTestResult executionId="09c0d81d-be55-4271-80c7-bfdaa1a61cda" testId="9c986d41-c766-f1ab-ed19-691435fd933a" testName="Cannot_Edit_Nonexistent_EquipmentClass" computerName="HUHAO-PC" duration="00:00:00.0030889" startTime="2012-01-08T11:43:55.0325174+08:00" endTime="2012-01-08T11:43:55.0325174+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="09c0d81d-be55-4271-80c7-bfdaa1a61cda">
+    </UnitTestResult>
+    <UnitTestResult executionId="b8b1aad1-4806-48dc-98a8-d9f97637687e" testId="a14b433f-3bc4-967e-47eb-7729979f0f06" testName="Can_Continue_Edit" computerName="HUHAO-PC" duration="00:00:00.0078823" startTime="2012-01-08T11:43:55.0325174+08:00" endTime="2012-01-08T11:43:55.0481174+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8b1aad1-4806-48dc-98a8-d9f97637687e">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a166f1d-3719-40c8-90bc-33bd9c676adf" testId="aa4c4c5f-b583-b047-3fb2-d067db16d4f4" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0020095" startTime="2012-01-08T11:43:55.0481174+08:00" endTime="2012-01-08T11:43:55.0481174+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a166f1d-3719-40c8-90bc-33bd9c676adf">
+    </UnitTestResult>
+    <UnitTestResult executionId="1d789ce4-7388-4bd8-bbcd-6008efd1bce9" testId="ae2a92d4-d797-6681-b06b-8f86e0d0b750" testName="Cannot_Edit_Nonexistent_EquipmentDetail" computerName="HUHAO-PC" duration="00:00:00.0033884" startTime="2012-01-08T11:43:55.0481174+08:00" endTime="2012-01-08T11:43:55.0637174+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d789ce4-7388-4bd8-bbcd-6008efd1bce9">
+    </UnitTestResult>
+    <UnitTestResult executionId="69c071ec-c471-431d-84fd-efd7d9e071f9" testId="b8044e2e-9ceb-92ae-a87d-c00fa25ff9ec" testName="Can_Delete_Valid_Locations" computerName="HUHAO-PC" duration="00:00:00.0037702" startTime="2012-01-08T11:43:55.0637174+08:00" endTime="2012-01-08T11:43:55.0637174+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69c071ec-c471-431d-84fd-efd7d9e071f9">
+    </UnitTestResult>
+    <UnitTestResult executionId="9064790f-208e-4834-9b06-bb9b50762fa2" testId="bb70bf60-6da2-1c72-42b6-b48e496dad43" testName="Cannot_Edit_Nonexistent_Equipment" computerName="HUHAO-PC" duration="00:00:00.0022518" startTime="2012-01-08T11:43:55.0793175+08:00" endTime="2012-01-08T11:43:55.0793175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9064790f-208e-4834-9b06-bb9b50762fa2">
+    </UnitTestResult>
+    <UnitTestResult executionId="a37280bd-672f-4d00-89c9-3f7c3db99702" testId="bc821964-f5f7-18c6-c4f0-a2ec75156c6d" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0012906" startTime="2012-01-08T11:43:55.0793175+08:00" endTime="2012-01-08T11:43:55.0793175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a37280bd-672f-4d00-89c9-3f7c3db99702">
+    </UnitTestResult>
+    <UnitTestResult executionId="125b2e6b-97ed-423a-a08a-20491c97c9f4" testId="c485ac2d-d198-ff2c-a138-5988046546c4" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0027591" startTime="2012-01-08T11:43:55.0793175+08:00" endTime="2012-01-08T11:43:55.0949175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="125b2e6b-97ed-423a-a08a-20491c97c9f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="8c2cf218-4039-4c7c-bdb7-7b0181e4940a" testId="cbfbb373-17b7-8d75-8ca6-6d480c0a36df" testName="Can_Edit_EquipmentClass" computerName="HUHAO-PC" duration="00:00:00.0043603" startTime="2012-01-08T11:43:55.0949175+08:00" endTime="2012-01-08T11:43:55.0949175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c2cf218-4039-4c7c-bdb7-7b0181e4940a">
+    </UnitTestResult>
+    <UnitTestResult executionId="ed9110bc-5042-46c6-81f0-2fbe0b56be0e" testId="d159ea66-d80f-4e70-28f9-76757fddaaab" testName="Cannot_Delete_Invalid_Units" computerName="HUHAO-PC" duration="00:00:00.0030309" startTime="2012-01-08T11:43:55.1105175+08:00" endTime="2012-01-08T11:43:55.1105175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed9110bc-5042-46c6-81f0-2fbe0b56be0e">
+    </UnitTestResult>
+    <UnitTestResult executionId="b622f838-2846-4682-9e3f-be5528e56487" testId="d4addeb7-b46b-8b01-be23-81b7430c8f6f" testName="Can_Show_Equipment_Details" computerName="HUHAO-PC" duration="00:00:00.0052716" startTime="2012-01-08T11:43:55.1105175+08:00" endTime="2012-01-08T11:43:55.1261175+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b622f838-2846-4682-9e3f-be5528e56487">
+    </UnitTestResult>
+    <UnitTestResult executionId="e661b954-e7ed-4dc8-bb12-f6802897411a" testId="d7699ade-953f-327a-1ab4-78d3289ed877" testName="Can_Edit_EquipmentDetail" computerName="HUHAO-PC" duration="00:00:00.0090120" startTime="2012-01-08T11:43:55.1261175+08:00" endTime="2012-01-08T11:43:55.1417176+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e661b954-e7ed-4dc8-bb12-f6802897411a">
+    </UnitTestResult>
+    <UnitTestResult executionId="c7d8df5c-28d6-4535-ab50-b3639cfbe7db" testId="dc620eea-5d39-b6d6-8980-95d328278ec4" testName="Can_Show_Unit_Details" computerName="HUHAO-PC" duration="00:00:00.0052004" startTime="2012-01-08T11:43:55.1417176+08:00" endTime="2012-01-08T11:43:55.1417176+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7d8df5c-28d6-4535-ab50-b3639cfbe7db">
+    </UnitTestResult>
+    <UnitTestResult executionId="9beb97d4-583c-46ac-b13d-b68bcb6b2888" testId="deb319a7-965b-1e11-8e64-25999e1b9c85" testName="Can_Show_Manufacturer_Details" computerName="HUHAO-PC" duration="00:00:00.0051688" startTime="2012-01-08T11:43:55.1417176+08:00" endTime="2012-01-08T11:43:55.1573176+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9beb97d4-583c-46ac-b13d-b68bcb6b2888">
+    </UnitTestResult>
+    <UnitTestResult executionId="9851da6d-cc08-4315-8b4a-f368321f20c0" testId="e068f555-0b2c-e2ce-e479-d912e5ffb7ed" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0088260" startTime="2012-01-08T11:43:55.1573176+08:00" endTime="2012-01-08T11:43:55.1729176+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9851da6d-cc08-4315-8b4a-f368321f20c0">
+    </UnitTestResult>
+    <UnitTestResult executionId="bac49599-de43-4ad3-b85b-9b09507f7d83" testId="e8f9ecd4-9075-f6b1-f0a7-d0342c9544dd" testName="Can_Edit_Collector" computerName="HUHAO-PC" duration="00:00:00.0089374" startTime="2012-01-08T11:43:55.1729176+08:00" endTime="2012-01-08T11:43:55.1885177+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bac49599-de43-4ad3-b85b-9b09507f7d83">
+    </UnitTestResult>
+    <UnitTestResult executionId="cbf9b45f-c177-49c1-804b-c94c2ad7021d" testId="e946a969-8c32-2a07-9222-de7b3224b454" testName="Can_Save_Valid_Changes" computerName="HUHAO-PC" duration="00:00:00.0020781" startTime="2012-01-08T11:43:55.1885177+08:00" endTime="2012-01-08T11:43:55.1885177+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbf9b45f-c177-49c1-804b-c94c2ad7021d">
+    </UnitTestResult>
+    <UnitTestResult executionId="42ec4953-dea3-4ac6-bc51-f165714137b2" testId="ebcd1165-ec28-3fe7-dadb-f2d969a40330" testName="Cannot_Edit_Nonexistent_Unit" computerName="HUHAO-PC" duration="00:00:00.0024741" startTime="2012-01-08T11:43:55.1885177+08:00" endTime="2012-01-08T11:43:55.2041177+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42ec4953-dea3-4ac6-bc51-f165714137b2">
+    </UnitTestResult>
+    <UnitTestResult executionId="5d10f9e6-799e-4ea7-82bd-b08a293137b3" testId="efc05520-c146-b83a-c32e-936696d92b88" testName="Index_Contains_All_EquipmentClasses" computerName="HUHAO-PC" duration="00:00:00.0205025" startTime="2012-01-08T11:43:55.2041177+08:00" endTime="2012-01-08T11:43:55.2197177+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d10f9e6-799e-4ea7-82bd-b08a293137b3">
+    </UnitTestResult>
+    <UnitTestResult executionId="ab053cef-5bf1-4fb5-acf2-ec7628f9744c" testId="f99c74b2-ace8-0604-2088-38ed1909e95f" testName="Can_Move_Down_EquipmentClass" computerName="HUHAO-PC" duration="00:00:00.0020854" startTime="2012-01-08T11:43:55.2197177+08:00" endTime="2012-01-08T11:43:55.2353177+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab053cef-5bf1-4fb5-acf2-ec7628f9744c">
+    </UnitTestResult>
+    <UnitTestResult executionId="490ab043-5db9-4ade-a2eb-67dc913def55" testId="fe2cb81e-d05b-80d1-047a-37ccc2405255" testName="Cannot_Save_Invalid_Changes" computerName="HUHAO-PC" duration="00:00:00.0014535" startTime="2012-01-08T11:43:55.2353177+08:00" endTime="2012-01-08T11:43:55.2509178+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="490ab043-5db9-4ade-a2eb-67dc913def55">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<EEDDMS.Domain.Entities.CollectorRecord>
+
+@using System.Text;
+
+@{
+    ViewBag.Title = "RecordsByCollector";
+    Layout = "~/Views/Shared/_CollectorModuleLayout.cshtml";
+}
+
+<h2>采集器运行记录</h2>
+
+
+<fieldset>
+    <legend>运行记录</legend>
+
+@foreach (var item in Model) {
+    StringBuilder builder = new StringBuilder();
+    builder.Append("从");
+    builder.Append(item.StartDate.Value.ToString("yyyy-MM-dd"));
+    builder.Append(item.EndDate.HasValue ? "至" + item.EndDate.Value.ToString("yyyy-MM-dd") : "至今");
+    builder.Append("：");
+    builder.Append("采集器 " + item.Collector.CollectorNo);
+    builder.Append(" 绑定在设备 " + item.Equipment.EquipmentNo);
+    @builder.ToString()
+    <br />
+}
+
+</fieldset>
+
+<p>
+    @Html.ActionLink("返回采集器详情", "Details", "Collector", new { id = ViewData["CollectorId"].ToString() }, null)
+</p>

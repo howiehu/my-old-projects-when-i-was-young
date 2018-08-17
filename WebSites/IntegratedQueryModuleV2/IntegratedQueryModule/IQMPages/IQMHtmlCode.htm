@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="div_iqm_ui">
+        <div id="div_tabs">
+            <ul id="ul_tabs">
+            </ul>
+            <div id="div_panel_main">
+                <div id="div_toolbar_search">
+                    <span id="span_toolbar_search" class="ui-widget-header ui-corner-all">
+                        <button id="button_reset" autocomplete="off">
+                            重置查询结果
+                        </button>
+                        <button id="button_summary_clean" autocomplete="off">
+                            清除汇总结果
+                        </button>
+                        &nbsp;
+                        <button id="button_search" autocomplete="off">
+                            组合条件查询
+                        </button>
+                        <button id="button_summary" autocomplete="off">
+                            汇总查询结果
+                        </button>
+                        &nbsp;
+                        <button id="button_export" autocomplete="off">
+                            导出查询结果
+                        </button>
+                    </span>
+                </div>
+                <div id="div_toolbar_table">
+                    <span id="span_toolbar_pagenum" class="ui-widget-header ui-corner-all">
+                        <label>
+                            每页行数
+                        </label>
+                        <input type="radio" id="radio_pagenum_10" name="repeat" value="10" autocomplete="off"
+                            checked="checked" /><label for="radio_pagenum_10">10</label>
+                        <input type="radio" id="radio_pagenum_20" name="repeat" value="20" autocomplete="off" /><label
+                            for="radio_pagenum_20">20</label>
+                        <input type="radio" id="radio_pagenum_50" name="repeat" value="50" autocomplete="off" /><label
+                            for="radio_pagenum_50">50</label>
+                        <input type="radio" id="radio_pagenum_100" name="repeat" value="100" autocomplete="off" /><label
+                            for="radio_pagenum_100">100</label>
+                    </span>
+                </div>
+                <div id="div_form_search" title="组合条件查询助手">
+                    <div id="div_search_columns" class="ui-widget-content">
+                        <h3 class="ui-widget-header">
+                            项目列表
+                        </h3>
+                        <select id="select_columns" size="20">
+                        </select>
+                    </div>
+                    <div id="div_search_logical" class="ui-widget-content">
+                        <h3 class="ui-widget-header">
+                            查询逻辑
+                        </h3>
+                        <table id="table_search_logical">
+                            <tr>
+                                <td>
+                                    <input id="radio_and" type="radio" name="radiological" value="and" checked="checked"
+                                        autocomplete="off" />
+                                    <label for="radio_and">
+                                        是
+                                    </label>
+                                </td>
+                                <td>
+                                    <input id="radio_andnot" type="radio" name="radiological" value="andnot" autocomplete="off" />
+                                    <label for="radio_andnot">
+                                        非
+                                    </label>
+                                </td>
+                                <td>
+                                    <span id="span_or">
+                                        <input id="radio_or" type="radio" name="radiological" value="or" autocomplete="off" />
+                                        <label for="radio_or">
+                                            或
+                                        </label>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span id="span_ornot">
+                                        <input id="radio_ornot" type="radio" name="radiological" value="ornot" autocomplete="off" />
+                                        <label for="radio_ornot">
+                                            或非
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div_search_range" class="ui-widget-content">
+                        <h3 class="ui-widget-header">
+                            查询精度
+                        </h3>
+                        <table id="table_search_range">
+                            <tr>
+                                <td>
+                                    <input id="radio_likeall" type="radio" name="radiorange" value="likeall" checked="checked"
+                                        autocomplete="off" />
+                                    <label for="radio_likeall">
+                                        模糊
+                                    </label>
+                                </td>
+                                <td>
+                                    <input id="radio_equal" type="radio" name="radiorange" value="equal" autocomplete="off" />
+                                    <label for="radio_equal">
+                                        精确
+                                    </label>
+                                </td>
+                                <td>
+                                    <span id="span_likefront">
+                                        <input id="radio_likefront" type="radio" name="radiorange" value="likefront" autocomplete="off" />
+                                        <label for="radio_likefront">
+                                            前匹配
+                                        </label>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span id="span_likebehind">
+                                        <input id="radio_likebehind" type="radio" name="radiorange" value="likebehind" autocomplete="off" />
+                                        <label for="radio_likebehind">
+                                            后匹配
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div_search_type_text">
+                        <input id="text_search_text" type="text" size="40" autocomplete="off" />
+                        <button id="button_search_text" class="text-type-button" autocomplete="off">
+                            添加
+                        </button>
+                    </div>
+                    <div id="div_search_type_money">
+                        <div class="divrange">
+                            从
+                            <input id="text_search_money_start" type="text" size="18" autocomplete="off" />
+                            到
+                            <input id="text_search_money_end" type="text" size="18" autocomplete="off" />
+                            <button id="button_search_money_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <input id="text_search_money" type="text" size="40" autocomplete="off" />
+                            <button id="button_search_money" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_date">
+                        <div class="divrange">
+                            从
+                            <input id="text_search_date_start" type="text" size="18" autocomplete="off" />
+                            到
+                            <input id="text_search_date_end" type="text" size="18" autocomplete="off" />
+                            <button id="button_search_date_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <input id="text_search_date" type="text" size="40" autocomplete="off" />
+                            <button id="button_search_date" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_year">
+                        <div class="divrange">
+                            从
+                            <input id="text_search_year_start" type="text" size="18" maxlength="4" autocomplete="off" />
+                            到
+                            <input id="text_search_year_end" type="text" size="18" maxlength="4" autocomplete="off" />
+                            <button id="button_search_year_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <input id="text_search_year" type="text" size="40" maxlength="4" autocomplete="off" />
+                            <button id="button_search_year" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_month">
+                        <div class="divrange">
+                            从
+                            <select id="select_search_month_start">
+                            </select>
+                            到
+                            <select id="select_search_month_end">
+                            </select>
+                            <button id="button_search_month_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <select id="select_search_month">
+                            </select>
+                            <button id="button_search_month" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_day">
+                        <div class="divrange">
+                            从
+                            <select id="select_search_day_start">
+                            </select>
+                            到
+                            <select id="select_search_day_end">
+                            </select>
+                            <button id="button_search_day_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <select id="select_search_day">
+                            </select>
+                            <button id="button_search_day" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_number">
+                        <div class="divrange">
+                            从
+                            <input id="text_search_number_start" type="text" size="18" autocomplete="off" />
+                            到
+                            <input id="text_search_number_end" type="text" size="18" autocomplete="off" />
+                            <button id="button_search_number_range" class="range-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                        <div class="divequal">
+                            <input id="text_search_number" type="text" size="40" autocomplete="off" />
+                            <button id="button_search_number" class="equal-type-button" autocomplete="off">
+                                添加
+                            </button>
+                        </div>
+                    </div>
+                    <div id="div_search_type_alias">
+                        <select id="select_search_alias">
+                        </select>
+                        <button id="button_search_alias" class="equal-type-button" autocomplete="off">
+                            添加
+                        </button>
+                    </div>
+                    <div id="div_search_preview" class="ui-widget-content">
+                        <h3 class="ui-widget-header">
+                            逻辑预览
+                        </h3>
+                        <div id="div_search_preview_text" class="ui-widget-content">
+                        </div>
+                    </div>
+                </div>
+                <div id="div_form_groupby" title="汇总查询结果助手">
+                    <div id="div_groupby" class="ui-widget-content">
+                        <h3 class="ui-widget-header">
+                            选择汇总项目
+                        </h3>
+                        <div id="div_groupby_items" class="ui-widget-content">
+                            <input id="Checkbox1" type="checkbox" value="text" /><label for="Checkbox1"><b>测试</b></label><br />
+                        </div>
+                    </div>
+                </div>
+                <div id="div_table" class="ui-widget-content">
+                    <h3 class="ui-widget-header">
+                        查询结果
+                    </h3>
+                    <div>
+                        <div id="div_table_data">
+                            <div id="div_table_head">
+                            </div>
+                            <div id="div_table_body">
+                            </div>
+                            <div id="div_table_pagetool">
+                                <button id="button_page_first" autocomplete="off">
+                                    首页
+                                </button>
+                                <button id="button_page_prev" autocomplete="off">
+                                    上一页
+                                </button>
+                                当前页：<span id="span_page_index">-</span>/<span id="span_page_count">-</span>
+                                <button id="button_page_next" autocomplete="off">
+                                    下一页
+                                </button>
+                                <button id="button_page_last" autocomplete="off">
+                                    末页
+                                </button>
+                                跳转到第<input id="text_jump_to" type="text" size="8" />页
+                                <button id="button_page_jump" autocomplete="off">
+                                    跳转
+                                </button>
+                            </div>
+                        </div>
+                        <div id="div_table_nodata" class="ui-state-highlight ui-corner-all">
+                            <strong>没有找到符合条件的数据！</strong>
+                        </div>
+                    </div>
+                </div>
+                <div id="div_result" class="ui-widget-content">
+                    <h3 class="ui-widget-header">
+                        合计结果
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <input id="hidden_xmlDocName" type="hidden" autocomplete="off" />
+        <input id="hidden_startRowIndex" type="hidden" value="0" autocomplete="off" />
+        <input id="hidden_maximumRows" type="hidden" value="10" autocomplete="off" />
+        <input id="hidden_pageIndex" type="hidden" value="1" autocomplete="off" />
+        <input id="hidden_selectColumns" type="hidden" autocomplete="off" />
+        <input id="hidden_whereClause" type="hidden" autocomplete="off" />
+        <input id="hidden_whereClauseTemp" type="hidden" autocomplete="off" />
+        <input id="hidden_groupColumns" type="hidden" autocomplete="off" />
+        <input id="hidden_orderClause" type="hidden" autocomplete="off" />
+        <input id="hidden_havingClause" type="hidden" autocomplete="off" />
+        <input id="hidden_queryParameter" type="hidden" autocomplete="off" />
+        <div id="div_dialog_exportexcel" title="导出查询结果">
+            <p>
+                <b>请点击“导出为Excel文件”按钮获取下载链接（有效期为5分钟）！</b>
+            </p>
+            <p>
+                导出的Excel文件可以在Office2007/2010及以上版本中直接打开并编辑，如果您使用的是Office2000/2003，请下载并安装“Microsoft
+                Office Word、Excel 和 PowerPoint 文件格式兼容包”：
+                <div style="text-align: center">
+                    <a href="http://www.microsoft.com/downloads/zh-cn/details.aspx?FamilyID=941b3470-3ae9-4aee-8f43-c6bb74cd1466"
+                        target="_blank">远程下载文件格式兼容包</a>
+                    <br />
+                    <a href="../FileFormatConverters/FileFormatConverters.exe">本地下载文件格式兼容包</a>
+                </div>
+            </p>
+            <p>
+                <div style="text-align: center">
+                    <button id="button_getexcel" autocomplete="off">
+                        导出为Excel文件
+                    </button>
+                    <p>
+                        <a id="link_excel" href="">请用鼠标右键单击此链接并选择“目标另存为”以下载导出结果</a>
+                    </p>
+                </div>
+            </p>
+        </div>
+        <div id="div_dialog_noxml" title="错误">
+            <p>
+                <span class="ui-icon ui-icon-circle-close" style="float: left; margin: 0 5px 50px 0;">
+                </span><b>获取分类信息失败，请联系网络管理员！</b>
+                <br />
+                可能存在的原因如下：
+            </p>
+            <p>
+                1、初始化参数错误；<br />
+                2、没有可用的配置文件。
+            </p>
+        </div>
+        <div id="div_dialog_nocolumns" title="错误">
+            <p>
+                <span class="ui-icon ui-icon-circle-close" style="float: left; margin: 0 5px 50px 0;">
+                </span><b>数据列信息失败，请联系网络管理员！</b>
+                <br />
+                可能存在的原因如下：
+            </p>
+            <p>
+                数据列信息配置错误。
+            </p>
+        </div>
+        <div id="div_dialog_nosearchcontent" title="错误">
+            <p>
+                <span class="ui-icon ui-icon-circle-close" style="float: left; margin: 0 5px 50px 0;">
+                </span><b>请输入查询条件！</b>
+            </p>
+        </div>
+        <div id="div_dialog_nogroupbycontent" title="错误">
+            <p>
+                <span class="ui-icon ui-icon-circle-close" style="float: left; margin: 0 5px 50px 0;">
+                </span><b>请选择汇总项目！</b>
+            </p>
+        </div>
+        <div id="div_dialog_pageoutrange" title="错误">
+            <p>
+                <span class="ui-icon ui-icon-circle-close" style="float: left; margin: 0 5px 50px 0;">
+                </span><b>您输入的页号已超出范围，请重新输入！</b>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

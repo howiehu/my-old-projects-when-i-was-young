@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="sidebar">
+    <p>
+        @Html.ActionLink("设备", "Index", "Equipment")
+    </p>
+    <p>
+        @Html.ActionLink("设备信息", "Index", "EquipmentDetail")
+    </p>
+    <p>
+        @Html.ActionLink("设备制造商", "Index", "Manufacturer")
+    </p>
+    <p>
+        @Html.ActionLink("设备分类", "Index", "EquipmentClass")
+    </p>
+    <p>
+        @Html.ActionLink("使用单位", "Index", "Unit")
+    </p>
+</div>
+
+<div id="content">
+@RenderBody()
+</div>

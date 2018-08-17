@@ -1,0 +1,70 @@
+﻿@model EEDDMS.WebSite.Models.EquipmentDetailListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+<h2>
+    选择设备信息</h2>
+<table>
+    <tr>
+        <th>
+            名称
+        </th>
+        <th>
+            型号
+        </th>
+        <th>
+            设计寿命
+        </th>
+        <th>
+            制造商
+        </th>
+        <th>
+            设备分类
+        </th>
+        <th>
+            备注
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model.EquipmentDetails)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesignLife)
+            </td>
+            <td>
+                @if (item.Manufacturer != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Manufacturer.Name)
+                }
+            </td>
+            <td>
+                @if (item.EquipmentClass != null)
+                {
+                    @Html.DisplayFor(modelItem => item.EquipmentClass.Name)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+            </td>
+            <td>
+                @Html.ActionLink("选择", "Select", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("返回设备编辑", "ContinueEdit", "Equipment")
+</p>
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index",
+new { page = x }))
+</div>

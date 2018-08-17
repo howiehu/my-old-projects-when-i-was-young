@@ -1,0 +1,119 @@
+﻿@model EEDDMS.WebSite.Models.CollectorListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CollectorModuleLayout.cshtml";
+}
+<h2>
+    采集器列表</h2>
+<p>
+    @Html.ActionLink("新建", "Create")
+</p>
+@using (Html.BeginForm("QueryCollector", "Collector"))
+{
+
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            采集器编号
+        </div>
+        <div class="editor-field">@Html.TextBox("collectorNo")@Html.ValidationMessage("collectorNo")
+        </div>
+        <div class="editor-label">
+            采集器状态
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("state", new SelectListItem[] 
+            { 
+                new SelectListItem { Text = " ", Value = "3"},
+                new SelectListItem { Text = "未启用", Value = "0"},
+                new SelectListItem { Text = "已启用", Value = "1"},
+                new SelectListItem { Text = "已报废", Value = "2"}
+            })
+        </div>
+        <div class="editor-label">
+            出厂日期开始
+        </div>
+        <div class="editor-field">@Html.TextBox("startproductionDate")@Html.ValidationMessage("startproductionDate")
+        </div>
+        <div class="editor-label">
+            出厂日期结束
+        </div>
+        <div class="editor-field">@Html.TextBox("endproductionDate")@Html.ValidationMessage("endproductionDate")
+        </div>
+        <div class="editor-label">
+            启用日期开始
+        </div>
+        <div class="editor-field">@Html.TextBox("startToUseDate")@Html.ValidationMessage("startToUseDate")
+        </div>
+        <div class="editor-label">
+            启用日期结束
+        </div>
+        <div class="editor-field">@Html.TextBox("endstartToUseDate")@Html.ValidationMessage("endstartToUseDate")
+        </div>
+        <div class="editor-label">
+            绑定设备编号
+        </div>
+        <div class="editor-field">@Html.TextBox("EquipmentNo")@Html.ValidationMessage("EquipmentNo")
+        </div>
+        <input type="submit" value="查询" />
+        <input type="reset" value="重置" />
+    </fieldset> }
+<table>
+    <tr>
+        <th>
+            采集器编号
+        </th>
+        <th>
+            采集器状态
+        </th>
+        <th>
+            出厂日期
+        </th>
+        <th>
+            启用日期
+        </th>
+        <th>
+            绑定设备编号
+        </th>
+        <th>
+            备注
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model.Collectors)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollectorNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartToUseDate)
+            </td>
+            <td>
+                @if (item.Equipment != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Equipment.EquipmentNo)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("详情", "Details", new { id = item.Id }) |
+                @Html.ActionLink("删除", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index",
+new { page = x }))
+</div>

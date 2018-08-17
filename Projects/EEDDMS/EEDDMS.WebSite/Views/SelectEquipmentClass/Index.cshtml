@@ -1,0 +1,52 @@
+﻿@using EEDDMS.WebSite.Models;
+@model IEnumerable<EEDDMS.WebSite.Models.EquipmentClassTreeNode>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>选择设备分类</h2>
+
+<table>
+
+@foreach (var item in Model)
+{
+    string trparentId = item.EquipmentClass.ParentId.HasValue ? "tr_" + item.EquipmentClass.ParentId.ToString() : "";
+    
+    <tr class="row" id="@("tr_" + @item.EquipmentClass.Id)" parentId="@(trparentId)">
+        <td>
+            @{
+                string indent = string.Empty;
+                for (int i = 0; i < item.LevelNumber; i++)
+                {
+                    indent += "&nbsp;&nbsp;";
+                }
+            }
+            <div>
+                @Html.Raw(indent)
+
+                @if (item.EquipmentClass.Children.Count > 0)
+                {
+                    <a id="@item.EquipmentClass.Id" class="plus">-</a>
+                }
+                else
+                {
+                    @:&nbsp;
+                }
+
+                @Html.DisplayFor(modelItem => item.EquipmentClass.Name)
+
+                <span class="editarea">
+                    @Html.ActionLink("选择", "Select", new { item.EquipmentClass.Id })
+                </span>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("返回设备信息编辑", "ContinueEdit", "EquipmentDetail")
+</p>

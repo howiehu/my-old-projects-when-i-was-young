@@ -1,0 +1,117 @@
+﻿@using EEDDMS.WebSite.Models;
+@model IEnumerable<EEDDMS.WebSite.Models.EquipmentClassTreeNode>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        $(".editarea").hide();
+
+//        $(".row").mouseover(function () {
+//            $(this).find(".editarea").show();
+//        });
+
+//        $(".row").mouseleave(function () {
+//            $(this).find(".editarea").hide();
+//        });
+
+//        $(".plus").click(function () {
+//            var plus = $(this).text();
+//            if (plus == "+") {
+//                $(this).text("-");
+//            }
+//            else if (plus == "-") {
+//                $(this).text("+");
+//            }
+
+//            var parentId = "tr_" + $(this).attr("id");
+//            ToggleTree(parentId);
+//        });
+//    });
+
+//    function ToggleTree(id) {
+//        if (id != "") {
+//            var selector = "tr[parentId=" + id + "]";
+//            $(selector).toggle();
+
+//            $(selector).each(function () {
+//                var parentId = $(this).attr("id");
+//                ToggleTree(parentId);
+//            });
+//        }
+//    }
+</script>
+
+<h2>设备分类列表</h2>
+
+@if (TempData["message"] != null)
+{
+    <div class="Message">@TempData["message"]</div>
+}
+
+<p>
+    @Html.ActionLink("新建主分类", "Create")
+</p>
+<table>
+
+@foreach (var item in Model)
+{
+    string trparentId = item.EquipmentClass.ParentId.HasValue ? "tr_" + item.EquipmentClass.ParentId.ToString() : "";
+    
+    <tr class="row" id="@("tr_" + @item.EquipmentClass.Id)" parentId="@(trparentId)">
+        <td>
+            @{
+                string indent = string.Empty;
+                for (int i = 0; i < item.LevelNumber; i++)
+                {
+                    indent += "&nbsp;&nbsp;";
+                }
+            }
+            <div>
+                @Html.Raw(indent)
+
+                @if (item.EquipmentClass.Children.Count > 0)
+                {
+                    <a id="@item.EquipmentClass.Id" class="plus">-</a>
+                }
+                else
+                {
+                    @:&nbsp;
+                }
+
+                @Html.DisplayFor(modelItem => item.EquipmentClass.Name)
+
+                <span class="editarea">
+                    @{
+                        switch (item.IsFirstOrLastNode)
+                        {
+                            case NodeSiblingPosition.Only:
+                                break;
+                            case NodeSiblingPosition.First:
+                                @Html.ActionLink("下移", "MoveDown", new { item.EquipmentClass.Id })
+                                break;
+                            case NodeSiblingPosition.Middle:
+                                @Html.ActionLink("上移", "MoveUp", new { item.EquipmentClass.Id })
+                                @:
+                                @Html.ActionLink("下移", "MoveDown", new { item.EquipmentClass.Id })
+                                break;
+                            case NodeSiblingPosition.Last:
+                                @Html.ActionLink("上移", "MoveUp", new { item.EquipmentClass.Id })
+                                break;
+                        }
+                    }
+                    @{Guid parentId = item.EquipmentClass.Id;}
+                    @Html.ActionLink("新建子分类", "CreateChild", new { parentId })
+                    @Html.ActionLink("编辑", "Edit", new { item.EquipmentClass.Id })
+                    @Html.ActionLink("详情", "Details", new { item.EquipmentClass.Id })
+                    @Html.ActionLink("删除", "Delete", new { item.EquipmentClass.Id })
+                </span>
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "localhost", "http://localhost:1220", "{708AFCB8-8DE5-4964-BA81-B28A0DB8CFA9}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/IntegratedQueryModuleV2"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\IntegratedQueryModuleV2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\IntegratedQueryModuleV2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/IntegratedQueryModuleV2"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\IntegratedQueryModuleV2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\IntegratedQueryModuleV2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\IntegratedQueryModuleV2\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://121.52.217.152:8080/tfs/%e5%8d%97%e6%96%b9%e7%94%b5%e7%bd%91%e9%a1%b9%e7%9b%ae%e9%9b%86%e5%90%88
+		SccWebProject0 = true
+		SccProjectUniqueName0 = http://localhost:1220
+		SccProjectName0 = $/综合查询模块第二版/IntegratedQueryModuleV2
+		SccAuxPath0 = http://121.52.217.152:8080/tfs/%e5%8d%97%e6%96%b9%e7%94%b5%e7%bd%91%e9%a1%b9%e7%9b%ae%e9%9b%86%e5%90%88
+		SccLocalPath0 = ..\\..\\WebSites\\IntegratedQueryModuleV2
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{708AFCB8-8DE5-4964-BA81-B28A0DB8CFA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708AFCB8-8DE5-4964-BA81-B28A0DB8CFA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

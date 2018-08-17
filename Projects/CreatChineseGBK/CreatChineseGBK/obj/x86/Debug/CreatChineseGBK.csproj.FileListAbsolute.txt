@@ -1,0 +1,5 @@
+F:\Developer\.NET\Projects\CreatChineseGBK\CreatChineseGBK\bin\Debug\CreatChineseGBK.exe
+F:\Developer\.NET\Projects\CreatChineseGBK\CreatChineseGBK\bin\Debug\CreatChineseGBK.pdb
+F:\Developer\.NET\Projects\CreatChineseGBK\CreatChineseGBK\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Developer\.NET\Projects\CreatChineseGBK\CreatChineseGBK\obj\x86\Debug\CreatChineseGBK.exe
+F:\Developer\.NET\Projects\CreatChineseGBK\CreatChineseGBK\obj\x86\Debug\CreatChineseGBK.pdb

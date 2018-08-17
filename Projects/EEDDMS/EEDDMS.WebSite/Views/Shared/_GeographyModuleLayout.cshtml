@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="sidebar">
+    <p>
+        @Html.ActionLink("使用地域", "Index", "Location")
+    </p>
+    <p>
+        @Html.ActionLink("工程地图", "Index", "Map")
+    </p>
+</div>
+
+<div id="content">
+    @RenderBody()
+</div>

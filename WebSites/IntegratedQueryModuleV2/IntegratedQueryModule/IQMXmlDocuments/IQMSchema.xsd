@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IQMSchema"
+    targetNamespace="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd"
+    xmlns:mstns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="Table">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Columns" />
+            </xs:sequence>
+            <xs:attribute name="Alias" type="xs:string" use="required" />
+            <xs:attribute name="SourceName" type="xs:string" use="required" />
+            <xs:attribute name="SourceType" type="SourceTypeType" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Columns">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Column" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Column">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ValueAlias" minOccurs="0" />
+                <xs:element ref="ValueUrl" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="required" />
+            <xs:attribute name="Alias" type="xs:string" use="required" />
+            <xs:attribute name="ColumnType" type="ColumnTypeType" default="text" />
+            <xs:attribute name="IsSumColumn" type="xs:boolean" default="false" />
+            <xs:attribute name="TextAlign" type="TextAlignType" default="left" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ValueAlias">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Value" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="Value" type="xs:string" use="required" />
+                        <xs:attribute name="Alias" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ValueUrl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Key" type="xs:string" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="Url" type="xs:anyURI" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="SourceTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TVF" />
+            <xs:enumeration value="SP" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ColumnTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="text" />
+            <xs:enumeration value="date" />
+            <xs:enumeration value="money" />
+            <xs:enumeration value="year" />
+            <xs:enumeration value="month" />
+            <xs:enumeration value="day" />
+            <xs:enumeration value="number" />
+            <xs:enumeration value="alias" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TextAlignType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="left" />
+            <xs:enumeration value="right" />
+            <xs:enumeration value="center" />
+            <xs:enumeration value="justify" />
+            <xs:enumeration value="char" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

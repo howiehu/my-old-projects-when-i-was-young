@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0153903-4147-4B5B-B22E-DDCF16F45E9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EEDDMS.Domain</RootNamespace>
+    <AssemblyName>EEDDMS.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\EEDDMS\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 3\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\ICollectorRecordRepository.cs" />
+    <Compile Include="Abstract\ICollectorRepository.cs" />
+    <Compile Include="Abstract\IEquipmentClassRepository.cs" />
+    <Compile Include="Abstract\IEquipmentDetailRepository.cs" />
+    <Compile Include="Abstract\IEquipmentRecordRepository.cs" />
+    <Compile Include="Abstract\IEquipmentRepository.cs" />
+    <Compile Include="Abstract\ILocationRepository.cs" />
+    <Compile Include="Abstract\IManufacturerRepository.cs" />
+    <Compile Include="Abstract\IUnitRepository.cs" />
+    <Compile Include="Concrete\EFCollectorRecordRepository.cs" />
+    <Compile Include="Concrete\EFCollectorRepository.cs" />
+    <Compile Include="Concrete\EFDbContext.cs" />
+    <Compile Include="Concrete\EFEquipmentClassRepository.cs" />
+    <Compile Include="Concrete\EFEquipmentDetailRepository.cs" />
+    <Compile Include="Concrete\EFEquipmentRecordRepository.cs" />
+    <Compile Include="Concrete\EFEquipmentRepository.cs" />
+    <Compile Include="Concrete\EFLocationRepository.cs" />
+    <Compile Include="Concrete\EFManufacturerRepository.cs" />
+    <Compile Include="Concrete\EFUnitRepository.cs" />
+    <Compile Include="Entities\Collector.cs" />
+    <Compile Include="Entities\CollectorRecord.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\Equipment.cs" />
+    <Compile Include="Entities\EquipmentClass.cs" />
+    <Compile Include="Entities\EquipmentDetail.cs" />
+    <Compile Include="Entities\EquipmentRecord.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\Manufacturer.cs" />
+    <Compile Include="Entities\Map.cs" />
+    <Compile Include="Entities\Unit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

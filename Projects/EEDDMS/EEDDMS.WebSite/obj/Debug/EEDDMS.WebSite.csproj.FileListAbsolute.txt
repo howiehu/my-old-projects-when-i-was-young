@@ -1,0 +1,17 @@
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.WebSite.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.WebSite.pdb
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.Domain.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EntityFramework.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Microsoft.Web.Infrastructure.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.Web.Mvc.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\WebActivator.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EEDDMS.Domain.pdb
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\EntityFramework.xml
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.pdb
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.xml
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.Web.Mvc.pdb
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\bin\Ninject.Web.Mvc.xml
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\obj\Debug\ResolveAssemblyReference.cache
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\obj\Debug\EEDDMS.WebSite.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.WebSite\obj\Debug\EEDDMS.WebSite.pdb

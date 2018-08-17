@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Table xmlns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd" Alias="招标查询" SourceName="iqm_ct_quarter_v" SourceType="TVF">
+  <Columns>
+    <Column Name="departName" Alias="部门名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <!--<Column Name="planYear" Alias="计划年份" ColumnType="year" IsSumColumn="0" TextAlign="center">
+      <ValueUrl Url="/zb/zb_plan_year_edit.aspx">
+        <Key>mainid</Key>
+      </ValueUrl>
+    </Column>-->
+    <Column Name="ctName" Alias="合同名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <Column Name="ctno" Alias="合同号" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <Column Name="ctsignDate" Alias="签约日期" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+    <Column Name="htjzrq" Alias="截止日期" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+    <Column Name="ctMoney" Alias="合同金额" ColumnType="money" IsSumColumn="1" TextAlign="right" />
+    <Column Name="unitName" Alias="对方单位" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <Column Name="htzxqk" Alias="履行情况" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <Column Name="ctid" Alias="是否招标" ColumnType="alias" IsSumColumn="0" TextAlign="center">
+      <ValueAlias>
+        <Value Value="1" Alias="是"/>
+        <Value Value="2" Alias="否"/>
+      </ValueAlias>
+    </Column>
+    <Column Name="username" Alias="经办人" ColumnType="text" IsSumColumn="0" TextAlign="center" />
+    <Column Name="ctmemo" Alias="备注" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+  </Columns>
+</Table>
+

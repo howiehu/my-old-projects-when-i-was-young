@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Table xmlns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd" Alias="招标查询" SourceName="iqm_zb_f" SourceType="TVF">
+  <Columns>
+    <Column Name="departName" Alias="部门名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <!--<Column Name="planYear" Alias="计划年份" ColumnType="year" IsSumColumn="0" TextAlign="center">
+      <ValueUrl Url="/zb/zb_plan_year_edit.aspx">
+        <Key>mainid</Key>
+      </ValueUrl>
+    </Column>-->
+    <Column Name="pubProjName" Alias="项目名称" ColumnType="text" IsSumColumn="0" TextAlign="left" />
+    <Column Name="pubProjMoney" Alias="预算金额（元）" ColumnType="money" IsSumColumn="1" TextAlign="right" />
+    <Column Name="pubZbWay" Alias="招标方式" ColumnType="alias" IsSumColumn="0" TextAlign="center">
+      <ValueAlias>
+        <!--<Value Value="1" Alias="委托招标"/>
+        <Value Value="2" Alias="公开招标"/>
+        <Value Value="3" Alias="邀请招标"/>
+        <Value Value="4" Alias="直接合同谈判"/>-->
+        <Value Value="1;" Alias="委托招标"/>
+        <Value Value="2;" Alias="公开招标"/>
+        <Value Value="3;" Alias="邀请招标"/>
+        <Value Value="4;" Alias="单一来源采购"/>
+        <Value Value="5;" Alias="询价采购"/>
+        <Value Value="6;" Alias="竞争性谈判"/>
+      </ValueAlias>
+    </Column>
+    <Column Name="pubStartDate" Alias="招标计划开始时间" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+    <Column Name="pubStopDate" Alias="招标计划结束时间" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+    <Column Name="username" Alias="承办人" ColumnType="text" IsSumColumn="0" TextAlign="center" />
+    <Column Name="zbStatus" Alias="招标阶段" ColumnType="alias" IsSumColumn="0" TextAlign="center" >
+      <ValueAlias>
+        <Value Value="1" Alias="新建方案"/>
+        <Value Value="2" Alias="方案审批"/>
+        <Value Value="3" Alias="方案结束"/>
+        <Value Value="4" Alias="文件会签"/>
+        <Value Value="5" Alias="专家抽取"/>
+        <Value Value="6" Alias="专家审批"/>
+        <Value Value="7" Alias="定标及谈判结果编辑"/>
+        <Value Value="8" Alias="定标及谈判结果审批"/>
+        <Value Value="9" Alias="中标通知"/>
+        <Value Value="10" Alias="招标结束"/>
+      </ValueAlias>
+    </Column>
+    <!--<Column Name="zbAuditPerson" Alias="招标中心审核人" ColumnType="text" IsSumColumn="0" TextAlign="center" />
+    <Column Name="zbAuditDate" Alias="审核日期" ColumnType="date" IsSumColumn="0" TextAlign="center" />
+    <Column Name="memo" Alias="备注" ColumnType="text" IsSumColumn="0" TextAlign="left" />-->
+  </Columns>
+</Table>

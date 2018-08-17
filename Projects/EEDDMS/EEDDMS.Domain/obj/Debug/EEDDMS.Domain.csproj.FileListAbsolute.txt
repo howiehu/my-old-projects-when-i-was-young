@@ -1,0 +1,7 @@
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EEDDMS.Domain.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EEDDMS.Domain.pdb
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EntityFramework.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\bin\Debug\EntityFramework.xml
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\obj\Debug\ResolveAssemblyReference.cache
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\obj\Debug\EEDDMS.Domain.dll
+F:\Developer\.NET\Projects\EEDDMS\EEDDMS.Domain\obj\Debug\EEDDMS.Domain.pdb

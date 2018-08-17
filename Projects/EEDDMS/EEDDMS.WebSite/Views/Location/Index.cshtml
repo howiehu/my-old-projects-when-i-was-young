@@ -1,0 +1,53 @@
+﻿@model EEDDMS.WebSite.Models.LocationsListViewModel
+@{
+    ViewBag.Title = "地域信息列表";
+    Layout = "~/Views/Shared/_GeographyModuleLayout.cshtml";
+}
+<h2>
+    地域信息列表</h2>
+<p>
+    @Html.ActionLink("新建", "Create")
+</p>
+@using (Html.BeginForm("QueryLocation", "Location"))
+{
+
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            名称
+        </div>
+        <div class="editor-field">@Html.TextBox("name")@Html.ValidationMessage("name")
+        </div>
+        <input type="submit" value="查询" />
+        <input type="reset" value="重置" />
+    </fieldset> }
+<table>
+    <tr>
+        <th>
+            名称
+        </th>
+        <th>
+            备注
+        </th>
+    </tr>
+    @foreach (var item in Model.Locations)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("列表", "Details", new { id = item.Id }) |
+                @Html.ActionLink("删除", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index",
+new { page = x }))
+</div>

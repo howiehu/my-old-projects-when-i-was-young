@@ -1,0 +1,184 @@
+﻿*
+{
+    font-size: 12px;
+}
+.boldfont
+{
+    font-weight: bold;
+}
+#div_tabs
+{
+    min-width: 720px;
+}
+#span_toolbar_search
+{
+    padding: 10px 4px;
+}
+#span_toolbar_pagenum
+{
+    padding: 10px 10px;
+}
+#div_toolbar_search
+{
+    margin: 20px 5px 35px 5px;
+    text-align: center;
+}
+#div_toolbar_table
+{
+    margin: 5px 0px 20px 0px;
+}
+#div_form_search h3
+{
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+}
+#div_search_columns
+{
+    width: 200px;
+    height: 370px;
+    padding: 5px;
+    text-align: center;
+}
+#select_columns
+{
+    width: 200px;
+    margin: 5px 0px 0px 0px;
+    font-weight: bold;
+}
+#div_search_logical
+{
+    position: absolute;
+    top: 6px;
+    left: 230px;
+    width: 385px;
+    height: 50px;
+    padding: 5px;
+}
+#div_search_range
+{
+    position: absolute;
+    top: 73px;
+    left: 230px;
+    width: 385px;
+    height: 50px;
+    padding: 5px;
+}
+.div_search_type
+{
+    position: absolute;
+    top: 140px;
+    left: 230px;
+    width: 385px;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+}
+#div_search_preview
+{
+    position: absolute;
+    top: 207px;
+    left: 230px;
+    width: 385px;
+    height: 169px;
+    padding: 5px;
+}
+#div_table
+{
+    padding: 5px;
+    margin: 5px 0px 15px 0px;
+}
+#div_table h3
+{
+    text-align: center;
+    margin: 0px;
+}
+#div_result
+{
+    width: 360px;
+    padding: 5px;
+}
+#div_result h3
+{
+    text-align: center;
+    margin: 0px;
+}
+.sumresult
+{
+    margin-top: 5px;
+    padding: 2px 5px;
+}
+#select_search_alias, #select_search_month, #select_search_day
+{
+    width: 230px;
+}
+#select_search_month_start, #select_search_month_end, #select_search_day_start, #select_search_day_end
+{
+    width: 130px;
+}
+#text_search_money_start, #text_search_money_end, #text_search_money, #text_search_number_start, #text_search_number_end, #text_search_number
+{
+    text-align: right;
+}
+.ui-autocomplete
+{
+    max-height: 180px;
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    overflow-y: auto; /* prevent horizontal scrollbar */
+    padding-right: 20px;
+}
+#div_form_search table
+{
+    width: 100%;
+    table-layout: fixed;
+}
+#div_search_preview_text
+{
+    height: 146px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#div_table_body
+{
+    padding: 2px;
+    overflow-x: scroll; /* 如设置成auto则IE9会产生点击表格时莫名其妙的div变化问题 */
+    overflow-y: hidden;
+}
+#table_main
+{
+    border-collapse: collapse;
+}
+#table_main th, #table_main td
+{
+    padding: 6px;
+    border-width: 1px;
+    border-color: Black;
+    border-style: solid;
+    white-space: nowrap;
+}
+#div_table_pagetool
+{
+    text-align: center;
+    margin: 8px 2px 4px 2px;
+}
+#div_table_nodata
+{
+    text-align: center;
+    margin: 8px 2px 4px 2px;
+}
+#div_groupby
+{
+    height: 370px;
+    padding: 5px;
+}
+#div_groupby h3
+{
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+}
+#div_groupby_items
+{
+    height: 340px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-weight: bold;
+}

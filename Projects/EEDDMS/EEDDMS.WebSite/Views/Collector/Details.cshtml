@@ -1,0 +1,57 @@
+﻿@model EEDDMS.Domain.Entities.Collector
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_CollectorModuleLayout.cshtml";
+}
+
+<h2>详情</h2>
+
+<fieldset>
+    <legend>采集器</legend>
+
+    <div class="display-label">采集器编号</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollectorNo)
+    </div>
+
+    <div class="display-label">采集器状态</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">出厂日期</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductionDate)
+    </div>
+
+    <div class="display-label">启用日期</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartToUseDate)
+    </div>
+
+    <div class="display-label">绑定设备编号</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Equipment.EquipmentNo)
+    </div>
+
+    <div class="display-label">备注</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Memo)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.CreationDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.ModifyDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("查看使用记录", "RecordsByCollector", "CollectorRecord", new { id = Model.Id }, null) |
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回采集器列表", "Index")
+</p>

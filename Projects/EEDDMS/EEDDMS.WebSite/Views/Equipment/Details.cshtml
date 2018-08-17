@@ -1,0 +1,67 @@
+﻿@model EEDDMS.Domain.Entities.Equipment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>详情</h2>
+
+<fieldset>
+    <legend>设备</legend>
+
+    <div class="display-label">设备编号</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EquipmentNo)
+    </div>
+
+    <div class="display-label">设备名称</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EquipmentDetail.Name)
+    </div>
+
+    <div class="display-label">设备型号</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EquipmentDetail.Type)
+    </div>
+
+    <div class="display-label">出厂日期</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductionDate)
+    </div>
+
+    <div class="display-label">启用日期</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartToUseDate)
+    </div>
+
+    <div class="display-label">设备状态</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">设备健康状况</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Health)
+    </div>
+
+    <div class="display-label">备注</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Memo)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.CreationDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.ModifyDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("设备使用记录", "RecordsByEquipment", "EquipmentRecord", new { id = Model.Id }, null) | 
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回设备列表", "Index")
+</p>

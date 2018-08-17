@@ -1,0 +1,97 @@
+﻿@model EEDDMS.Domain.Entities.Equipment
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>编辑</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm("Edit", "Equipment", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.EquipmentDetailId)
+    @Html.HiddenFor(model => model.IsDeleted)
+    @Html.HiddenFor(model => model.CreationDate)
+    @Html.HiddenFor(model => model.ModifyDate)
+    @Html.HiddenFor(model => model.DeleteDate)
+
+    <fieldset>
+        <legend>设备信息</legend>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.EquipmentDetail.Name)
+            @Html.ActionLink("选择设备信息", "Index", "SelectEquipmentDetail")
+            @Html.ValidationMessageFor(model => model.EquipmentDetailId)
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>设备</legend>
+
+        <div class="editor-label">
+            设备编号
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EquipmentNo)
+            @Html.ValidationMessageFor(model => model.EquipmentNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProductionDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProductionDate)
+            @Html.ValidationMessageFor(model => model.ProductionDate)
+        </div>
+
+        <div class="editor-label">
+            启用日期
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartToUseDate)
+            @Html.ValidationMessageFor(model => model.StartToUseDate)
+        </div>
+
+        <div class="editor-label">
+            设备状态
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.State, new SelectListItem[] 
+            { 
+                new SelectListItem { Text = "正常", Value = "0"},
+                new SelectListItem { Text = "故障", Value = "1"},
+                new SelectListItem { Text = "报废", Value = "2"}
+            })
+            @Html.ValidationMessageFor(model => model.State)
+        </div>
+
+        <div class="editor-label">
+            设备健康状况
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Health)
+            @Html.ValidationMessageFor(model => model.Health)
+        </div>
+
+        <div class="editor-label">
+            备注
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Memo)
+            @Html.ValidationMessageFor(model => model.Memo)
+        </div>
+
+        <p>
+            <input type="submit" value="保存" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回设备列表", "Index")
+</div>

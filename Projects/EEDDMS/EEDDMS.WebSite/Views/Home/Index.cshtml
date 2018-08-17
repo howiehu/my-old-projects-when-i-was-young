@@ -1,0 +1,436 @@
+﻿@{
+    ViewBag.Title = "首页";
+}
+@if (false)
+{
+    <script language="javascript" type="text/javascript" src="../../Scripts/jquery-1.7.1-vsdoc.js"></script>
+}
+<h2 id="title">
+    世界地图</h2>
+<script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../Scripts/jquery-ui-1.8.16.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+<script type="text/javascript" language="javascript">
+    //移除数组中设备信息
+    Array.prototype.remove = function (obj) {
+        for (var i = 0; i < this.length; i++) {
+            var temp = this[i];
+            if (!isNaN(obj)) {
+                temp = i;
+            }
+            if (temp == obj) {
+                for (var j = i; j < this.length; j++) {
+                    this[j] = this[j + 1]; 2
+                }
+                this.length = this.length - 1;
+            }
+        }
+
+    };
+
+    Array.prototype.contains = function (element) {
+        for (var i = 0; i < this.length; i++) {
+            try {
+                if (this[i].getPosition().lng == element.Longitude && this[i].getPosition().lat == element.Latitude) {
+                    return true;
+                }
+            } catch (e) {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    $(document).ready(function () {
+        function toFullScreen() {
+            if (document.getElementById('header').style.display != "none") {
+                map.disableAutoResize();
+                var h = document.documentElement.clientHeight;
+                var curPix = map.pointToPixel(map.getCenter());
+                var newPix = new BMap.Pixel(curPix.x - 80, curPix.y - 40);
+                var newCenter = map.pixelToPoint(newPix);
+                document.getElementById('title').style.display = 'none';
+                document.getElementById('header').style.display = 'none';
+                document.getElementById('menu').style.display = 'none';
+                var mapContainer = document.getElementById('dituContent');
+                mapContainer.style.height = h + "px";
+                mapContainer.style.marginLeft = "0";
+                map.checkResize();
+                map.setCenter(newCenter);
+                map.enableAutoResize();
+            } else {
+                map.disableAutoResize();
+                var h = document.documentElement.clientHeight;
+                var curPix = map.pointToPixel(map.getCenter());
+                var newPix = new BMap.Pixel(curPix.x - 80, curPix.y - 40);
+                var newCenter = map.pixelToPoint(newPix);
+                document.getElementById('header').style.display = '';
+                document.getElementById('menu').style.display = '';
+                document.getElementById('title').style.display = '';
+                var mapContainer = document.getElementById('dituContent');
+                mapContainer.style.height = h + "px";
+                mapContainer.style.marginLeft = "0";
+                mapContainer.style.marginTop = "0";
+                map.checkResize();
+                map.setCenter(newCenter);
+                map.enableAutoResize();
+
+            }
+        }
+        //全局地图数组
+        var mapArray = new Array();
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap(); //创建地图
+            setMapEvent(); //设置地图事件
+            addMapControl(); //向地图添加控件
+            CreateRirhtControl(); //添加右键菜单
+        }
+
+        //设置地图
+        function setMarker(customMap) {
+            if (customMap != null) {
+                if (!mapArray.contains(customMap)) {
+                    var point = new BMap.Point(customMap.Longitude, customMap.Latitude);
+                    var address = "";
+                    var myGeo = new BMap.Geocoder();
+                    myGeo.getLocation(point, function (result) {
+                        if (result) {
+                            address = result.address;
+                        }
+                    });
+                    window.map.centerAndZoom(point, 15);
+                    var marker = new BMap.Marker(point);        // 创建标注  
+                    marker.setTitle(customMap.Name);
+
+                    marker.addEventListener("click", function () {
+                        var divHtml = "<div><h4>" + customMap.Name + "</h4><table><tr><td>经度:</td><td>" + customMap.Longitude + "</td><td align='right' rowspan='4'><img  title=" + customMap.Name + " src=/Image/" + customMap.Name + ".jpg style='width:" + customMap.PictureWidth + "px;height:" + customMap.PictureHeight + "px'></img></td><tr><tr><td>纬度:</td><td>" + customMap.Latitude + "</td></tr><tr><td style='font-size: 12px;'>所在地区:</td><td style='font-size: 12px;'>" + address + "</td></tr><tr><td style='width:95px;font-size: 12px;'>工作状态:</td><td style='font-size: 12px;width:200px'>当前处于工作状态，运转正常</td></tr></table></div>";
+                        var infoWindow = new BMap.InfoWindow(divHtml);  // 创建信息窗口对象  
+                        window.map.openInfoWindow(infoWindow, point);      // 打开信息窗口  
+                    });
+                    window.map.addOverlay(marker);
+
+                    mapArray.push(marker);
+                    var menu = new BMap.ContextMenu();
+                    var txtMenuItem = [
+                  {
+                      text: '删除设备',
+                      callback: function () {
+                          window.map.removeOverlay(marker);
+                          mapArray.remove(marker);
+
+                      }
+                  }
+                 ];
+
+                    for (var i = 0; i < txtMenuItem.length; i++) {
+                        menu.addItem(new BMap.MenuItem(txtMenuItem[i].text, txtMenuItem[i].callback, 100));
+
+                    }
+                    marker.addContextMenu(menu);
+                }
+            }
+        }
+
+        //创建地图函数：
+        function createMap() {
+            var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+            window.map = map; //将map变量存储在全局
+            window.map.centerAndZoom("北京", 5);
+        }
+
+        //获取当前提示层的左边
+        GetShowLeft = function (left, picWidth) {
+            var divWidth = $("#_tooltip_").width();
+            var viewWidth = document.body.clientWidth;  //浏览器可视宽度 
+
+            var retValue = 0;
+            if (divWidth + left > viewWidth)
+                retValue = left - divWidth + picWidth;
+            else
+                retValue = left;
+
+            return retValue;
+        }
+
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+            map.disableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+            map.disableKeyboard(); //启用键盘上下左右键移动地图
+        }
+
+        function CreateRirhtControl() {
+            var menu = new BMap.ContextMenu();
+            var txtMenuItem = [
+                  {
+                      text: '居中显示',
+                      callback: function () { map.zoomIn() }
+                  },
+                  {
+                      text: '查看使用地域',
+                      callback: function () { map.zoomOut() }
+                  },
+                   {
+                       text: '查看现场分布',
+                       callback: function () { map.zoomOut() }
+                   },
+                   {
+                       text: '查看设备信息',
+                       callback: function () { map.zoomOut() }
+                   }
+                 ,
+                   {
+                       text: '查看设备历史',
+                       callback: function () { map.zoomOut() }
+                   }
+                 ];
+
+            for (var i = 0; i < txtMenuItem.length; i++) {
+                menu.addItem(new BMap.MenuItem(txtMenuItem[i].text, txtMenuItem[i].callback, 100));
+                if (i == 0 || i == 2 || i == 4) {
+                    menu.addSeparator();
+                }
+
+            }
+
+            map.addContextMenu(menu);
+
+        }
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(ctrl_nav);
+            //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            map.addControl(ctrl_sca);
+            map.addControl(new BMap.MapTypeControl());
+            // 定义一个控件类,即function
+            function ZoomControl() {
+                // 默认停靠位置和偏移量
+                this.defaultAnchor = BMAP_ANCHOR_TOP_RIGHT;
+                this.defaultOffset = new BMap.Size(0, 40);
+            }
+
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            ZoomControl.prototype = new BMap.Control();
+
+
+            // 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回
+            // 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中
+            ZoomControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                // 添加搜索框
+                var inputSearch = document.createElement("input");
+                div.appendChild(inputSearch);
+                inputSearch.setAttribute("id", "inputSearch");
+                inputSearch.onfocus = function (e) {
+                    var text = this.value;
+                    $.ajax({
+                        //要用post方式   
+                        type: "Post",
+                        //方法所在页面和方法名   
+                        url: '@Url.Action("GetEquipmentsByName")', //调用WebService的地址和方法名称组合 ---- WsURL/方法名
+                        contentType: "application/json; charset=utf-8",
+                        data: "{equipmentName:'" + text + "'}",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data != null) {
+                                //返回的数据用data获取内容   
+                                if (data != " ") {
+                                    var result = data;
+                                    //自动补全
+                                    $("#inputSearch").autocomplete({
+                                        source: result
+                                    });
+                                }
+                            }
+
+                        }
+                    });
+                }
+
+                var btnSearch = document.createElement("input");
+                btnSearch.setAttribute("id", "btnSearch");
+                btnSearch.type = 'button';
+                btnSearch.value = '查询';
+                div.appendChild(btnSearch);
+                btnSearch.onclick = function (e) {
+                    var text = $("#inputSearch").val();
+                    $.ajax({
+                        //要用post方式   
+                        type: "Post",
+                        //方法所在页面和方法名   
+                        url: '@Url.Action("GetEquipmentByName")', //调用WebService的地址和方法名称组合 ---- WsURL/方法名
+                        contentType: "application/json; charset=utf-8",
+                        data: "{equipmentName:'" + text + "'}",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data != null) {
+                                //返回的数据用data获取内容   
+                                if (data != " ") {
+                                    var result = data;
+                                    setMarker(result[0]);
+                                }
+                            }
+
+                        }
+                    });
+                }
+
+                // 设置样式
+                div.style.cursor = "pointer";
+                div.style.border = "1px solid gray";
+                div.style.backgroundColor = "white";
+                // 添加DOM元素到地图中
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+            }
+            function LControl() {
+                // 默认停靠位置和偏移量
+                this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+                this.defaultOffset = new BMap.Size(50, 10);
+
+            }
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            LControl.prototype = new BMap.Control();
+            LControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                // 添加文字说明
+                div.appendChild(document.createTextNode("世界"));
+                // 设置样式
+                div.style.cursor = "pointer";
+                div.style.border = "1px solid gray";
+                div.style.backgroundColor = "white";
+                // 绑定事件,点击一次放大两级
+                div.onclick = function (e) {
+
+                    window.map.centerAndZoom("北京", 3);
+                }
+                // 添加DOM元素到地图中 
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+
+            }
+
+            function ChinaControl() {
+                // 默认停靠位置和偏移量
+                this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+                this.defaultOffset = new BMap.Size(90, 10);
+
+            }
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            ChinaControl.prototype = new BMap.Control();
+            ChinaControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                // 添加文字说明
+                div.appendChild(document.createTextNode("中国"));
+                // 设置样式
+                div.style.cursor = "pointer";
+                div.style.border = "1px solid gray";
+                div.style.backgroundColor = "white";
+                // 绑定事件,点击一次放大两级
+                div.onclick = function (e) {
+                    window.map.centerAndZoom("北京", 4);
+                }
+                // 添加DOM元素到地图中 
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+
+            }
+
+
+            function ProvinceControl() {
+                // 默认停靠位置和偏移量
+                this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+                this.defaultOffset = new BMap.Size(130, 10);
+
+            }
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            ProvinceControl.prototype = new BMap.Control();
+            ProvinceControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                // 添加文字说明
+                div.appendChild(document.createTextNode("省"));
+                // 设置样式
+                div.style.cursor = "pointer";
+                div.style.border = "1px solid gray";
+                div.style.backgroundColor = "white";
+                // 绑定事件,点击一次放大两级
+                div.onclick = function (e) {
+                    window.map.centerAndZoom("北京", 8);
+                }
+                // 添加DOM元素到地图中 
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+
+            }
+
+
+            function FullScreenControl() {
+                // 默认停靠位置和偏移量
+                this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+                this.defaultOffset = new BMap.Size(160, 10);
+
+            }
+
+            // 通过JavaScript的prototype属性继承于BMap.Control
+            FullScreenControl.prototype = new BMap.Control();
+            FullScreenControl.prototype.initialize = function (map) {
+                // 创建一个DOM元素
+                var div = document.createElement("div");
+                // 添加文字说明
+                div.appendChild(document.createTextNode("全屏"));
+                // 设置样式
+                div.style.cursor = "pointer";
+                div.style.border = "1px solid gray";
+                div.style.backgroundColor = "white";
+                // 绑定事件,点击一次放大两级
+                div.onclick = function (e) {
+                    toFullScreen();
+                    window.map.centerAndZoom("北京");
+                }
+                // 添加DOM元素到地图中 
+                map.getContainer().appendChild(div);
+                // 将DOM元素返回
+                return div;
+
+            }
+
+
+            // 创建控件
+            var myZoomCtrl = new ZoomControl();
+            var myLCtrl = new LControl();
+            var myChinaControl = new ChinaControl();
+            var myProvinceControl = new ProvinceControl();
+            var myFullScreenControl = new FullScreenControl();
+            // 添加到地图当中
+            map.addControl(myZoomCtrl);
+            map.addControl(myLCtrl);
+            map.addControl(myChinaControl);
+            map.addControl(myProvinceControl);
+            map.addControl(myFullScreenControl);
+            //  map.setMinZoom(9)
+            map.setMaxZoom(18);
+
+        }
+        initMap(); //创建和初始化地图
+    });
+</script>
+<!--百度地图容器-->
+<div style="width: 100%; height: 459px; border: #ccc solid 1px;" id="dituContent">
+</div>

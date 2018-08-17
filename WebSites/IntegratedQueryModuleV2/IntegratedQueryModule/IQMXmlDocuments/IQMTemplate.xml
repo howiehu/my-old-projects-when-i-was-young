@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Table Alias="Alias1" SourceName="SourceName1" SourceType="TVF" xmlns="http://www.hkrsoft.com.cn/xml/IQMSchema.xsd">
+    <Columns>
+        <Column Name="Name1" Alias="Alias1" ColumnType="text" IsSumColumn="false" TextAlign="left">
+            <ValueAlias>
+                <Value Value="Value1" Alias="Alias1" />
+                <Value Value="Value2" Alias="Alias2" />
+                <Value Value="Value3" Alias="Alias3" />
+            </ValueAlias>
+            <ValueUrl Url="http://uri1">
+                <Key>Key1</Key>
+                <Key>Key2</Key>
+                <Key>Key3</Key>
+            </ValueUrl>
+        </Column>
+        <Column Name="Name2" Alias="Alias2" ColumnType="text" IsSumColumn="true" TextAlign="left">
+            <ValueAlias>
+                <Value Value="Value4" Alias="Alias4" />
+                <Value Value="Value5" Alias="Alias5" />
+                <Value Value="Value6" Alias="Alias6" />
+            </ValueAlias>
+            <ValueUrl Url="http://uri2">
+                <Key>Key4</Key>
+                <Key>Key5</Key>
+                <Key>Key6</Key>
+            </ValueUrl>
+        </Column>
+        <Column Name="Name3" Alias="Alias3" ColumnType="date" IsSumColumn="false" TextAlign="right">
+            <ValueAlias>
+                <Value Value="Value7" Alias="Alias7" />
+                <Value Value="Value8" Alias="Alias8" />
+                <Value Value="Value9" Alias="Alias9" />
+            </ValueAlias>
+            <ValueUrl Url="http://uri3">
+                <Key>Key7</Key>
+                <Key>Key8</Key>
+                <Key>Key9</Key>
+            </ValueUrl>
+        </Column>
+    </Columns>
+</Table>

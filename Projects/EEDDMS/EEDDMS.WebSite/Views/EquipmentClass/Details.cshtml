@@ -1,0 +1,31 @@
+﻿@model EEDDMS.Domain.Entities.EquipmentClass
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_EquipmentModuleLayout.cshtml";
+}
+
+<h2>详情</h2>
+
+<fieldset>
+    <legend>设备分类</legend>
+
+    <div class="display-label">@Html.LabelFor(model => model.Name)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.CreationDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreationDate)
+    </div>
+
+    <div class="display-label">@Html.LabelFor(model => model.ModifyDate)</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModifyDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回设备分类列表", "Index")
+</p>

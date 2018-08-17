@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="sidebar">
+    <p>
+        @Html.ActionLink("采集器", "Index", "Collector")
+    </p>
+</div>
+
+<div id="content">
+@RenderBody()
+</div>

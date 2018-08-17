@@ -1,0 +1,164 @@
+﻿body
+{
+    font-size: 14px;
+    font-family: SimSun, "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #5c87b2;
+    
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    min-width: 964px;
+}
+
+/* 头部样式 */
+#header
+{
+    /*background-color: #CCFFFF;*/
+    height: 150px;
+    margin: 0px 0px 0px 0px;
+}
+
+#header #userpanel
+{
+    background-color: #FFFFFF;
+    margin: 5px;
+    padding: 10px;
+    float: right;
+    clear:both;
+}
+
+#header #title
+{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-family: SimHei, "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    font-weight: bold;
+    position: relative;
+    top: 35%;
+    left: 40px;
+}
+
+/* 菜单样式 */
+#menu
+{
+    background-color: #FFFFFF;
+    margin: 15px 0px 0px 0px;
+}
+
+#menu ul
+{
+    padding: 10px;
+}
+
+#menu li
+{
+    display: inline;
+    list-style: none;
+}
+
+/* 正文样式 */
+#body
+{
+    margin: 0px 0px 0px 0px;
+    min-height: 320px;
+}
+
+#body #sidebar
+{
+    background-color: #FFFFFF;
+    width: 160px;
+    float: left;
+    padding: 10px;
+    text-align:center;
+}
+
+#body #content
+{
+    background-color: #FFFFFF;
+    min-height: 320px;
+    margin-left: 190px;
+    padding: 10px;
+}
+
+/* 底部样式 */
+#footer
+{
+    background-color: #FFFFFF;
+    height: 40px;
+    text-align:center;
+    padding: 10px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
+}
+
+/* VS自动添加部分
+-----------------------------------------------------------*/
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
