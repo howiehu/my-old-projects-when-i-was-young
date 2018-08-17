@@ -1,0 +1,8 @@
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ALEXXPCLPTools.Properties.Resources.resources
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ALEXXPCLPTools.csproj.GenerateResource.Cache
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\bin\Debug\ALEXXPCLPTools.exe
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\bin\Debug\ALEXXPCLPTools.pdb
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ALEXXPCLPTools.exe
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ALEXXPCLPTools.pdb
+F:\Projects\ALEXXPCLPTools\ALEXXPCLPTools\obj\Debug\ALEXXPCLPTools.MainForm.resources

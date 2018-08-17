@@ -1,0 +1,5 @@
+F:\Projects\ALEXXPCLPTools\ALEXXPStringTableHelper\bin\Debug\ALEXXPStringTableHelper.dll
+F:\Projects\ALEXXPCLPTools\ALEXXPStringTableHelper\bin\Debug\ALEXXPStringTableHelper.pdb
+F:\Projects\ALEXXPCLPTools\ALEXXPStringTableHelper\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\ALEXXPCLPTools\ALEXXPStringTableHelper\obj\Debug\ALEXXPStringTableHelper.dll
+F:\Projects\ALEXXPCLPTools\ALEXXPStringTableHelper\obj\Debug\ALEXXPStringTableHelper.pdb

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.5.906 (http://www.liquid-technologies.com) -->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\Projects\XmlEditor\XmlEditor\Pay.xsd">
+  <configSections>
+    <section name="string" type="string" />
+  </configSections>
+  <paymanager>
+    <policies>
+      <add previousPoicyName="string">
+        <itemKeys />
+        <calculatorKeys />
+      </add>
+      <add description="string" previousPoicyName="string" />
+      <add name="string" wageType="string">
+        <itemKeys />
+        <calculatorKeys />
+      </add>
+      <add name="string" caption="string" previousPoicyName="string" />
+    </policies>
+    <items>
+      <add name="string" columnName="string" calculatingCategory="string" dataType="string" formatString="string" calculatingExtensionType="string">
+        <expressions />
+      </add>
+      <add name="string" calculatingCategory="string" dataType="string" />
+    </items>
+    <criterias>
+      <add name="string" criteriaString="string" />
+      <add name="string" />
+    </criterias>
+    <add name="string" caption="string" columnName="string" dataType="string" calculatingExtensionType="string" tempItemName="string" />
+    <add dataType="string" criteriaCategory="string" calculatingExtensionType="string" tempItemName="string" />
+  </paymanager>
+</configuration>

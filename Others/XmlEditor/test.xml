@@ -1,0 +1,1807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="paymanager" type="Pay.PayConfigurationManager,Pay,Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+  </configSections>
+  <paymanager>
+    <policies>
+      <add name="defaultpolicy" caption="职能部门工资" description="职能部门工资计算策略" previousPoicyName="" wageType="3">
+        <itemKeys>
+          <!--考勤-->
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="0" />
+          <add name="kuanggongtianshu" sortedKey="0" />
+          <add name="countimespan" sortedKey="0" />
+          <add name="convertzhangchangchuqinrate" sortedKey="0" />
+          <add name="fadingjiejiari" sortedKey="0" />
+          <add name="zhoumejiaban" sortedKey="0" />
+          <add name="chuqinlv" sortedKey="0" />
+          <add name="queqintianshu" sortedKey="0" />
+          <add name="ZhongQin" sortedKey="0" />
+          <add name="YeQin" sortedKey="0" />
+          <add name="DaYeQin" sortedKey="0" />
+          <add name="PiZhuiJiaBan" sortedKey="0" />
+          <!--基本工资部分-->
+          <add name="BenefitBaseWage02" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="WorkStationWage02" sortedKey="2" />
+          <add name="SkillWage02" sortedKey="3" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="AlreadyAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="Absence02" sortedKey="5" />
+          <add name="FeastOvertimeAmount02" sortedKey="6" />
+          <add name="WeekendOvertimeAmount02" sortedKey="7" />
+          <add name="Overtime02" sortedKey="8" />
+          <add name="ProductionBounty02" sortedKey="9" />
+          <add name="ProductionExamine02" sortedKey="10" />
+          <add name="Bounty02" sortedKey="11" />
+          <add name="Examine02" sortedKey="12" />
+          <add name="GroupAward02" sortedKey="13" />
+          <!--补贴-->
+          <add name="FourSubsidy02" sortedKey="14" />
+          <add name="LengthOfService02" sortedKey="15" />
+          <add name="SanitarySubsidy02" sortedKey="16" />
+          <add name="RepastSubsidy02" sortedKey="17" />
+          <add name="DegreeSubsidy02" sortedKey="18" />
+          <add name="MessageSubsidy02" sortedKey="19" />
+          <add name="TrafficSubsidy02" sortedKey="20" />
+          <add name="LaborSubsidy02" sortedKey="21" />
+          <add name="DirectorSubsidy02" sortedKey="22" />
+          <add name="HousingSubsidy02" sortedKey="23" />
+          <add name="HighTemperature02" sortedKey="24" />
+          <add name="Surroundings02" sortedKey="25" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="26" />
+          <add name="MotormanSubsidy02" sortedKey="27" />
+          <add name="QuanqinAward02" sortedKey="28" />
+          <add name="OtherSubsidy02" sortedKey="29" />
+          <!--保险-->
+          <add name="Medicare02" sortedKey="30" />
+          <add name="EndowmentInsurance02" sortedKey="31" />
+          <add name="UnemploymentInsurance02" sortedKey="32" />
+          <add name="LargeInsurance02" sortedKey="33" />
+          <!--考核-->
+          <add name="Utilities02" sortedKey="34" />
+          <add name="ExaminationFees02" sortedKey="35" />
+          <add name="FinanceCharge02" sortedKey="36" />
+          <add name="CompanyCharge02" sortedKey="37" />
+          <add name="LaborInsuranceCharge02" sortedKey="38" />
+          <add name="OtherCharge102" sortedKey="39" />
+          <add name="OtherCharge202" sortedKey="40" />
+          <!-- 显示列12月9号加 -->
+          <add name="BasicWageSubTotal" sortedKey="40" />
+          <add name="RelayWage" sortedKey="40" />
+          <add name="AbsenceRelayTotal" sortedKey="40" />
+          <add name="BasicWageTotal" sortedKey="40" />
+          <add name="FeastOvertime" sortedKey="40" />
+          <add name="WeekendOvertimeTotal" sortedKey="40" />
+          <add name="KeepWatchTotal" sortedKey="40" />
+          <add name="KeepWatchSubTotal" sortedKey="40" />
+          <add name="CompanyFees" sortedKey="40" />
+          <add name="TotalWage" sortedKey="40" />
+          <add name="InsuranceSubTotal" sortedKey="40" />
+          <add name="NetWage" sortedKey="40" />
+          <add name="ExaminationFees" sortedKey="40" />
+          <add name="FinanceCharge" sortedKey="40" />
+          <add name="CompanyCharge" sortedKey="40" />
+          <add name="LaborInsuranceCharge" sortedKey="40" />
+          <add name="OtherCharge1" sortedKey="40" />
+          <add name="OtherCharge2" sortedKey="40" />
+          <add name="BandhWage" sortedKey="40" />
+          <add name="DeferShellOutWage" sortedKey="40" />
+          <add name="TotalWage5" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <!-- 显示列12月9号下午加 -->
+          <add name="ProductionSubTotal" sortedKey="40" />
+          <add name="BountyExamineSubTotal" sortedKey="40" />
+          <add name="EfficiencyWage" sortedKey="40" />
+          <add name="AwardTotal" sortedKey="40" />
+          <add name="WageAndAwardTotal" sortedKey="40" />
+          <add name="SubsidySubTotal" sortedKey="40" />
+          <add name="OtherSubsidy" sortedKey="40" />
+          <add name="OtherSubsidy1" sortedKey="40" />
+          <add name="OtherSubsidy2" sortedKey="40" />
+          <add name="Signature" sortedKey="40" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="kaoqinCalculator" sortedKey="0" />
+          <add name="defaultcalculatorBase" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="ZhiNengBuMenPolicy" caption="职能部门工资(无补贴)" description="职能部门工资计算策略(无补贴)" previousPoicyName="" wageType="3">
+        <itemKeys>
+          <!--考勤-->
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="0" />
+          <add name="kuanggongtianshu" sortedKey="0" />
+          <add name="countimespan" sortedKey="0" />
+          <add name="convertzhangchangchuqinrate" sortedKey="0" />
+          <add name="fadingjiejiari" sortedKey="0" />
+          <add name="zhoumejiaban" sortedKey="0" />
+          <add name="chuqinlv" sortedKey="0" />
+          <add name="queqintianshu" sortedKey="0" />
+          <add name="ZhongQin" sortedKey="0" />
+          <add name="YeQin" sortedKey="0" />
+          <add name="DaYeQin" sortedKey="0" />
+          <add name="PiZhuiJiaBan" sortedKey="0" />
+          <!--基本工资部分-->
+          <add name="BenefitBaseWage02" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="WorkStationWage02" sortedKey="2" />
+          <add name="SkillWage02" sortedKey="3" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="AlreadyAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="Absence02" sortedKey="5" />
+          <add name="FeastOvertimeAmount02" sortedKey="6" />
+          <add name="WeekendOvertimeAmount02" sortedKey="7" />
+          <add name="Overtime02" sortedKey="8" />
+          <add name="ProductionBounty02" sortedKey="9" />
+          <add name="ProductionExamine02" sortedKey="10" />
+          <add name="Bounty02" sortedKey="11" />
+          <add name="Examine02" sortedKey="12" />
+          <add name="GroupAward02" sortedKey="13" />
+          <!--保险-->
+          <add name="Medicare02" sortedKey="30" />
+          <add name="EndowmentInsurance02" sortedKey="31" />
+          <add name="UnemploymentInsurance02" sortedKey="32" />
+          <add name="LargeInsurance02" sortedKey="33" />
+          <!--考核-->
+          <add name="Utilities02" sortedKey="34" />
+          <add name="ExaminationFees02" sortedKey="35" />
+          <add name="FinanceCharge02" sortedKey="36" />
+          <add name="CompanyCharge02" sortedKey="37" />
+          <add name="LaborInsuranceCharge02" sortedKey="38" />
+          <add name="OtherCharge102" sortedKey="39" />
+          <add name="OtherCharge202" sortedKey="40" />
+          <!-- 显示列12月9号加 -->
+          <add name="BasicWageSubTotal" sortedKey="40" />
+          <add name="RelayWage" sortedKey="40" />
+          <add name="AbsenceRelayTotal" sortedKey="40" />
+          <add name="BasicWageTotal" sortedKey="40" />
+          <add name="FeastOvertime" sortedKey="40" />
+          <add name="WeekendOvertimeTotal" sortedKey="40" />
+          <add name="KeepWatchTotal" sortedKey="40" />
+          <add name="KeepWatchSubTotal" sortedKey="40" />
+          <add name="CompanyFees" sortedKey="40" />
+          <add name="TotalWage" sortedKey="40" />
+          <add name="InsuranceSubTotal" sortedKey="40" />
+          <add name="NetWage" sortedKey="40" />
+          <add name="ExaminationFees" sortedKey="40" />
+          <add name="FinanceCharge" sortedKey="40" />
+          <add name="CompanyCharge" sortedKey="40" />
+          <add name="LaborInsuranceCharge" sortedKey="40" />
+          <add name="OtherCharge1" sortedKey="40" />
+          <add name="OtherCharge2" sortedKey="40" />
+          <add name="BandhWage" sortedKey="40" />
+          <add name="DeferShellOutWage" sortedKey="40" />
+          <add name="TotalWage5" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <!-- 显示列12月9号下午加 -->
+          <add name="ProductionSubTotal" sortedKey="40" />
+          <add name="BountyExamineSubTotal" sortedKey="40" />
+          <add name="EfficiencyWage" sortedKey="40" />
+          <add name="AwardTotal" sortedKey="40" />
+          <add name="WageAndAwardTotal" sortedKey="40" />
+          <add name="SubsidySubTotal" sortedKey="40" />
+          <add name="OtherSubsidy" sortedKey="40" />
+          <add name="OtherSubsidy1" sortedKey="40" />
+          <add name="OtherSubsidy2" sortedKey="40" />
+          <add name="Signature" sortedKey="40" />
+          <!--补贴-->
+          <add name="FourSubsidy" sortedKey="40" />
+          <add name="LengthOfService" sortedKey="40" />
+          <add name="SanitarySubsidy" sortedKey="40" />
+          <add name="RepastSubsidy" sortedKey="40" />
+          <add name="DegreeSubsidy" sortedKey="40" />
+          <add name="MessageSubsidy" sortedKey="40" />
+          <add name="TrafficSubsidy" sortedKey="40" />
+          <add name="LaborSubsidy" sortedKey="40" />
+          <add name="DirectorSubsidy" sortedKey="40" />
+          <add name="HousingSubsidy" sortedKey="40" />
+          <add name="HighTemperature" sortedKey="40" />
+          <add name="Surroundings" sortedKey="40" />
+          <add name="SafetyOfficerSubsidy" sortedKey="40" />
+          <add name="MotormanSubsidy" sortedKey="40" />
+          <add name="QuanqinAward" sortedKey="40" />
+          <add name="OtherSubsidy" sortedKey="40" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="kaoqinCalculator" sortedKey="0" />
+          <add name="defaultcalculatorBase" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="ShengChangPolicy01" caption="生产人员一次工资" description="生产人员的工资标准第一次计算" previousPoicyName="" wageType="1">
+        <itemKeys>
+          <!--考勤-->
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="0" />
+          <add name="kuanggongtianshu" sortedKey="0" />
+          <add name="countimespan" sortedKey="0" />
+          <add name="convertzhangchangchuqinrate" sortedKey="0" />
+          <add name="fadingjiejiari" sortedKey="0" />
+          <add name="zhoumejiaban" sortedKey="0" />
+          <add name="chuqinlv" sortedKey="0" />
+          <add name="queqintianshu" sortedKey="0" />
+          <add name="ZhongQin" sortedKey="0" />
+          <add name="YeQin" sortedKey="0" />
+          <add name="DaYeQin" sortedKey="0" />
+          <add name="PiZhuiJiaBan" sortedKey="0" />
+          <add name="BenefitBaseWage01" sortedKey="7" />
+          <add name="DailyWages01" sortedKey="8" />
+          <add name="AlreadyAttendancedays01" sortedKey="9" />
+          <add name="WeekendOvertimeAmount02" sortedKey="10" />
+          <add name="OvertimeAmount02" sortedKey="11" />
+          <add name="Overtime02" sortedKey="12" />
+          <add name="KeepWatchAmount02" sortedKey="13" />
+          <add name="KeepWatch02" sortedKey="14" />
+          <add name="RelayAmount02" sortedKey="15" />
+          <add name="FeastOvertimeAmount02" sortedKey="17" />
+          <add name="ConfirmOvertimeAmount02" sortedKey="18" />
+          <!-- 显示列 -->
+          <add name="BasicWageSubTotal" sortedKey="40" />
+          <add name="RelayWage" sortedKey="40" />
+          <add name="BasicWageTotal" sortedKey="40" />
+          <add name="FeastOvertime" sortedKey="40" />
+          <add name="WeekendOvertimeTotal" sortedKey="40" />
+          <add name="KeepWatchTotal" sortedKey="40" />
+          <add name="KeepWatchSubTotal" sortedKey="40" />
+          <add name="CompanyFees" sortedKey="40" />
+          <add name="TotalWage" sortedKey="40" />
+          <add name="InsuranceSubTotal" sortedKey="40" />
+          <add name="NetWage" sortedKey="40" />
+          <add name="ExaminationFees" sortedKey="40" />
+          <add name="FinanceCharge" sortedKey="40" />
+          <add name="CompanyCharge" sortedKey="40" />
+          <add name="LaborInsuranceCharge" sortedKey="40" />
+          <add name="OtherCharge1" sortedKey="40" />
+          <add name="OtherCharge2" sortedKey="40" />
+          <add name="BandhWage" sortedKey="40" />
+          <add name="DeferShellOutWage" sortedKey="40" />
+          <add name="TotalWage5" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <!-- 显示列12月9号下午加 -->
+          <add name="Signature" sortedKey="40" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="kaoqinCalculator" sortedKey="0" />
+          <add name="calculatorBaseShengChan01" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="ShengChangPolicy02" caption="生产人员第二次工资" description="生产人员工资第二次计算　" previousPoicyName="ShengChangPolicy01" wageType="2">
+        <itemKeys>
+          <!--考勤-->
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="0" />
+          <add name="kuanggongtianshu" sortedKey="0" />
+          <add name="countimespan" sortedKey="0" />
+          <add name="convertzhangchangchuqinrate" sortedKey="0" />
+          <add name="fadingjiejiari" sortedKey="0" />
+          <add name="zhoumejiaban" sortedKey="0" />
+          <add name="chuqinlv" sortedKey="0" />
+          <add name="queqintianshu" sortedKey="0" />
+          <add name="ZhongQin" sortedKey="0" />
+          <add name="YeQin" sortedKey="0" />
+          <add name="DaYeQin" sortedKey="0" />
+          <add name="PiZhuiJiaBan" sortedKey="0" />
+          <add name="BenefitBaseWage03" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="ShellOutWage01" sortedKey="2" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="WeekendOvertimeAmount02" sortedKey="4" />
+          <add name="AttendanceRatio01" sortedKey="5" />
+          <add name="Bounty02" sortedKey="10" />
+          <add name="Examine02" sortedKey="11" />
+          <add name="FourSubsidy02" sortedKey="12" />
+          <add name="LengthOfService02" sortedKey="13" />
+          <add name="SanitarySubsidy02" sortedKey="14" />
+          <add name="RepastSubsidy02" sortedKey="15" />
+          <add name="DegreeSubsidy02" sortedKey="16" />
+          <add name="MessageSubsidy02" sortedKey="17" />
+          <add name="TrafficSubsidy02" sortedKey="18" />
+          <add name="LaborSubsidy02" sortedKey="19" />
+          <add name="DirectorSubsidy02" sortedKey="20" />
+          <add name="HousingSubsidy02" sortedKey="21" />
+          <add name="HighTemperature02" sortedKey="22" />
+          <add name="Surroundings02" sortedKey="23" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="24" />
+          <add name="MotormanSubsidy02" sortedKey="25" />
+          <add name="QuanqinAward02" sortedKey="26" />
+          <add name="OtherSubsidy02" sortedKey="27" />
+          <add name="PayBasicWageTotal01" sortedKey="27" />
+          <add name="Medicare02" sortedKey="25" />
+          <add name="EndowmentInsurance02" sortedKey="26" />
+          <add name="UnemploymentInsurance02" sortedKey="27" />
+          <add name="LargeInsurance02" sortedKey="28" />
+          <add name="Utilities02" sortedKey="30" />
+          <add name="ExaminationFees02" sortedKey="31" />
+          <add name="FinanceCharge02" sortedKey="32" />
+          <add name="CompanyCharge02" sortedKey="33" />
+          <add name="LaborInsuranceCharge02" sortedKey="34" />
+          <add name="OtherCharge102" sortedKey="35" />
+          <add name="OtherCharge202" sortedKey="36" />
+          <add name="NetWage01" sortedKey="37" />
+          <add name="AlreadyPayIncomeTax01" sortedKey="38" />
+          <!-- 显示列12月9号加 -->
+          <!--<add name="KeepWatchTotal" sortedKey="40"/>
+          <add name="KeepWatchSubTotal" sortedKey="40"/>
+          <add name="CompanyFees" sortedKey="40"/>
+          <add name="TotalWage" sortedKey="40"/>
+          <add name="InsuranceSubTotal" sortedKey="40"/>
+          <add name="NetWage" sortedKey="40"/>
+          <add name="ExaminationFees" sortedKey="40"/>
+          <add name="FinanceCharge" sortedKey="40"/>
+          <add name="CompanyCharge" sortedKey="40"/>
+          <add name="LaborInsuranceCharge" sortedKey="40"/>
+          <add name="OtherCharge1" sortedKey="40"/>
+          <add name="OtherCharge2" sortedKey="40"/>-->
+          <add name="BandhWage" sortedKey="40" />
+          <add name="DeferShellOutWage" sortedKey="40" />
+          <add name="TotalWage5" sortedKey="40" />
+          <!-- 显示列12月9号下午加 -->
+          <add name="AwardTotal" sortedKey="40" />
+          <add name="WageAndAwardTotal" sortedKey="40" />
+          <add name="SubsidySubTotal" sortedKey="40" />
+          <add name="OtherSubsidy" sortedKey="40" />
+          <add name="OtherSubsidy1" sortedKey="40" />
+          <add name="OtherSubsidy2" sortedKey="40" />
+          <add name="Signature" sortedKey="40" />
+          <add name="TotalWage1" sortedKey="40" />
+          <add name="FactTotalWage" sortedKey="40" />
+          <!-- 显示列12月11号加 -->
+          <add name="ProductionSubTotal" sortedKey="40" />
+          <add name="BountyExamineSubTotal" sortedKey="40" />
+          <add name="GroupAward" sortedKey="40" />
+          <add name="AttendanceScore" sortedKey="40" />
+          <add name="UnitScoreMoney" sortedKey="40" />
+          <add name="PerformanceWage" sortedKey="40" />
+          <add name="ProductionBounty" sortedKey="40" />
+          <add name="ProductionExamine" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <add name="ShouldPayIncomeTax" sortedKey="40" />
+          <add name="TotalWage2" sortedKey="40" />
+          <add name="TotalWage3" sortedKey="40" />
+          <add name="TotalWage4" sortedKey="40" />
+          <add name="UnshellOutWage" sortedKey="40" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="kaoqinCalculator" sortedKey="0" />
+          <add name="calculatorBaseShengChan02" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="ShengChangPolicyHeBing02" caption="生产人员工资合并后表样" description="生产人员工资合并　" previousPoicyName="" wageType="4">
+        <itemKeys>
+          <!--考勤-->
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="0" />
+          <add name="kuanggongtianshu" sortedKey="0" />
+          <add name="countimespan" sortedKey="0" />
+          <add name="convertzhangchangchuqinrate" sortedKey="0" />
+          <add name="fadingjiejiari" sortedKey="0" />
+          <add name="zhoumejiaban" sortedKey="0" />
+          <add name="chuqinlv" sortedKey="0" />
+          <add name="queqintianshu" sortedKey="0" />
+          <add name="ZhongQin" sortedKey="0" />
+          <add name="YeQin" sortedKey="0" />
+          <add name="DaYeQin" sortedKey="0" />
+          <add name="PiZhuiJiaBan" sortedKey="0" />
+          <add name="BenefitBaseWage03" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="AlreadyAttendancedays01" sortedKey="3" />
+          <add name="AttendanceRatio01" sortedKey="3" />
+          <add name="WeekendOvertimeAmount02" sortedKey="3" />
+          <add name="OvertimeAmount02" sortedKey="4" />
+          <add name="Overtime02" sortedKey="5" />
+          <add name="KeepWatchAmount02" sortedKey="6" />
+          <add name="KeepWatch02" sortedKey="7" />
+          <add name="RelayAmount02" sortedKey="8" />
+          <add name="FeastOvertimeAmount02" sortedKey="10" />
+          <add name="ConfirmOvertimeAmount02" sortedKey="11" />
+          <add name="Bounty02" sortedKey="12" />
+          <add name="Examine02" sortedKey="12" />
+          <add name="FourSubsidy02" sortedKey="12" />
+          <add name="LengthOfService02" sortedKey="13" />
+          <add name="SanitarySubsidy02" sortedKey="14" />
+          <add name="RepastSubsidy02" sortedKey="15" />
+          <add name="DegreeSubsidy02" sortedKey="16" />
+          <add name="MessageSubsidy02" sortedKey="17" />
+          <add name="TrafficSubsidy02" sortedKey="18" />
+          <add name="LaborSubsidy02" sortedKey="19" />
+          <add name="DirectorSubsidy02" sortedKey="20" />
+          <add name="HousingSubsidy02" sortedKey="21" />
+          <add name="HighTemperature02" sortedKey="22" />
+          <add name="Surroundings02" sortedKey="23" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="24" />
+          <add name="MotormanSubsidy02" sortedKey="25" />
+          <add name="QuanqinAward02" sortedKey="26" />
+          <add name="OtherSubsidy02" sortedKey="27" />
+          <add name="PayBasicWageTotal01" sortedKey="27" />
+          <add name="Medicare02" sortedKey="25" />
+          <add name="EndowmentInsurance02" sortedKey="26" />
+          <add name="UnemploymentInsurance02" sortedKey="27" />
+          <add name="LargeInsurance02" sortedKey="28" />
+          <add name="Utilities02" sortedKey="30" />
+          <add name="ExaminationFees02" sortedKey="31" />
+          <add name="FinanceCharge02" sortedKey="32" />
+          <add name="CompanyCharge02" sortedKey="33" />
+          <add name="LaborInsuranceCharge02" sortedKey="34" />
+          <add name="OtherCharge102" sortedKey="35" />
+          <add name="OtherCharge202" sortedKey="36" />
+          <add name="NetWage01" sortedKey="37" />
+          <!-- 显示列12月9号加 -->
+          <add name="BasicWageSubTotal" sortedKey="40" />
+          <add name="RelayWage" sortedKey="40" />
+          <add name="BasicWageTotal" sortedKey="40" />
+          <add name="FeastOvertime" sortedKey="40" />
+          <add name="WeekendOvertimeTotal" sortedKey="40" />
+          <add name="KeepWatchTotal" sortedKey="40" />
+          <add name="KeepWatchSubTotal" sortedKey="40" />
+          <add name="CompanyFees" sortedKey="40" />
+          <add name="TotalWage" sortedKey="40" />
+          <add name="InsuranceSubTotal" sortedKey="40" />
+          <add name="NetWage" sortedKey="40" />
+          <add name="BandhWage" sortedKey="40" />
+          <add name="DeferShellOutWage" sortedKey="40" />
+          <add name="TotalWage5" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <!-- 显示列12月9号下午加 -->
+          <add name="AbsenceRelayTotal" sortedKey="40" />
+          <add name="EfficiencyWage" sortedKey="40" />
+          <add name="AwardTotal" sortedKey="40" />
+          <add name="WageAndAwardTotal" sortedKey="40" />
+          <add name="SubsidySubTotal" sortedKey="40" />
+          <add name="OtherSubsidy" sortedKey="40" />
+          <add name="OtherSubsidy1" sortedKey="40" />
+          <add name="OtherSubsidy2" sortedKey="40" />
+          <add name="Signature" sortedKey="40" />
+          <add name="TotalWage1" sortedKey="40" />
+          <add name="FactTotalWage" sortedKey="40" />
+          <!-- 显示列12月11号加 -->
+          <add name="ProductionSubTotal" sortedKey="40" />
+          <add name="BountyExamineSubTotal" sortedKey="40" />
+          <add name="GroupAward" sortedKey="40" />
+          <add name="AttendanceScore" sortedKey="40" />
+          <add name="UnitScoreMoney" sortedKey="40" />
+          <add name="PerformanceWage" sortedKey="40" />
+          <add name="ProductionBounty" sortedKey="40" />
+          <add name="ProductionExamine" sortedKey="40" />
+          <add name="PersonalIncomeTax" sortedKey="40" />
+          <add name="ShouldPayIncomeTax" sortedKey="40" />
+          <add name="UnshellOutWage" sortedKey="40" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="kaoqinCalculator" sortedKey="0" />
+          <add name="calculatorBaseShengChanHeBing02" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="DaiGangPolicy01" caption="待岗工资生产人员800" description="生产人员待岗800　">
+        <itemKeys>
+          <add name="MonthDays" sortedKey="0" />
+          <add name="AllHolidays" sortedKey="0" />
+          <add name="Holidays" sortedKey="0" />
+          <add name="BandhDays" sortedKey="0" />
+          <add name="DailyWages" sortedKey="0" />
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage01" sortedKey="5" />
+          <add name="DeferShellOutWage01" sortedKey="6" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="calculatorTempDay01" sortedKey="0" />
+          <add name="calculatorDaiGang01" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="DaiGangPolicy02" caption="待岗工资生产人员待岗900" description="生产人员待岗900　">
+        <itemKeys>
+          <add name="MonthDays" sortedKey="0" />
+          <add name="AllHolidays" sortedKey="0" />
+          <add name="Holidays" sortedKey="0" />
+          <add name="BandhDays" sortedKey="0" />
+          <add name="DailyWages" sortedKey="0" />
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage02" sortedKey="5" />
+          <add name="DeferShellOutWage02" sortedKey="6" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="calculatorTempDay01" sortedKey="0" />
+          <add name="calculatorDaiGang02" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+      <add name="DaiGangPolicy03" caption="待岗工资基本工资标准60%" description="基本工资标准60%　">
+        <itemKeys>
+          <add name="MonthDays" sortedKey="0" />
+          <add name="AllHolidays" sortedKey="0" />
+          <add name="Holidays" sortedKey="0" />
+          <add name="BandhDays" sortedKey="0" />
+          <add name="DailyWages" sortedKey="0" />
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage03" sortedKey="5" />
+          <add name="DeferShellOutWage03" sortedKey="6" />
+        </itemKeys>
+        <calculatorKeys>
+          <add name="calculatorTempDay01" sortedKey="0" />
+          <add name="calculatorDaiGang03" sortedKey="1" />
+        </calculatorKeys>
+      </add>
+    </policies>
+    <tempTables>
+      <add name="TempAttendanceTable">
+        <colume>
+          <!-- dataType = System.Type-->
+          <add name="Zhangchangchuqin" dataType="System.Decimal">
+          </add>
+          <add name="ConvertZhangchangchuqinRate" dataType="System.Decimal">
+          </add>
+          <add name="Yingchuqintianshu" dataType="System.Decimal">
+          </add>
+          <add name="Chuqinlv" dataType="System.Decimal">
+          </add>
+          <add name="CountTimeSpan" dataType="System.Int32">
+          </add>
+          <add name="Queqintianshu" dataType="System.Decimal">
+          </add>
+          <add name="Kuanggongtianshu" dataType="System.Decimal">
+          </add>
+          <add name="Qingjiatianshu" dataType="System.Decimal">
+          </add>
+          <add name="Zhoumejiaban" dataType="System.Decimal">
+          </add>
+          <add name="Fadingjiejiari" dataType="System.Decimal">
+          </add>
+          <add name="ZhongQin" dataType="System.Int32">
+          </add>
+          <add name="YeQin" dataType="System.Int32">
+          </add>
+          <add name="DaYeQin" dataType="System.Int32">
+          </add>
+          <add name="ZhiBan" dataType="System.Int32">
+          </add>
+          <add name="PiZhuiJiaBan" dataType="System.Decimal">
+          </add>
+        </colume>
+      </add>
+      <add name="TempTable">
+        <colume>
+          <!-- dataType = System.Type-->
+          <add name="MonthDays" dataType="System.Int32">
+          </add>
+          <add name="AllHolidays" dataType="System.Int32">
+          </add>
+          <add name="Holidays" dataType="System.Int32">
+          </add>
+          <add name="BandhDays" dataType="System.Int32">
+          </add>
+          <add name="DailyWages" dataType="System.Decimal">
+          </add>
+        </colume>
+      </add>
+    </tempTables>
+    <items>
+      <!--calculatingCategory: None,Sum,Count,Average   -->
+      <!-- dataType = System.Data.DbType-->
+      <!-- criteriaCategory = Bool Case-->
+      <!--显示列及公式设置-->
+      <add name="UnshellOutWage" caption="未发放工资" columnName="UnshellOutWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[BenefitBaseWage]-[ShellOutWage]" />
+        </expressions>
+      </add>
+      <add name="BasicWageSubTotal" caption="基本工资小计" columnName="BasicWageSubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="if([WageType]=3,[BenefitBaseWage]+[WorkStationWage]+[SkillWage],[DailyWages] * [AlreadyAttendancedays])" />
+        </expressions>
+      </add>
+      <add name="RelayWage" caption="顶班费" columnName="RelayWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[DailyWages] * [RelayAmount]" />
+        </expressions>
+      </add>
+      <add name="AbsenceRelayTotal" caption="顶班缺勤小计" columnName="AbsenceRelayTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[RelayWage]-[Absence]" />
+        </expressions>
+      </add>
+      <add name="BasicWageTotal" caption="基本工资合计" columnName="BasicWageTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[BasicWageSubTotal]+[AbsenceRelayTotal]" />
+        </expressions>
+      </add>
+      <add name="FeastOvertime" caption="法定节日加班" columnName="FeastOvertime" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="if([WageType]=3,[FeastOvertimeAmount]*[DailyWages]*2,[FeastOvertimeAmount]*[DailyWages]*3)" />
+        </expressions>
+      </add>
+      <add name="WeekendOvertimeTotal" caption="周未加班" columnName="WeekendOvertimeTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="if([WageType]=3,[WeekendOvertimeAmount]*[DailyWages]*1,[WeekendOvertimeAmount]*[DailyWages]*2)" />
+        </expressions>
+      </add>
+      <add name="KeepWatchTotal" caption="值班费" columnName="KeepWatchTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[KeepWatchAmount]*[KeepWatch]" />
+        </expressions>
+      </add>
+      <add name="KeepWatchSubTotal" caption="加班值班合计" columnName="KeepWatchSubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[FeastOvertime]+[WeekendOvertimeTotal]+[ConfirmOvertimeAmount]+[KeepWatchTotal]+[Overtime]" />
+        </expressions>
+      </add>
+      <add name="ProductionSubTotal" caption="联产小计" columnName="ProductionSubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[ProductionBounty]-[ProductionExamine]" />
+        </expressions>
+      </add>
+      <add name="BountyExamineSubTotal" caption="其它小计" columnName="BountyExamineSubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[Bounty]-[Examine]" />
+        </expressions>
+      </add>
+      <add name="AwardTotal" caption="奖励合计" columnName="AwardTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[ProductionSubTotal]+[BountyExamineSubTotal]+[GroupAward]" />
+        </expressions>
+      </add>
+      <add name="WageAndAwardTotal" caption="工资及奖励小计" columnName="WageAndAwardTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="if([WageType]=2,[AwardTotal]+[UnshellOutWage],[AwardTotal]+[BasicWageTotal])" />
+        </expressions>
+      </add>
+      <add name="SubsidySubTotal" caption="补贴小计" columnName="SubsidySubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[FourSubsidy]+[LengthOfService]+[SanitarySubsidy]+[RepastSubsidy]+[DegreeSubsidy]+[MessageSubsidy]+[TrafficSubsidy]+[LaborSubsidy]+[DirectorSubsidy]+[HousingSubsidy]+[HighTemperature]+[Surroundings]+[SafetyOfficerSubsidy]+[MotormanSubsidy]+[QuanqinAward]+[OtherSubsidy]+[OtherSubsidy1]+[OtherSubsidy2]" />
+        </expressions>
+      </add>
+      <add name="TotalWage" caption="工资合计" columnName="TotalWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="if([WageType]=1,[BasicWageTotal]+[KeepWatchSubTotal]-[ExaminationFees]-[CompanyFees],if([WageType]=2,[TotalWage1],[BasicWageTotal]+[KeepWatchSubTotal]+[SubsidySubTotal]+[AwardTotal]-[ExaminationFees]))" />
+        </expressions>
+      </add>
+      <add name="TotalWage1" caption="工资合计(本次工资加基本工资部分)" columnName="TotalWage1" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[WageAndAwardTotal]+[SubsidySubTotal]+[PayBasicWageTotal]" />
+        </expressions>
+      </add>
+      <add name="FactTotalWage" caption="本次实际工资合计" columnName="FactTotalWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[TotalWage1]-[PayBasicWageTotal]" />
+        </expressions>
+      </add>
+      <add name="InsuranceSubTotal" caption="保险小计" columnName="InsuranceSubTotal" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[Medicare]+[EndowmentInsurance]+[UnemploymentInsurance]+[LargeInsurance]" />
+        </expressions>
+      </add>
+      <add name="PersonalIncomeTax" caption="个人所得税" columnName="PersonalIncomeTax" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="IF(([TotalWage]-[InsuranceSubTotal]-2000) &lt;=0,0,IF(([TotalWage]-[InsuranceSubTotal]-2000) &lt;=500,ROUND(([TotalWage]-[InsuranceSubTotal]-2000)*0.05,2),IF(([TotalWage]-[InsuranceSubTotal]-2000) &lt;=2000,ROUND(([TotalWage]-[InsuranceSubTotal]-2000)*0.1-25,2),IF(([TotalWage]-[InsuranceSubTotal]-2000) &lt;=5000,ROUND(([TotalWage]-[InsuranceSubTotal]-2000)*0.15-125,2),IF(([TotalWage]-[InsuranceSubTotal]-2000) &lt;=20000,ROUND(([TotalWage]-[InsuranceSubTotal]-2000)*0.2-375,2), &quot; 请手工计算 &quot; )))))" />
+        </expressions>
+      </add>
+      <add name="ShouldPayIncomeTax" caption="应扣税" columnName="ShouldPayIncomeTax" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[PersonalIncomeTax]-[AlreadyPayIncomeTax]" />
+        </expressions>
+      </add>
+      <add name="TotalWage2" caption="税前扣除部分扣除后" columnName="TotalWage2" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[TotalWage1]-[InsuranceSubTotal]-[PersonalIncomeTax]" />
+        </expressions>
+      </add>
+      <add name="TotalWage3" caption="工资合计(基本工资部分)" columnName="TotalWage3" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[KeepWatchSubTotal]+[BasicWageTotal]+[SubsidySubTotal]-[ExaminationFees]" />
+        </expressions>
+      </add>
+      <add name="TotalWage4" caption="减去上月已发基本工资部分后剩余" columnName="TotalWage4" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[TotalWage2]-[PayBasicWageTotal]" />
+        </expressions>
+      </add>
+      <add name="TotalWage5" caption="税后扣除部分小计" columnName="TotalWage5" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="[Utilities]+[ExaminationFees]+[FinanceCharge]+[CompanyCharge]+[LaborInsuranceCharge]+[OtherCharge1]+[OtherCharge2]" />
+        </expressions>
+      </add>
+      <add name="NetWage" caption="实得工资" columnName="NetWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool" isFormual="true">
+        <expressions>
+          <add name="Formula" formulaString="IF([WageType]=1,([TotalWage]-[PersonalIncomeTax]-[TotalWage5]),if([WageType]=2,([FactTotalWage]+[BandhWage]-[TotalWage5]-[InsuranceSubTotal]-[ShouldPayIncomeTax]),if([WageType]=3,[TotalWage]+[BandhWage]-[InsuranceSubTotal]-[PersonalIncomeTax]-[TotalWage5],[TotalWage]+[BandhWage]-[InsuranceSubTotal]-[PersonalIncomeTax]-[TotalWage5])))" />
+        </expressions>
+      </add>
+      <add name="CompanyFees" caption="考核款" columnName="CompanyFees" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="ExaminationFees" caption="集团考勤款" columnName="ExaminationFees" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="FinanceCharge" caption="财务扣款" columnName="FinanceCharge" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="CompanyCharge" caption="本公司扣款" columnName="CompanyCharge" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="LaborInsuranceCharge" caption="劳保扣款" columnName="LaborInsuranceCharge" calculatingCategory="String" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="OtherCharge1" caption="其它扣款1" columnName="OtherCharge1" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="OtherCharge2" caption="其它扣款2" columnName="OtherCharge2" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="BandhWage" caption="待岗工资" columnName="BandhWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="DeferShellOutWage" caption="待岗未发工资" columnName="DeferShellOutWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="EfficiencyWage" caption="效益工资" columnName="EfficiencyWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="Signature" caption="签字" columnName="Signature" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="FourSubsidy" caption="四项补贴" columnName="FourSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="LengthOfService" caption="岗龄补贴" columnName="LengthOfService" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="SanitarySubsidy" caption="女工卫生补贴" columnName="SanitarySubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="RepastSubsidy" caption="中夜餐补贴" columnName="RepastSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="DegreeSubsidy" caption="学历补贴" columnName="DegreeSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="MessageSubsidy" caption="通讯补贴" columnName="MessageSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="TrafficSubsidy" caption="交通补贴" columnName="TrafficSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="LaborSubsidy" caption="劳保补贴" columnName="LaborSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="DirectorSubsidy" caption="车间主任岗位津贴" columnName="DirectorSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="HousingSubsidy" caption="住房补贴" columnName="HousingSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="HighTemperature" caption="高温补贴" columnName="HighTemperature" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="Surroundings" caption="环境补贴" columnName="Surroundings" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="SafetyOfficerSubsidy" caption="安全员补贴" columnName="SafetyOfficerSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="MotormanSubsidy" caption="司机补贴" columnName="MotormanSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="QuanqinAward" caption="全勤奖" columnName="QuanqinAward" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="OtherSubsidy" caption="其它补贴" columnName="OtherSubsidy" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="OtherSubsidy1" caption="其它补贴1" columnName="OtherSubsidy1" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="OtherSubsidy2" caption="其它补贴2" columnName="OtherSubsidy2" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="GroupAward" caption="集团奖励" columnName="GroupAward" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="AttendanceScore" caption="得分值" columnName="AttendanceScore" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="UnitScoreMoney" caption="分/金额" columnName="UnitScoreMoney" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="PerformanceWage" caption="绩效总额" columnName="PerformanceWage" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="ProductionBounty" caption="联产奖励" columnName="ProductionBounty" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="ProductionExamine" caption="联产考核" columnName="ProductionExamine" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="Bounty" caption="其它奖励" columnName="Bounty" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <add name="Examine" caption="其它考核" columnName="Examine" calculatingCategory="None" dataType="String" formatString="0.00" criteriaCategory="Bool">
+      </add>
+      <!--生产人员工资计算方式-->
+      <add name="BenefitBaseWage01" caption="基本工资基数" columnName="BenefitBaseWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]" />
+        </expressions>
+      </add>
+      <add name="BenefitBaseWage03" caption="基本工资标准" columnName="BenefitBaseWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.WageStandards]" />
+          <add name="v2" criteriaKey="criteriaDialyWage" formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]" />
+          <!--formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]*(decimal)[TempAttendanceTable].[Chuqinlv]"/>-->
+        </expressions>
+      </add>
+      <add name="DailyWages01" caption="日工资基数" columnName="DailyWages" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.DailyWages]" />
+          <add name="v2" criteriaKey="criteriaDialyWage" formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]/(decimal)[TempAttendanceTable].[Yingchuqintianshu]" />
+        </expressions>
+      </add>
+      <add name="DailyWages02" caption="日工资基数" columnName="DailyWages" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.DailyWages]" />
+          <add name="v2" criteriaKey="criteriaDialyWage" formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]/decimal.Parse([TempTable].[MonthDays].ToString())" />
+        </expressions>
+      </add>
+      <add name="AlreadyAttendancedays01" caption="出勤天数" columnName="AlreadyAttendancedays" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Zhangchangchuqin]" />
+        </expressions>
+      </add>
+      <add name="AlreadyPayIncomeTax01" caption="已扣个人所得税" columnName="AlreadyPayIncomeTax" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageInfoTable].[PersonalIncomeTax]" />
+        </expressions>
+      </add>
+      <add name="ShellOutWage01" caption="已发放工资" columnName="ShellOutWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageInfoTable].[BasicWageSubTotal]+(decimal)[WageInfoTable].[WeekendOvertimeTotal]" />
+        </expressions>
+      </add>
+      <add name="NetWage01" caption="实得工资" columnName="NetWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="PlanAttendancedays01" caption="应出勤天数" columnName="PlanAttendancedays" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Yingchuqintianshu]" />
+        </expressions>
+      </add>
+      <add name="FactAttendancedays01" caption="实际出勤天数" columnName="FactAttendancedays" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Zhangchangchuqin]+(decimal)[TempAttendanceTable].[Zhoumejiaban]+(decimal)[TempAttendanceTable].[fadingjiejiari]" />
+        </expressions>
+      </add>
+      <add name="AttendanceRatio01" caption="出勤率" columnName="AttendanceRatio" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Chuqinlv]" />
+        </expressions>
+      </add>
+      <add name="ConfirmOvertimeAmount02" caption="批准加班" columnName="ConfirmOvertimeAmount" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[PiZhuiJiaBan]*(decimal)[PersonnelInfoTable.DailyWages]/8" />
+        </expressions>
+      </add>
+      <add name="PayBasicWageTotal01" caption="基本工资部分合计(已发)" columnName="PayBasicWageTotal" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageInfoTable].[TotalWage]" />
+        </expressions>
+      </add>
+      <!-->
+      正常标准的工资计算条目
+      <-->
+      <add name="BenefitBaseWage02" caption="基数工资" columnName="BenefitBaseWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal) [PersonnelInfoTable.BenefitBaseWage]" />
+          <!--formulaString="(decimal) [PersonnelInfoTable.BenefitBaseWage]*(decimal)[TempAttendanceTable].[Chuqinlv]"/>-->
+        </expressions>
+      </add>
+      <add name="WorkStationWage02" caption="岗位工资" columnName="WorkStationWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.WorkStationWage]" />
+        </expressions>
+      </add>
+      <add name="SkillWage02" caption="技术工资" columnName="SkillWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.SkillWage]" />
+        </expressions>
+      </add>
+      <add name="RelayAmount02" caption="顶班个数" columnName="RelayAmount" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="Absence02" caption="缺勤" columnName="Absence" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal) [PersonnelInfoTable.BenefitBaseWage] *(1M-(decimal)[TempAttendanceTable].[Chuqinlv])" />
+        </expressions>
+      </add>
+      <add name="FeastOvertimeAmount02" caption="法定节日加班个数" columnName="FeastOvertimeAmount" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Fadingjiejiari]" />
+        </expressions>
+      </add>
+      <add name="WeekendOvertimeAmount02" caption="周末加班个数" columnName="WeekendOvertimeAmount" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Zhoumejiaban]" />
+        </expressions>
+      </add>
+      <add name="OvertimeAmount02" caption="其它加班小时数" columnName="OvertimeAmount" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="Overtime02" caption="其他加班" columnName="Overtime" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.DailyWages] * (decimal)[TempAttendanceTable].[PiZhuiJiaBan]/8M " />
+        </expressions>
+      </add>
+      <add name="KeepWatchAmount02" caption="值班个数" columnName="KeepWatchAmount" calculatingCategory="None" dataType="Int32" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(int)[TempAttendanceTable].[ZhiBan] " />
+        </expressions>
+      </add>
+      <add name="KeepWatch02" caption="值班费" columnName="KeepWatch" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.DailyWages]*(int)[TempAttendanceTable].[ZhiBan]/8M " />
+        </expressions>
+      </add>
+      <add name="ProductionBounty02" caption="联产奖励" columnName="ProductionBounty" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="ProductionExamine02" caption="联产考核" columnName="ProductionExamine" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="Bounty02" caption="奖励" columnName="Bounty" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="Examine02" caption="考核" columnName="Examine" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="GroupAward02" caption="集团奖励" columnName="GroupAward" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <!-->
+      待岗
+      <-->
+      <add name="BandhWage01" caption="待岗工资" columnName="BandhWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="400M * decimal.Parse([TempTable].[BandhDays].ToString()) /decimal.Parse([TempTable].[MonthDays].ToString()) + decimal.Parse([TempTable].[DailyWages].ToString()) * decimal.Parse([TempTable].[Holidays].ToString())" />
+        </expressions>
+      </add>
+      <add name="BandhWage02" caption="待岗工资" columnName="BandhWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaNoThreeMonths" formulaString="450M * decimal.Parse([TempTable].[BandhDays].ToString()) /decimal.Parse([TempTable].[MonthDays].ToString()) + decimal.Parse([TempTable].[DailyWages].ToString()) * decimal.Parse([TempTable].[Holidays].ToString())" />
+        </expressions>
+      </add>
+      <add name="BandhWage03" caption="待岗工资" columnName="BandhWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaNoThreeMonths" formulaString="(decimal)[PersonnelInfoTable].[WageStandards] * decimal.Parse([TempTable].[BandhDays].ToString()) /decimal.Parse([TempTable].[MonthDays].ToString()) + decimal.Parse([TempTable].[DailyWages].ToString()) * decimal.Parse([TempTable].[Holidays].ToString())" />
+        </expressions>
+      </add>
+      <add name="DeferShellOutWage01" caption="待岗未发放工资" columnName="DeferShellOutWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="400M * decimal.Parse([TempTable].[BandhDays].ToString()) /decimal.Parse([TempTable].[MonthDays].ToString())  " />
+        </expressions>
+      </add>
+      <add name="DeferShellOutWage02" caption="待岗未发放工资" columnName="DeferShellOutWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="450M * decimal.Parse([TempTable].[BandhDays].ToString()) /decimal.Parse([TempTable].[MonthDays].ToString()) " />
+        </expressions>
+      </add>
+      <add name="DeferShellOutWage03" caption="待岗未发放工资" columnName="DeferShellOutWage" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="0" />
+        </expressions>
+      </add>
+      <!-->
+      保险
+      <-->
+      <add name="Medicare02" caption="医疗保险" columnName="Medicare" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[Medicare]" />
+        </expressions>
+      </add>
+      <add name="EndowmentInsurance02" caption="养老保险" columnName="EndowmentInsurance" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[EndowmentInsurance]" />
+        </expressions>
+      </add>
+      <add name="UnemploymentInsurance02" caption="失业保险" columnName="UnemploymentInsurance" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[UnemploymentInsurance]" />
+        </expressions>
+      </add>
+      <add name="LargeInsurance02" caption="大额保险" columnName="LargeInsurance" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.PersonalLargeInsurance]" />
+        </expressions>
+      </add>
+      <!-->
+      其它扣款
+      <-->
+      <add name="Utilities02" caption="房水电费" columnName="Utilities" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[Utilities]" />
+        </expressions>
+      </add>
+      <add name="ExaminationFees02" caption="集团考核款" columnName="ExaminationFees" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[ExaminationFees]" />
+        </expressions>
+      </add>
+      <add name="FinanceCharge02" caption="财务扣款" columnName="FinanceCharge" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[FinanceCharge]" />
+        </expressions>
+      </add>
+      <add name="CompanyCharge02" caption="本公司扣款" columnName="CompanyCharge" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[CompanyCharge]" />
+        </expressions>
+      </add>
+      <add name="LaborInsuranceCharge02" caption="劳保" columnName="LaborInsuranceCharge" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[LaborInsuranceCharge]" />
+        </expressions>
+      </add>
+      <add name="OtherCharge102" caption="其它扣款1" columnName="OtherCharge1" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[OtherCharge1]" />
+        </expressions>
+      </add>
+      <add name="OtherCharge202" caption="其它扣款2" columnName="OtherCharge2" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[OtherCharge2]" />
+        </expressions>
+      </add>
+      <!-->
+      补贴相关条目
+      <-->
+      <add name="FourSubsidy02" caption="四项补贴" columnName="FourSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriSixiangbutie" formulaString="50" />
+          <add name="v2" criteriaKey="criteriaYiBanGuanLiRenYuanYiShang" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="LengthOfService02" caption="工岗龄补贴" columnName="LengthOfService" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriGongganglingbutie01" formulaString="(decimal)[WageFrameTable].[LengthOfService] * 10" />
+          <add name="v2" criteriaKey="criteriGongganglingbutie02" formulaString="(decimal)[WageFrameTable].[LengthOfService] * (int)[PersonnelInfoTable.FilialeWorkingYears]" />
+          <add name="v3" criteriaKey="criteriaYiBanGuanLiRenYuanYiShang" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="SanitarySubsidy02" caption="女工补贴" columnName="SanitarySubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriNvxin" formulaString="5" />
+          <add name="v2" criteriaKey="criteriaYiBanGuanLiRenYuanYiShang" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="RepastSubsidy02" caption="中夜餐补贴" columnName="RepastSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(int)[TempAttendanceTable].[ZhongQin] * 2 + (int)[TempAttendanceTable].[YeQin] * 3 + (int)[TempAttendanceTable].[DaYeQin] * 5  " />
+        </expressions>
+      </add>
+      <add name="DegreeSubsidy02" caption="学历补贴" columnName="DegreeSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[DegreeSubsidy]" />
+        </expressions>
+      </add>
+      <add name="MessageSubsidy02" caption="通讯补贴" columnName="MessageSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[MessageSubsidy]" />
+        </expressions>
+      </add>
+      <add name="TrafficSubsidy02" caption="交通补贴" columnName="TrafficSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriKaoqinlv85" formulaString="(decimal)[WageFrameTable].[TrafficSubsidy]" />
+        </expressions>
+      </add>
+      <add name="LaborSubsidy02" caption="劳保补贴" columnName="LaborSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[LaborSubsidy]" />
+        </expressions>
+      </add>
+      <add name="DirectorSubsidy02" caption="车间主任岗位津贴" columnName="DirectorSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[DirectorSubsidy]" />
+        </expressions>
+      </add>
+      <add name="HousingSubsidy02" caption="住房补贴" columnName="HousingSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[HousingSubsidy]" />
+        </expressions>
+      </add>
+      <add name="HighTemperature02" caption="高温补贴" columnName="HighTemperature" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriKaoqinlv85" formulaString="(decimal)[WageFrameTable].[HighTemperature]" />
+          <add name="v2" criteriaKey="criteriaGaoWeiButie" formulaString="10M" />
+        </expressions>
+      </add>
+      <add name="Surroundings02" caption="环境补贴" columnName="Surroundings" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriHuanjingbutie01" formulaString="150-5*(decimal)[TempAttendanceTable].[Queqintianshu]" />
+          <add name="v2" criteriaKey="criteriHuanjingbutie02" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="SafetyOfficerSubsidy02" caption="安全员补贴" columnName="SafetyOfficerSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[SafetyOfficerSubsidy]" />
+        </expressions>
+      </add>
+      <add name="MotormanSubsidy02" caption="司机补贴" columnName="MotormanSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriSijibutie" formulaString="(decimal)[WageFrameTable].[MotormanSubsidy]" />
+        </expressions>
+      </add>
+      <add name="QuanqinAward02" caption="全勤奖" columnName="QuanqinAward" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriKaoqinlv100" formulaString="(decimal)[WageFrameTable].[QuanqinAward]" />
+          <add name="v2" criteriaKey="criteriaQuanQinYeliangong01" formulaString="(decimal)[WageFrameTable].[QuanqinAward]" />
+          <!--<add name="v3" criteriaKey="criteriaNoQuanQin02"
+                formulaString="0"/>-->
+        </expressions>
+      </add>
+      <add name="OtherSubsidy02" caption="其它补贴" columnName="OtherSubsidy" calculatingCategory="None" dataType="Decimal" formatString="0.00" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[WageFrameTable].[OtherSubsidy]" />
+        </expressions>
+      </add>
+      <!-->
+      考勤汇总
+      <-->
+      <!--<add name="AttendanceNormalCount" caption="应出勤天数" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      
+      <add name="AttendanceZhongQinCount" caption="其中中勤天数" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+
+      <add name="AttendanceYeQinCount" caption="其中夜勤天数" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="批准加班" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+
+      <add name="AttendanceYeQinCount" caption="病假" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+
+      <add name="AttendanceYeQinCount" caption="事假" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="产假" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="探亲假" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="婚丧假" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="迟到早退折后" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="旷工" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="周末加班" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="150满勤奖" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="100满勤奖" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>
+      <add name="AttendanceYeQinCount" caption="出勤率" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1"  criteriaKey="criteriaChuqian"
+               formulaString="(decimal)[AttendancesTable.InitRate]"/>
+        </expressions>
+      </add>-->
+      <!-->
+      criteriaKey="criteriaChuqian"
+      
+      考勤相关的计算条目
+      <-->
+      <!-- dataType = System.Type-->
+      <add name="MonthDays" caption="当月天数" columnName="MonthDays" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempTable].[MonthDays]" dataType="Decimal" formatString="0" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="((DateTime)[PersonnelInfoTable.WageEndDate] -(DateTime)[PersonnelInfoTable.WageStartDate]).Days + 1M" />
+        </expressions>
+      </add>
+      <add name="AllHolidays" caption="应休假天数" columnName="AllHolidays" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempTable].[AllHolidays]" dataType="Decimal" formatString="0" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaNoThreeMonths" formulaString="0" />
+          <add name="v2" criteriaKey="criteriaBetweenThreeMonthsAndOneYears" formulaString="10" />
+          <add name="v3" criteriaKey="criteriaOneYearsMore" formulaString="20" />
+        </expressions>
+      </add>
+      <add name="DailyWages" caption="日工资" columnName="DailyWages" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempTable].[DailyWages]" dataType="Decimal" formatString="0" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" formulaString="(decimal)[PersonnelInfoTable.DailyWages]" />
+          <add name="v2" criteriaKey="criteriaDialyWage" formulaString="(decimal)[PersonnelInfoTable.BenefitBaseWage]/decimal.Parse([TempTable].[MonthDays].ToString())" />
+        </expressions>
+      </add>
+      <add name="Holidays" caption="当月休假天数" columnName="Holidays" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempTable].[Holidays]" dataType="Decimal" formatString="0" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaHolidayInMonth01" formulaString="(((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date - ((DateTime)[PersonnelInfoTable.WageStartDate])).Days +1" />
+          <add name="v2" criteriaKey="criteriaHolidayInMonth02" formulaString="(((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date - ((DateTime)[PersonnelInfoTable.StartTime])).Days + 1" />
+          <!--formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]).Date -((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]).Date).Days"/>-->
+          <add name="v3" criteriaKey="criteriaHolidayOutMonth01" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) - ((DateTime)[PersonnelInfoTable.WageStartDate])).Days + 1" />
+          <add name="v4" criteriaKey="criteriaHolidayOutMonth02" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) - ((DateTime)[PersonnelInfoTable.StartTime])).Days + 1" />
+          <add name="v5" criteriaKey="criteriaHolidayOutMonth03" formulaString="0" />
+        </expressions>
+      </add>
+      <add name="BandhDays" caption="当月待岗天数" columnName="BandhDays" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempTable].[BandhDays]" dataType="Decimal" formatString="0" criteriaCategory="Bool">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaInMonth" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) -((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]).Date).Days + 1" />
+          <add name="v2" criteriaKey="criteriaOutEndDate" formulaString="0" />
+          <add name="v3" criteriaKey="criteriaOutStartDate" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) -((DateTime)[PersonnelInfoTable.WageStartDate]).Date).Days+1" />
+          <add name="v4" criteriaKey="criteriaInMonth0" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) -((DateTime)[PersonnelInfoTable.StartTime]).Date).Days +1" />
+          <add name="v5" criteriaKey="criteriaOutEndDate0" formulaString="0" />
+          <add name="v6" criteriaKey="criteriaOutStartDate0" formulaString="(((DateTime)[PersonnelInfoTable.WageEndDate]) -((DateTime)[PersonnelInfoTable.WageStartDate]).Date).Days+1" />
+        </expressions>
+      </add>
+      <!-->     
+      
+      考勤相关的计算条目
+      <-->
+      <add name="zhangchangchuqin" caption="出勤天数" columnName="zhangchangchuqin" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhangchangchuqin]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaChuqian" formulaString="(decimal)[AttendancesTable.InitRate]" />
+        </expressions>
+      </add>
+      <add name="convertzhangchangchuqinrate" caption="折算后的天数" columnName="convertzhangchangchuqinrate" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[ConvertZhangchangchuqinRate]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaChuqian" formulaString="(decimal)[AttendancesTable.Rate]" />
+        </expressions>
+      </add>
+      <add name="countimespan" caption="排班班次计数" columnName="countimespan" calculatingCategory="Count" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[CountTimeSpan]" dataType="Int32" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaCountTimeSpans" formulaString="(decimal)[AttendancesTable.Id]" />
+        </expressions>
+      </add>
+      <add name="yingchuqintianshu" caption="应出勤天数" columnName="yingchuqintianshu" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Yingchuqintianshu]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaYingChuqian" formulaString="(decimal)[AttendancesTable.InitRate]" />
+        </expressions>
+      </add>
+      <add name="chuqinlv" caption="出勤率" columnName="chuqinlv" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Chuqinlv]" dataType="Decimal" formatString="0.00" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaChuqinlv" formulaString="((decimal)[TempAttendanceTable].[Zhangchangchuqin]+(decimal)[TempAttendanceTable].[Zhoumejiaban]+(decimal)[TempAttendanceTable].[Fadingjiejiari])/(decimal)[TempAttendanceTable].[Yingchuqintianshu]" />
+        </expressions>
+      </add>
+      <add name="queqintianshu" caption="缺勤天数" columnName="queqintianshu" calculatingCategory="None" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Queqintianshu]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <!--<add name="v1"   criteriaKey="criteriaQueqin"-->
+          <add name="v1" formulaString="(decimal)[TempAttendanceTable].[Yingchuqintianshu]-(decimal)[TempAttendanceTable].[Zhangchangchuqin]-(decimal)[TempAttendanceTable].[Zhoumejiaban]-(decimal)[TempAttendanceTable].[Fadingjiejiari]" />
+        </expressions>
+      </add>
+      <add name="kuanggongtianshu" caption="旷工天数" columnName="kuanggongtianshu" calculatingCategory="Count" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Kuanggongtianshu]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaKuanggong" formulaString="(decimal)[AttendancesTable.IsPlan]" />
+        </expressions>
+      </add>
+      <add name="zhoumejiaban" caption="周未加班" columnName="zhoumejiaban" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Zhoumejiaban]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaZhoumejiaban" formulaString="(decimal)[AttendancesTable.InitRate] " />
+        </expressions>
+      </add>
+      <add name="fadingjiejiari" caption="法定节假日" columnName="fadingjiejiari" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[Fadingjiejiari]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaFadingjiejia" formulaString="(decimal)[AttendancesTable.InitRate] " />
+        </expressions>
+      </add>
+      <add name="ZhongQin" caption="中勤" columnName="ZhongQin" calculatingCategory="Count" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[ZhongQin]" dataType="Int32" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaZhongQin" formulaString="(int)[AttendancesTable.AttendanceType]" />
+        </expressions>
+      </add>
+      <add name="YeQin" caption="夜勤" columnName="YeQin" calculatingCategory="Count" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[YeQin]" dataType="Int32" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaYeQin" formulaString="(int)[AttendancesTable.AttendanceType]" />
+        </expressions>
+      </add>
+      <add name="DaYeQin" caption="大夜勤" columnName="DaYeQin" calculatingCategory="Count" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[DaYeQin]" dataType="Int32" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaDaYeQin" formulaString="(int)[AttendancesTable.AttendanceType]" />
+        </expressions>
+      </add>
+      <add name="PiZhuiJiaBan" caption="加班小时数" columnName="PiZhuiJiaBan" calculatingCategory="Sum" calculatingExtensionType="CalCondition" tempItemName="[TempAttendanceTable].[PiZhuiJiaBan]" dataType="Decimal" formatString="0.0" criteriaCategory="Case">
+        <expressions>
+          <add name="v1" criteriaKey="criteriaPiZhuiJiaBan" formulaString="(decimal)[AttendancesTable.Rate]" />
+        </expressions>
+      </add>
+      <!--
+      <add name="WorkStationWage" caption="岗位工资" calculatingCategory="none" dataType="Decimal" formatString="00.00" formulaString="[PersonnelInfoTable.WorkStationWage] * [PersonnelInfoTable.WorkStationWageQuotiety]" criteriaCategory=""/>
+      <add name="SkillWage" caption="岗位技能工资" calculatingCategory="none" dataType="Decimal" formatString="00.00" formulaString="PersonnelInfoTable.SkillWage * PersonnelInfoTable.SkillWageQuotiety" criteriaCategory=""/>
+      <add name="RelayWage" caption="顶班" calculatingCategory="none" dataType="Decimal" formatString="00.00" formulaString="PersonnelInfoTable.RelayWage * PersonnelInfoTable.RelayWageQuotiety" criteriaCategory=""/>
+      <add name="Absence" caption="缺勤" calculatingCategory="none" dataType="Decimal" formatString="00.00" formulaString="PersonnelInfoTable.Absence * PersonnelInfoTable.AbsenceQuotiety" criteriaCategory=""/>
+      <add name="FeastOvertime" caption="法定节日加班" calculatingCategory="none" dataType="Decimal" formatString="00.00" formulaString="PersonnelInfoTable.FeastOvertime * PersonnelInfoTable.FeastOvertimeQuotiety" criteriaCategory=""/>           
+      -->
+    </items>
+    <criterias>
+      <!--<add name="gongganglingbutietiaojian1" caption="" criteriaString="(int)[PersonelInfoTable.WorkYears]>=1 and (int)[PersonelInfoTable.WorkYears]<=10"/>-->
+      <add name="gongganglingbutietiaojian2" criteriaString="(int)[PersonelInfoTable.WorkYears]&gt;=10" />
+      <add name="test1" criteriaString="(int)[PersonelInfoTable.BenefitBaseWage] &gt;=(int)[TempAttendanceTable.zhangchangchuqin]" />
+      <add name="juececenglingdaobeibuzhangji" criteriaString="(string)[PersonnelInfoTable.HeadShipLevelName]== &quot;本部长级&quot;" />
+      <add name="juececenglingdaodaerzhangzhiji" criteriaString="(string)[PersonnelInfoTable.HeadShipLevelName]== &quot;大二正职级&quot;" />
+      <add name="defaultpolicy" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;defaultpolicy&quot;" />
+      <add name="shengchangrenyunpolicy01" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;defaultpolicy&quot;  &amp;&amp; (string)[PersonnelInfoTable.wageType]= &quot;1&quot;" />
+      <add name="shengchangrenyunpolicy02" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;shengchangrenyunpolicy&quot;  &amp;&amp; (string)[PersonnelInfoTable.wageType]= &quot;2&quot;" />
+      <add name="huanjieganbupolicy" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;huanjieganbupolicy&quot;" />
+      <add name="juececengrenyuanpolicy" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;juececengrenyuanpolicy&quot;" />
+      <add name="yibanguanlirenyunpolicy" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;yibanguanlirenyunpolicy&quot;" />
+      <add name="fuzhurenyuangongzipolicy" criteriaString="(string)[PersonnelInfoTable.PayPolciyName]== &quot;fuzhurenyuangongzipolicy&quot;" />
+      <add name="queqintianshu" criteriaString="(int)[PersonelInfoTable.Department]==10" />
+      <add name="tongxunbutietiaojian2" criteriaString="(int)[PersonelInfoTable.Department]==20" />
+      <!-->
+      考勤相关的计算条目
+      <add name="Normal" caption="出勤" rate= "1" enumValue="1" type="1"/>
+      <add name="MiddleShift" caption="中勤" rate= "1" enumValue="2" type="1"/>
+      <add name="NightShift" caption="夜勤" rate= "1" enumValue="4" type="1"/>
+      <add name="Weekend" caption="周未加班" rate="2" enumValue="8" type="1"/>
+      <add name="Fete" caption="法定节假日" rate="3" enumValue="16" type="1"/>
+      <add name="Overtime" caption="批准加班" rate="0" enumValue="32" type="2"/>
+      <add name="MerryHoliday" caption="病假" rate="-1" enumValue="64" type="2"/>
+      <add name="PrivateAffairLeave" caption="事假" rate="0" enumValue="256" type="2"/>
+      <add name="MaternityLeave" caption="产假" rate="0" enumValue="512" type="2"/>
+      <add name="HomeHoliday" caption="探亲假" rate="0" enumValue="1024" type="2"/>
+      <add name="MatrimonyHoliday" caption="婚假" rate="0" enumValue="2048" type="2"/>
+      <add name="ChiDaoZaoTuiZheHe" caption="迟到早退折合" rate="0" enumValue="4096" type="2"/>
+      <add name="LunXiuRi" caption="轮休日" rate="0" enumValue="8192" type="2"/>
+      <add name="GongShang" caption="公伤" rate="0" enumValue="16384" type="2"/>
+      <add name="GongJia" caption="公假" rate="3" enumValue="32768" type="2"/>
+      <add name="JieYuJia" caption="节育假" rate="2" enumValue="65536" type="1"/>
+      <add name="SangJia" caption="丧假" rate="0" enumValue="131072" type="2"/>
+      <add name="Absenteeism" caption="旷工" rate="0" enumValue="262144" type="2"/>
+      <-->
+      <add name="criteriaChuqian" criteriaString="((int)[AttendancesTable.AttendanceState]==1) &amp;&amp; (bool)[AttendancesTable.IsPlan]== true " />
+      <add name="criteriaQueqin" criteriaString="((int)[AttendancesTable.AttendanceState]==64 &#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==256&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==512&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==1024&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==2048&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==16384&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==32768&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==65536&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==131072&#xD;&#xA;        || (int)[AttendancesTable.AttendanceState]==262144) &amp;&amp; (bool)[AttendancesTable.IsPlan]== true" />
+      <add name="criteriaChuqinlv" criteriaString="(decimal)[TempAttendanceTable].[Yingchuqintianshu]&gt;0M" />
+      <add name="criteriaKuanggong" criteriaString="(int)[AttendancesTable.AttendanceState]==262144 &amp;&amp; (bool)[AttendancesTable.IsPlan]== true " />
+      <add name="criteriaCountTimeSpans" criteriaString="(bool)[AttendancesTable.IsPlan]== true " />
+      <add name="criteriaYingChuqian" criteriaString="(bool)[AttendancesTable.IsPlan]== true" />
+      <add name="criteriaZhoumejiaban" criteriaString="(int)[AttendancesTable.AttendanceState]== 8 " />
+      <add name="criteriaFadingjiejia" criteriaString="(int)[AttendancesTable.AttendanceState]== 16 " />
+      <add name="criteriKaoqinlv80" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;)" />
+      <add name="criteriKaoqinlv85" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;)" />
+      <add name="criteriKaoqinlv100" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;1&quot;)" />
+      <!--<add name="criteriKaoqinHuanjie" criteriaString="(decimal)[PersonnelInfoTable].[WorkStationType]"/>-->
+      <add name="criteriSixiangbutie" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp;  (decimal)[WageFrameTable].[Medicare]&gt; 0M" />
+      <add name="criteriGongganglingbutie01" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp; (int)[PersonnelInfoTable.FilialeWorkingYears] &gt;= 10 " />
+      <add name="criteriGongganglingbutie02" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp; 10 &gt;= (int)[PersonnelInfoTable.FilialeWorkingYears]  " />
+      <add name="criteriNvxin" criteriaString="(string)[PersonnelInfoTable.Gender]== &quot;女&quot; &amp;&amp; (decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) " />
+      <add name="criteriJiaotongbuite" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) " />
+      <add name="criteriHuanjingbutie01" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) " />
+      <add name="criteriHuanjingbutie02" criteriaString=" decimal.Parse(&quot;0.85&quot;)&gt;(decimal)[TempAttendanceTable].[Chuqinlv] " />
+      <add name="criteriAnquanyuanbutie" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp; (string)[PersonnelInfoTable.WorkStationName]==&quot;安全员&quot;" />
+      <add name="criteriSijibutie" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp; (string)[PersonnelInfoTable.WorkStationName]==&quot;司机&quot;" />
+      <add name="criteriGongtuanganshi" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;) &amp;&amp; (string)[PersonnelInfoTable.WorkStationName]==&quot;工团干事补贴&quot;" />
+      <add name="criteriaQingjia" criteriaString="(int)[AttendancesTable.AttendanceType]==&quot;请假&quot;" />
+      <add name="criteriaQuanQinYeliangong01" criteriaString="(decimal)[TempAttendanceTable].[Zhangchangchuqin]+(decimal)[TempAttendanceTable].[Zhoumejiaban]+(decimal)[TempAttendanceTable].[Fadingjiejiari]&gt;=28M  &amp;&amp; ((string)[PersonnelInfoTable.WorkStationName]== &quot;冶炼班长&quot; || (string)[PersonnelInfoTable.WorkStationName]== &quot;冶炼副班长&quot; &#xD;&#xA;        || (string)[PersonnelInfoTable.WorkStationName]== &quot;冶炼工&quot; || (string)[PersonnelInfoTable.WorkStationName]== &quot;出铁工&quot;)" />
+      <add name="criteriaNoQuanQin02" criteriaString="(string)[PersonnelInfoTable.WorkStationName]== &quot;仪表工&quot;" />
+      <add name="criteriaZhongQin" criteriaString="(int)[AttendancesTable.AttendanceType]== 2  &amp;&amp; ((int)[AttendancesTable.AttendanceState]==1 || (int)[AttendancesTable.AttendanceState]==8 ||(int)[AttendancesTable.AttendanceState]==16) " />
+      <add name="criteriaYeQin" criteriaString="(int)[AttendancesTable.AttendanceType]== 4 &amp;&amp; ((int)[AttendancesTable.AttendanceState]==1 || (int)[AttendancesTable.AttendanceState]==8 ||(int)[AttendancesTable.AttendanceState]==16) " />
+      <add name="criteriaDaYeQin" criteriaString="(int)[AttendancesTable.AttendanceType]== 8 &amp;&amp; ((int)[AttendancesTable.AttendanceState]==1 || (int)[AttendancesTable.AttendanceState]==8 ||(int)[AttendancesTable.AttendanceState]==16) " />
+      <add name="criteriaPiZhuiJiaBan" criteriaString="(int)[AttendancesTable.AttendanceType]== 32" />
+      <add name="criteriaDialyWage" criteriaString="(decimal)[PersonnelInfoTable.DailyWages]== 0M" />
+      <add name="criteriaNoThreeMonths" criteriaString="((DateTime)[PersonnelInfoTable.JoinFilialeDate]).AddMonths(3).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).Date " />
+      <add name="criteriaBetweenThreeMonthsAndOneYears" criteriaString="(((DateTime)[PersonnelInfoTable.JoinFilialeDate]).AddYears(1).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).Date)  &amp;&amp; ((DateTime)[PersonnelInfoTable.StartTime]).Date &gt; ((DateTime)[PersonnelInfoTable.JoinFilialeDate]).AddMonths(3).Date " />
+      <add name="criteriaOneYearsMore" criteriaString="((DateTime)[PersonnelInfoTable.StartTime]).Date&gt; ((DateTime)[PersonnelInfoTable.JoinFilialeDate]).AddYears(1).Date " />
+      <add name="criteriaHolidayInMonth01" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp; (((DateTime)[PersonnelInfoTable.WageEndDate]).Date &gt;= ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date  &amp;&amp;  &#xD;&#xA;        ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]).Date &gt;= ((DateTime)[PersonnelInfoTable.WageStartDate]).Date )  &#xD;&#xA;        &amp;&amp; (((DateTime)[PersonnelInfoTable.WageStartDate]).Date &gt;= ((DateTime)[PersonnelInfoTable.StartTime]).Date) " />
+      <add name="criteriaHolidayInMonth02" criteriaString=" (int)[TempTable].[AllHolidays] !=0 &amp;&amp; (((DateTime)[PersonnelInfoTable.WageEndDate]).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date  &amp;&amp;  &#xD;&#xA;        ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]).Date &gt; ((DateTime)[PersonnelInfoTable.WageStartDate]).Date )  &#xD;&#xA;        &amp;&amp; (((DateTime)[PersonnelInfoTable.StartTime]).Date &gt; ((DateTime)[PersonnelInfoTable.WageStartDate]).Date ) " />
+      <add name="criteriaInMonth0" criteriaString="(int)[TempTable].[AllHolidays] ==0 &amp;&amp; (((DateTime)[PersonnelInfoTable.WageEndDate]).Date &gt;= ((DateTime)[PersonnelInfoTable.StartTime]).Date  &amp;&amp;  &#xD;&#xA;        ((DateTime)[PersonnelInfoTable.StartTime]).Date &gt;= ((DateTime)[PersonnelInfoTable.WageStartDate]).Date ) " />
+      <add name="criteriaInMonth" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp;  (((DateTime)[PersonnelInfoTable.WageEndDate]).Date &gt;= ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date  &amp;&amp;  &#xD;&#xA;        ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date &gt;= ((DateTime)[PersonnelInfoTable.WageStartDate]).Date ) " />
+      <add name="criteriaOutEndDate0" criteriaString="(int)[TempTable].[AllHolidays] ==0 &amp;&amp; ((DateTime)[PersonnelInfoTable.StartTime]).Date &gt; ((DateTime)[PersonnelInfoTable.WageEndDate]).Date  " />
+      <add name="criteriaOutEndDate" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp;  ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date &gt; ((DateTime)[PersonnelInfoTable.WageEndDate]).Date  " />
+      <add name="criteriaOutStartDate0" criteriaString="(int)[TempTable].[AllHolidays] ==0 &amp;&amp; ((DateTime)[PersonnelInfoTable.WageStartDate]).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).Date " />
+      <add name="criteriaOutStartDate" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp; ((DateTime)[PersonnelInfoTable.WageStartDate]).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date " />
+      <add name="criteriaHolidayOutMonth01" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp;   ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date&gt; ((DateTime)[PersonnelInfoTable.WageEndDate]).Date&#xD;&#xA;         &amp;&amp; (((DateTime)[PersonnelInfoTable.WageStartDate]).Date &gt; ((DateTime)[PersonnelInfoTable.StartTime]).Date) " />
+      <add name="criteriaHolidayOutMonth02" criteriaString="(int)[TempTable].[AllHolidays] !=0 &amp;&amp;  ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date&gt; ((DateTime)[PersonnelInfoTable.WageEndDate]).Date&#xD;&#xA;         &amp;&amp; (((DateTime)[PersonnelInfoTable.StartTime]).Date &gt; ((DateTime)[PersonnelInfoTable.WageStartDate]).Date ) " />
+      <add name="criteriaHolidayOutMonth03" criteriaString="((int)[TempTable].[AllHolidays] !=0 &amp;&amp;  ((DateTime)[PersonnelInfoTable.WageStartDate]).Date&gt; ((DateTime)[PersonnelInfoTable.StartTime]).AddDays((int)[TempTable].[AllHolidays]-1).Date) &#xD;&#xA;        || (int)[TempTable].[AllHolidays]==0" />
+      <add name="criteriaGaoWeiButie" criteriaString="(decimal)[TempAttendanceTable].[Chuqinlv]&gt;=decimal.Parse(&quot;0.85&quot;)  &amp;&amp; (decimal)[WageFrameTable].[HighTemperature]&gt;0M  &amp;&amp; (((DateTime)[PersonnelInfoTable.WageEndDate]).Month&gt; 10 || 5&gt;((DateTime)[PersonnelInfoTable.WageEndDate]).Month)" />
+      <add name="criteriaYiBanGuanLiRenYuanYiShang" criteriaString="(Guid)[PersonnelInfoTable.WorkStationType]==new Guid(&quot;B4C35A10-C078-4C48-80E4-7D64F4D60322&quot;)   &#xD;&#xA;        || (Guid)[PersonnelInfoTable.WorkStationType]==new Guid(&quot;53D2DDCA-3796-4EBA-A807-F851629B843D&quot;)&#xD;&#xA;        || (Guid)[PersonnelInfoTable.WorkStationType]==new Guid(&quot;D94B3791-FDE2-42A9-9826-4C1167FA9428&quot;)" />
+      <!--<add name="tongxunbutietiaojian1" criteriaString="Item[5]"/>-->
+      <!--
+      <add name="WorkStationWageCriteria" criteriaString="PersonelInfoTable.WorkStation"/>
+      <add name="SkillWageCriteria" criteriaString="PersonelInfoTable.WorkStation"/>
+      <add name="RelayWageWageCriteria" criteriaString="PersonelInfoTable.WorkStation"/>      
+      -->
+    </criterias>
+    <!--
+    <tables>
+      <add name="PersonnelInfoTable">
+        <cols>
+          <add name="Name" sourceName="Name" dataType="string"></add>
+          <add name="DepartmetnId" sourceName="DepartmetnId" dataType="Guid"></add>
+          <add name="WorkshopSectionId" sourceName="WorkshopSectionId" dataType="string"></add>
+          <add name="Gender" sourceName="Gender" dataType="Guid"></add>
+          <add name="BankbookCode" sourceName="BankbookCode" dataType="string"></add>
+          
+          <add name="WorkStation" sourceName="WorkStation" dataType="Guid"></add>
+          <add name="HeadshipLevel" sourceName="HeadshipLevel" dataType="Guid"></add>             
+          <add name="BenefitBaseWage" sourceName="BenefitBaseWage" dataType="Decimal"></add>
+          <add name="BenefitBaseWageQuotiety" sourceName="BenefitBaseWageQuotiety" dataType="Decimal"></add>
+          <add name="WorkStationWage" sourceName="WorkStationWage" dataType="Decimal"></add>
+          
+          <add name="WorkStationWageQuotiety" sourceName="WorkStationWageQuotiety" dataType="Decimal"></add>
+          <add name="SkillWage" sourceName="SkillWage" dataType="Decimal"></add>
+          <add name="SkillWageQuotiety" sourceName="SkillWageQuotiety" dataType="Decimal"></add>
+          
+          <add name="RelayWage" sourceName="RelayWage" dataType="Decimal"></add>
+          <add name="RelayWageQuotiety" sourceName="RelayWageQuotiety" dataType="Decimal"></add>
+          
+          <add name="Absence" sourceName="Absence" dataType="Decimal"></add>
+          <add name="AbsenceQuotiety" sourceName="AbsenceQuotiety" dataType="Decimal"></add>
+          <add name="FeastOvertime" sourceName="FeastOvertime" dataType="Decimal"></add>
+          <add name="FeastOvertimeQuotiety" sourceName="FeastOvertimeQuotiety" dataType="Decimal"></add>
+          <add name="WeekendOvertime" dataType="Decimal"></add>
+          <add name="WeekendOvertimeQuotiety" dataType="Decimal"></add>
+          <add name="Overtime" dataType="Decimal"></add>
+          <add name="OvertimeQuotiety" dataType="Decimal"></add>
+
+          <add name="KeepWatch" dataType="Decimal"></add>
+          <add name="KeepWatchQuotiety" dataType="Decimal"></add>
+          <add name="ProductionBounty" dataType="Decimal"></add>
+          <add name="ProductionBountyQuotiety" dataType="Decimal"></add>
+          <add name="ProductionExamine" dataType="Decimal"></add>
+          <add name="ProductionExamineQuotiety" dataType="Decimal"></add>
+          <add name="Bounty" dataType="Decimal"></add>
+          <add name="BountyQuotiety" dataType="Decimal"></add>
+          <add name="Examine" dataType="Decimal"></add>
+          <add name="ExamineQuotiety" dataType="Decimal"></add>
+          <add name="GroupAward" dataType="Decimal"></add>
+          <add name="GroupAwardQuotiety" dataType="Decimal"></add>
+          
+          <add name="FourSubsidy" dataType="Decimal"></add>
+          <add name="FourSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="LengthOfService" dataType="Decimal"></add>
+          <add name="LengthOfServiceQuotiety" dataType="Decimal"></add>
+          <add name="SanitarySubsidy" dataType="Decimal"></add> 
+          <add name="SanitarySubsidyQuotiety" dataType="Decimal"></add>
+          <add name="RepastSubsidy" dataType="Decimal"></add>
+          <add name="RepastSubsidyQuotiety" dataType=""></add>
+          <add name="DegreeSubsidy" dataType="Decimal"></add>
+          <add name="DegreeSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="MessageSubsidy" dataType="Decimal"></add>
+          <add name="MessageSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="TrafficSubsidy" dataType="Decimal"></add>
+          <add name="TrafficSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="LaborSubsidy" dataType="Decimal"></add>
+          <add name="LaborSubsidyQuotiety" dataType=""></add>
+          <add name="DirectorSubsidy" dataType="Decimal"></add>
+          <add name="DirectorSubsidyQuotiety" dataType=""></add>
+          <add name="HousingSubsidy" dataType="Decimal"></add>
+          <add name="HousingSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="HighTemperature" dataType="Decimal"></add>
+          <add name="HighTemperatureQuotiety" dataType="Decimal"></add>
+          <add name="Surroundings" dataType="Decimal"></add>
+          <add name="SurroundingsQuotiety" dataType="Decimal"></add>
+          <add name="SafetyOfficerSubsidy" dataType="Decimal"></add>
+          <add name="SafetyOfficerSubsidyQuotiety" dataType="Decimal"></add>
+          <add name="MotormanSubsidy" dataType="Decimal"></add>
+          <add name="MotormanSubsidyQuotiety" dataType="Decimal"></add>          
+          <add name="QuanqinAward" dataType="Decimal"></add>
+          <add name="QuanqinAwardQuotiety" dataType="Decimal"></add>          
+          <add name="OtherSubsidy" dataType="Decimal"></add>
+          <add name="OtherSubsidyQuotiety" dataType="Decimal"></add>
+          
+          <add name="Medicare" dataType="Decimal"></add>
+          <add name="MedicareQuotiety" dataType="Decimal"></add>          
+          <add name="EndowmentInsurance" dataType="Decimal"></add>
+          <add name="EndowmentInsuranceQuotiety" dataType="Decimal"></add>          
+          <add name="UnemploymentInsurance" dataType="Decimal"></add>
+          <add name="UnemploymentInsuranceQuotiety" dataType="Decimal"></add>
+          <add name="LargeInsurance" dataType="Decimal"></add>
+          <add name="LargeInsuranceQuotiety" dataType="Decimal"></add>
+          
+          <add name="PersonalIncomeTax" dataType="Decimal"></add>
+          <add name="PersonalIncomeTaxQuotiety" dataType="Decimal"></add>
+          <add name="Utilities" dataType="Decimal"></add>
+          <add name="UtilitiesQuotiety" dataType="Decimal"></add>
+          <add name="ExaminationFees" dataType="Decimal"></add>
+          <add name="ExaminationFeesQuotiety" dataType="Decimal"></add>
+          <add name="FinanceCharge" dataType="Decimal"></add>
+          <add name="FinanceChargeQuotiety" dataType="Decimal"></add>
+          <add name="CompanyCharge" dataType="v"></add>
+          <add name="CompanyChargeQuotiety" dataType="Decimal"></add>
+          <add name="LaborInsuranceCharge" dataType="Decimal"></add>
+          <add name="LaborInsuranceChargeQuotiety" dataType="Decimal"></add>
+          <add name="OtherCharge1" dataType="Decimal"></add>
+          <add name="OtherChargeQuotiety1" dataType="Decimal"></add>
+          <add name="OtherCharge2" dataType="Decimal"></add>
+          <add name="OtherChargeQuotiety2" dataType="Decimal"></add>
+        </cols>
+      </add>
+      <add name="AttendancesTable">
+        <cols>
+          <add name="Name" dataType="string"></add>
+          <add name="DepartmentId" dataType="string"></add>
+          <add name="WorkStationId" dataType="string"></add>
+          <add name="PanSltartTime" dataType="string"></add>
+          <add name="PanEndTime" dataType="string"></add>
+          <add name="FactStartTime" dataType="string"></add>
+          <add name="FactSltartTime" dataType="string"></add>
+          <add name="AttendanceType" dataType="string"></add>
+          <add name="AttendanceState" dataType="string"></add>
+          <add name="Rate" dataType="string"></add>          
+        </cols>
+      </add>
+    </tables>
+    -->
+    <!--formulas>
+      <formula name="" formulaString="1.3*(@param1-@param3)+5.5*@param2-100"></formula>
+    </formulas-->
+    <calculators>
+      <!-- CalculatingType: SingleRowSingleCol,SingleRowMultiCol,MultiRowSingleCol,MultiRowMultiCol-->
+      <!-- CalculatingExtensionType: Directness,CalCondition-->
+      <add name="defaultcalculatorBase" typeName="NormalCalculator" caption="基本工资" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="BenefitBaseWage02" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="WorkStationWage02" sortedKey="2" />
+          <add name="SkillWage02" sortedKey="3" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="AlreadyAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="Absence02" sortedKey="5" />
+          <add name="FeastOvertimeAmount02" sortedKey="6" />
+          <add name="WeekendOvertimeAmount02" sortedKey="7" />
+          <add name="Overtime02" sortedKey="8" />
+          <add name="ProductionBounty02" sortedKey="9" />
+          <add name="ProductionExamine02" sortedKey="10" />
+          <add name="Bounty02" sortedKey="11" />
+          <add name="Examine02" sortedKey="12" />
+          <add name="GroupAward02" sortedKey="13" />
+          <add name="FourSubsidy02" sortedKey="14" />
+          <add name="LengthOfService02" sortedKey="15" />
+          <add name="SanitarySubsidy02" sortedKey="16" />
+          <add name="RepastSubsidy02" sortedKey="17" />
+          <add name="DegreeSubsidy02" sortedKey="18" />
+          <add name="MessageSubsidy02" sortedKey="19" />
+          <add name="TrafficSubsidy02" sortedKey="20" />
+          <add name="LaborSubsidy02" sortedKey="21" />
+          <add name="DirectorSubsidy02" sortedKey="22" />
+          <add name="HousingSubsidy02" sortedKey="23" />
+          <add name="HighTemperature02" sortedKey="24" />
+          <add name="Surroundings02" sortedKey="25" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="26" />
+          <add name="MotormanSubsidy02" sortedKey="27" />
+          <add name="QuanqinAward02" sortedKey="28" />
+          <add name="OtherSubsidy02" sortedKey="29" />
+          <!--<add name="EfficiencyWage02" sortedKey="4"/>-->
+          <add name="Medicare02" sortedKey="30" />
+          <add name="EndowmentInsurance02" sortedKey="31" />
+          <add name="UnemploymentInsurance02" sortedKey="32" />
+          <add name="LargeInsurance02" sortedKey="33" />
+          <!--<add name="gerensuodeshui" sortedKey="28"/>-->
+          <add name="Utilities02" sortedKey="34" />
+          <add name="ExaminationFees02" sortedKey="35" />
+          <add name="FinanceCharge02" sortedKey="36" />
+          <add name="CompanyCharge02" sortedKey="37" />
+          <add name="LaborInsuranceCharge02" sortedKey="38" />
+          <add name="OtherCharge102" sortedKey="39" />
+          <add name="OtherCharge202" sortedKey="40" />
+        </itemKeys>
+      </add>
+      <add name="kaoqinCalculator" typeName="NormalCalculator01" caption="考勤" calculatingType="MultiRowSingleCol" table="AttendancesTable" ClassTemplate="MultiRowMultiColColCalculator">
+        <itemKeys>
+          <add name="yingchuqintianshu" sortedKey="0" />
+          <add name="zhangchangchuqin" sortedKey="1" />
+          <add name="kuanggongtianshu" sortedKey="2" />
+          <add name="countimespan" sortedKey="3" />
+          <add name="convertzhangchangchuqinrate" sortedKey="4" />
+          <add name="fadingjiejiari" sortedKey="5" />
+          <add name="zhoumejiaban" sortedKey="6" />
+          <add name="chuqinlv" sortedKey="7" />
+          <add name="queqintianshu" sortedKey="8" />
+          <add name="ZhongQin" sortedKey="9" />
+          <add name="YeQin" sortedKey="10" />
+          <add name="DaYeQin" sortedKey="11" />
+          <add name="PiZhuiJiaBan" sortedKey="12" />
+        </itemKeys>
+      </add>
+      <add name="calculatorBaseShengChan01" typeName="NormalCalculator02" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="BenefitBaseWage01" sortedKey="7" />
+          <add name="DailyWages01" sortedKey="8" />
+          <add name="AlreadyAttendancedays01" sortedKey="9" />
+          <add name="WeekendOvertimeAmount02" sortedKey="10" />
+          <add name="OvertimeAmount02" sortedKey="11" />
+          <add name="Overtime02" sortedKey="12" />
+          <add name="KeepWatchAmount02" sortedKey="13" />
+          <add name="KeepWatch02" sortedKey="14" />
+          <add name="RelayAmount02" sortedKey="15" />
+          <add name="FeastOvertimeAmount02" sortedKey="17" />
+          <add name="ConfirmOvertimeAmount02" sortedKey="18" />
+        </itemKeys>
+      </add>
+      <add name="calculatorTempDay01" typeName="NormalCalculator03" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="MonthDays" sortedKey="1">
+          </add>
+          <add name="AllHolidays" sortedKey="2">
+          </add>
+          <add name="Holidays" sortedKey="3">
+          </add>
+          <add name="BandhDays" sortedKey="4">
+          </add>
+          <add name="DailyWages" sortedKey="5" />
+        </itemKeys>
+      </add>
+      <add name="calculatorDaiGang01" typeName="NormalCalculator04" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage01" sortedKey="5" />
+          <add name="DeferShellOutWage01" sortedKey="6" />
+        </itemKeys>
+      </add>
+      <add name="calculatorDaiGang02" typeName="NormalCalculator05" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage02" sortedKey="5" />
+          <add name="DeferShellOutWage02" sortedKey="6" />
+        </itemKeys>
+      </add>
+      <add name="calculatorDaiGang03" typeName="NormalCalculator06" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="DailyWages02" sortedKey="1" />
+          <add name="BandhWage03" sortedKey="5" />
+          <add name="DeferShellOutWage03" sortedKey="6" />
+        </itemKeys>
+      </add>
+      <add name="calculatorBaseShengChan02" typeName="NormalCalculator07" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="BenefitBaseWage03" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="ShellOutWage01" sortedKey="2" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="AttendanceRatio01" sortedKey="5" />
+          <!--<add name="AttendanceScore01" sortedKey="6"/>
+            <add name="UnitScoreMoney01" sortedKey="7"/>-->
+          <!--<add name="ProductionBounty02" sortedKey="8"/>
+            <add name="ProductionExamine02" sortedKey="9"/>-->
+          <add name="Bounty02" sortedKey="10" />
+          <add name="Examine02" sortedKey="11" />
+          <add name="FourSubsidy02" sortedKey="12" />
+          <add name="LengthOfService02" sortedKey="13" />
+          <add name="SanitarySubsidy02" sortedKey="14" />
+          <add name="RepastSubsidy02" sortedKey="15" />
+          <add name="DegreeSubsidy02" sortedKey="16" />
+          <add name="MessageSubsidy02" sortedKey="17" />
+          <add name="TrafficSubsidy02" sortedKey="18" />
+          <add name="LaborSubsidy02" sortedKey="19" />
+          <add name="DirectorSubsidy02" sortedKey="20" />
+          <add name="HousingSubsidy02" sortedKey="21" />
+          <add name="HighTemperature02" sortedKey="22" />
+          <add name="Surroundings02" sortedKey="23" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="24" />
+          <add name="MotormanSubsidy02" sortedKey="25" />
+          <add name="QuanqinAward02" sortedKey="26" />
+          <add name="OtherSubsidy02" sortedKey="27" />
+          <add name="PayBasicWageTotal01" sortedKey="27" />
+          <!--<add name="EfficiencyWage02" sortedKey="4"/>-->
+          <add name="Medicare02" sortedKey="25" />
+          <add name="EndowmentInsurance02" sortedKey="26" />
+          <add name="UnemploymentInsurance02" sortedKey="27" />
+          <add name="LargeInsurance02" sortedKey="28" />
+          <!--<add name="gerensuodeshui" sortedKey="29"/>-->
+          <add name="Utilities02" sortedKey="30" />
+          <add name="ExaminationFees02" sortedKey="31" />
+          <add name="FinanceCharge02" sortedKey="32" />
+          <add name="CompanyCharge02" sortedKey="33" />
+          <add name="LaborInsuranceCharge02" sortedKey="34" />
+          <add name="OtherCharge102" sortedKey="35" />
+          <add name="OtherCharge202" sortedKey="36" />
+          <add name="NetWage01" sortedKey="37" />
+          <add name="AlreadyPayIncomeTax01" sortedKey="38" />
+        </itemKeys>
+      </add>
+      <add name="calculatorBaseShengChanHeBing02" typeName="NormalCalculator08" caption="考勤" calculatingType="SingleRowSingleCol" table="PersonnelInfoTable" ClassTemplate="SingleRowMultirowColCalculator">
+        <itemKeys>
+          <add name="BenefitBaseWage03" sortedKey="1" />
+          <add name="DailyWages01" sortedKey="1" />
+          <add name="PlanAttendancedays01" sortedKey="3" />
+          <add name="FactAttendancedays01" sortedKey="3" />
+          <add name="AlreadyAttendancedays01" sortedKey="3" />
+          <add name="AttendanceRatio01" sortedKey="3" />
+          <add name="WeekendOvertimeAmount02" sortedKey="3" />
+          <add name="OvertimeAmount02" sortedKey="4" />
+          <add name="Overtime02" sortedKey="5" />
+          <add name="KeepWatchAmount02" sortedKey="6" />
+          <add name="KeepWatch02" sortedKey="7" />
+          <add name="RelayAmount02" sortedKey="8" />
+          <add name="FeastOvertimeAmount02" sortedKey="10" />
+          <add name="ConfirmOvertimeAmount02" sortedKey="11" />
+          <add name="Bounty02" sortedKey="12" />
+          <add name="Examine02" sortedKey="12" />
+          <add name="FourSubsidy02" sortedKey="12" />
+          <add name="LengthOfService02" sortedKey="13" />
+          <add name="SanitarySubsidy02" sortedKey="14" />
+          <add name="RepastSubsidy02" sortedKey="15" />
+          <add name="DegreeSubsidy02" sortedKey="16" />
+          <add name="MessageSubsidy02" sortedKey="17" />
+          <add name="TrafficSubsidy02" sortedKey="18" />
+          <add name="LaborSubsidy02" sortedKey="19" />
+          <add name="DirectorSubsidy02" sortedKey="20" />
+          <add name="HousingSubsidy02" sortedKey="21" />
+          <add name="HighTemperature02" sortedKey="22" />
+          <add name="Surroundings02" sortedKey="23" />
+          <add name="SafetyOfficerSubsidy02" sortedKey="24" />
+          <add name="MotormanSubsidy02" sortedKey="25" />
+          <add name="QuanqinAward02" sortedKey="26" />
+          <add name="OtherSubsidy02" sortedKey="27" />
+          <!--//<add name="PayBasicWageTotal01" sortedKey="27"/>-->
+          <!--<add name="EfficiencyWage02" sortedKey="4"/>-->
+          <add name="Medicare02" sortedKey="25" />
+          <add name="EndowmentInsurance02" sortedKey="26" />
+          <add name="UnemploymentInsurance02" sortedKey="27" />
+          <add name="LargeInsurance02" sortedKey="28" />
+          <!--<add name="gerensuodeshui" sortedKey="29"/>-->
+          <add name="Utilities02" sortedKey="30" />
+          <add name="ExaminationFees02" sortedKey="31" />
+          <add name="FinanceCharge02" sortedKey="32" />
+          <add name="CompanyCharge02" sortedKey="33" />
+          <add name="LaborInsuranceCharge02" sortedKey="34" />
+          <add name="OtherCharge102" sortedKey="35" />
+          <add name="OtherCharge202" sortedKey="36" />
+          <add name="NetWage01" sortedKey="37" />
+        </itemKeys>
+      </add>
+      <!--<add name="calculatorBase02" typeName="NormalCalculator02" caption="缺勤天数"  calculatingType="MultiRowSingleCol"
+     calculatingExtensionType="CalCondition" table="PersonnelInfoTable" ClassTemplate="MultiRowMultiColColCalculator">
+        <itemKeys>
+          <add name="AttendanceDayCount" sortedKey="0"/>
+        </itemKeys>
+      </add>
+      <add name="calculatorBase03" typeName="NormalCalculator03" caption="合计"  calculatingType="MultiRowSingleCol"
+     calculatingExtensionType="CalCondition" table="PersonnelInfoTable" ClassTemplate="MultiRowMultiColColCalculator">
+        <itemKeys>
+          <add name="chuqiantianshu" sortedKey="0"/>
+          <add name="putongjishugongzipingjun" sortedKey="0"/>
+        </itemKeys>
+      </add>-->
+    </calculators>
+    <!--calculator name="errors"/-->
+    <calculatorsClassTemplates>
+      <add name="SingleRowMultirowColCalculator" type="ICalculator" regexStrategy="NormalRow,NormalCol" template="using System;&#xD;&#xA;        using System.Data;&#xD;&#xA;        using System.Collections.Generic;&#xD;&#xA;        //using Pay;&#xD;&#xA;        &#xD;&#xA;        namespace Pay&#xD;&#xA;        {&#xD;&#xA;            public class %ClassName% : ICalculator&#xD;&#xA;            {&#xD;&#xA;                private string _name;&#xD;&#xA;            &#xD;&#xA;                public %ClassName%() {}&#xD;&#xA;                &#xD;&#xA;                public string Name&#xD;&#xA;                {&#xD;&#xA;                    get{ return this._name;}&#xD;&#xA;                    set{ this._name = value;}&#xD;&#xA;                }&#xD;&#xA;                public void Calculate(System.Data.DataSet data, IDictionary&lt;string, Item&gt; items)&#xD;&#xA;                {                &#xD;&#xA;                    DataTable table = &lt;Table&gt;&#xD;&#xA;                    DataRow row = table.Rows[0];                    &#xD;&#xA;                    &lt;ItemsCode&gt;                    &#xD;&#xA;                }                &#xD;&#xA;            }&#xD;&#xA;        }">
+      </add>
+      <add name="MultiRowMultiColColCalculator" type="ICalculator" regexStrategy="NormalRow,NormalCol" template="using System;&#xD;&#xA;        using System.Data;&#xD;&#xA;        using System.Collections.Generic;&#xD;&#xA;        &#xD;&#xA;        namespace Pay&#xD;&#xA;        {&#xD;&#xA;            public class %ClassName% : ICalculator&#xD;&#xA;            {&#xD;&#xA;                private DataSet _data;&#xD;&#xA;                private DataTable _sourceTable;&#xD;&#xA;                private IList&lt;Item&gt; _items;&#xD;&#xA;                private string _name;&#xD;&#xA;            &#xD;&#xA;                public %ClassName%() {}&#xD;&#xA;                &#xD;&#xA;                public string Name&#xD;&#xA;                {&#xD;&#xA;                    get{ return this._name;}&#xD;&#xA;                    set{ this._name = value;}&#xD;&#xA;                }&#xD;&#xA;                &#xD;&#xA;                public void Calculate(System.Data.DataSet data, IDictionary&lt;string, Item&gt; items)&#xD;&#xA;                {&#xD;&#xA;                    DataTable table = &lt;Table&gt;&#xD;&#xA;                    foreach(DataRow row in table.Rows)&#xD;&#xA;                    {&#xD;&#xA;                        &lt;ItemsCode&gt;&#xD;&#xA;                    }&#xD;&#xA;                }&#xD;&#xA;            }&#xD;&#xA;        }">
+      </add>
+    </calculatorsClassTemplates>
+    <expressionMappings>
+      <!--source like [tableName.colName], target like row["colName"]-->
+      <add name="NormalRow" regexString="\[[^\]]+\.(?&lt;colName&gt;[^\]]+)\]" resultString="row[&quot;${colName}&quot;]" />
+      <!--source like [tableName].[colName], target like data.Tables[tableName].Rows[0]["colName"]-->
+      <add name="NormalCol" regexString="\[(?&lt;tableName&gt;[^]]+)\]\.\[(?&lt;colName&gt;[^]]+)\]" resultString="data.Tables[&quot;${tableName}&quot;].Rows[0][&quot;${colName}&quot;]" />
+      <!--source like #queqintianshu, target like Item[5] -->
+      <!--<add name "MidItem" regexString="" resultString="Item[&quot;${ItemName}]"/>-->
+      <!--add name="NormalVariant" regexString=""/-->
+      <!--@@Fun()-->
+    </expressionMappings>
+  </paymanager>
+</configuration>

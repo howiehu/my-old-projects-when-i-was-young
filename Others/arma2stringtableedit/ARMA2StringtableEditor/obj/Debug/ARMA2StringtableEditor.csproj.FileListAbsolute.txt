@@ -1,0 +1,15 @@
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\bin\Debug\ARMA2StringtableEditor.exe.config
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\bin\Debug\ARMA2StringtableEditor.exe
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\bin\Debug\ARMA2StringtableEditor.pdb
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.MainForm.resources
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.Properties.Resources.resources
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.csproj.GenerateResource.Cache
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.exe
+E:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.pdb
+F:\Projects\arma2stringtableedit\ARMA2StringtableEditor\bin\Debug\ARMA2StringtableEditor.exe.config
+F:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.exe
+F:\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.pdb
+E:\FBackup\FBackup\Projects\arma2stringtableedit\ARMA2StringtableEditor\bin\Debug\ARMA2StringtableEditor.exe.config
+E:\FBackup\FBackup\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.exe
+E:\FBackup\FBackup\Projects\arma2stringtableedit\ARMA2StringtableEditor\obj\Debug\ARMA2StringtableEditor.pdb

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.5.906 (http://www.liquid-technologies.com) -->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\Projects\XmlEditor\XmlEditor\Pay.xsd">
+  <configSections>
+    <section name="string" type="string" />
+  </configSections>
+  <paymanager name="string">
+    <add name="string" />
+    <add name="string" caption="string" />
+    <add name="string" caption="string" />
+    <add name="string" caption="string" />
+  </paymanager>
+</configuration>

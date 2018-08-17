@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMA2StringtableEditor", "ARMA2StringtableEditor\ARMA2StringtableEditor.csproj", "{0662B621-2C4D-49C7-95D5-E86E8B92E667}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs10.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ARMA2StringtableEditor\\ARMA2StringtableEditor.csproj
+		SccProjectName1 = ARMA2StringtableEditor
+		SccLocalPath1 = ARMA2StringtableEditor
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0662B621-2C4D-49C7-95D5-E86E8B92E667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0662B621-2C4D-49C7-95D5-E86E8B92E667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0662B621-2C4D-49C7-95D5-E86E8B92E667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0662B621-2C4D-49C7-95D5-E86E8B92E667}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
